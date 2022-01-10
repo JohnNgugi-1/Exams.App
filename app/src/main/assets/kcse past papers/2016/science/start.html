@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script src="../../../java2.js">
+
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+<p class = "questions">1. Which one of the following characteristics can be used to identify molars? Presence of</p>
+
+<input type = "radio" id = "mca" name = "question1" value = "A"> A). one root and chisel shape<br/>
+<input type = "radio" id = "mcb" name = "question1" value = "j"><a class="y"> B). cusps and ridges</a><br/>
+<input type = "radio" id = "mcc" name = "question1" value = "C"> C). one root and cusps<br/>
+<input type = "radio" id = "mcd" name = "question1" value = "D"> D). ridges and chisel shape.<br/>
+
+
+<p class = "questions">2. The following are functions of the trachea EXCEPT</p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). trapping dust<br/>
+<input type = "radio" id = "mc" name = "question2" value = "B"> B). moistening air<br/>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). warming air<br/>
+<input type = "radio" id = "mc" name = "question2" value = "j"><a class="y"> D). exchanging gases.</a><br/>
+
+<p class = "questions">3. Which one of the following parts of the 
+alimentary canal is correctly matched to its function?</p>
+<input type = "radio" id = "mc" name = "question3" value = "j"><a class="y"> A). Mouth - digestion of food </a><br/>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). Stomach - production of bile<br/>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). Small intestine - absorption of water<br/>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). Large intestine - absorption of digested food<br/>
+ 
+<p class = "questions">4. The diagram below represents the structure of a human heart.
+<p><img src="number4.jpg"></p>
+Name the blood vessels labelled K, L, M and N respectively;</p>
+<input type = "radio" id = "mc" name = "question4" value = "A"> A). Venacava, Pulmonary vein, Aorta, Pulmonary artery<br/>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). Pulmonary artery, Aorta, Pulmonary vein, Venacava<br/>
+<input type = "radio" id = "mc" name = "question4" value = "j"><a class="y"> C). Venacava, Pulmonary artery, Aorta, Pulmonary vein</a><br/>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). Pulmonary vein, Venacava, Pulmonary artery, Aorta<br/>
+
+<p class = "questions">5. The diagram below represents a female reproductive system.
+<p><img src="number5.jpg"></p>
+Which one of the parts labelled P, Q, R and S is correctly matched to its function?</p>
+<input type = "radio" id = "mc" name = "question5" value = "j"><a class="y"> A). P - site for fertilisation,</a><br/>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). Q - site for implantation, <br/>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). R - egg formation, <br/>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). S - ovulation.<br/>
+ 
+<p class = "questions">6. Which one of the following is a health effect of drug abuse?</p>  
+<input type = "radio" id = "mc" name = "question6" value = "j"><a class="y"> A). Withdrawal.</a><br/>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). Marital conflict.<br/>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). Truancy.<br/>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). Rape.<br/>
+
+<p class = "questions">7. The first stage of HIV infection is known as</p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). incubation<br/>
+<input type = "radio" id = "mc" name = "question7" value = "j"><a class="y"> B). window</a><br/>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). symptomatic<br/>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). asymptomatic.<br/>
+
+<p class = "questions">8. Which one of the following vaccines are correctly matched to the age when they are first administered?
+<b>BCG, Tetanus, Polio, Measles</b> respectively;</p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). At birth, 10 weeks, 6 weeks, 9 months<br/>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). 6 weeks, At birth, At birth, 10 weeks<br/>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). 10 weeks, 9 months, 10 weeks, At birth<br/>
+<input type = "radio" id = "mc" name = "question8" value = "j"><a class="y"> D). At birth, 6 weeks, At birth, 9 months</a><br/>
+
+<p class = "questions">9. Which one of the following diseases can be prevented by draining stagnant water around homesteads?</p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). Tuberculosis.<br/>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). Typhoid.<br/>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). Cholera.<br/>
+<input type = "radio" id = "mc" name = "question9" value = "j"><a class="y"> D). Malaria.</a><br/>
+
+<p class = "questions">10. A patient was instructed by a doctor to take two tablets of medicine every six hours. However, the patient forgot to take at noon and on remembering took four tablets at the same time. The patient should have;</p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). taken three tablets every six hours<br/>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). taken two tablets every three hours<br/>
+<input type = "radio" id = "mc" name = "question10" value = "j"><a class="y"> C). revisited the doctor for advice</a><br/>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). thrown away the two extra tablets.<br/>
+
+<p class = "questions">11. Which one of the following pairs consists only of illegal drugs in Kenya?</p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). Alcohol and miraa.<br/>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). Miraa and mandrax.<br/>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). Alcohol and bhang.<br/>
+<input type = "radio" id = "mc" name = "question11" value = "j"><a class="y"> D). Bhang and mandrax.</a><br/>
+
+<p class = "questions">12. Which one of the following weeds.has green-purple leaves?</p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). Mexican marigold.<br/>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). Blackjack.<br/>
+<input type = "radio" id = "mc" name = "question12" value = "j"><a class="y"> C). Pigweed.</a><br/>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). Sodom apple.<br/>
+
+<p class = "questions">13. Which one of the following pairs of plants stores food in the roots?</p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). Irish potato and cassava.<br/>
+<input type = "radio" id = "mc" name = "question13" value = "j"><a class="y"> B). Cassava and carrot.</a><br/>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). Onion and carrot.<br/>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). Irish potato and onion.<br/>
+
+<p class = "questions">14. Which one of the following statements 
+on interdependence between plants is NOT TRUE? Some plants</p>
+<input type = "radio" id = "mc" name = "question14" value = "j"><a class="y"> A). depend on others for carbon dioxide</a><br/>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). grow on dead plants<br/>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). depend on others for protection against strong sunlight<br/>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). depend on others for support.<br/>
+
+<p class = "questions">15. Which one of the following crop pests is correctly matched to the part of the plant it damages?</p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). Weevil - leaves<br/>
+<input type = "radio" id = "mc" name = "question15" value = "j"><a class="y"> B). Cutworm - stems, </a><br/>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). Stalk borer - flowers<br/>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). Aphids - roots.<br/>
+
+<p class = "questions">16. Which one of the following groups of plants consists of ONLY flowering plants?</p>
+<input type = "radio" id = "mc" name = "question16" value = "j"><a class="y"> A). Onion, sisal, nappier grass.</a><br/>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). Maize, kales, toadstools.<br/>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). Beans, mushrooms, peas.<br/>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). Euphorbia, cactus, moulds.<br/>
+
+<p class = "questions">17. Which one of the following diagrams represents the shape of the new moon?</p>
+<input type = "radio" id = "mc" name = "question17" value = "j"><a class="y"> A). <img src="17a.jpg"></a><br/>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). <img src="17b.jpg"><br/>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). <img src="17c.jpg"><br/>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). <img src="17d.jpg"><br/>
+
+<p class = "questions">18. In the solar system, Jupiter is found between</p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). Mercury and Saturn.<br/>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). Mars and Earth.<br/>
+<input type = "radio" id = "mc" name = "question18" value = "j"><a class="y"> C). Saturn and Mars.</a><br/>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). Earth and Mercury.<br/>
+
+<p class = "questions">19. Pupils observed and classified certain animals into two groups E and F as shown below?
+<p><img src="number19.jpg"></p> The pupils classified the animals on basis of?</p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A). carnivorous and herbivorous<br/>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B). animals covered with fur and animals covered with scales<br/>
+<input type = "radio" id = "mc" name = "question19" value = "j"><a class="y"> C). constant and varying body temperature</a><br/>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D). animals which give birth to young ones and those which lay eggs.<br/>
+
+<p class = "questions">20. Standard five pupils observed a goat tied on a post to graze in the field. This method of grazing is classified as?</p>
+<input type = "radio" id = "mc" name = "question20" value = "j"><a class="y"> A). rotational grazing</a><br/>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). zero grazing<br/>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). strip grazing<br/>
+<input type = "radio" id = "mc" name = "question20" value = "D"> D). paddocking.<br/>
+
+<p class = "questions">21. The diagrams below represents beaks of certain birds.<p><img src="number21.jpg"></p> The birds whose beaks are represented by G and H respectively are?</p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). grain eater and flesh eater<br/>
+<input type = "radio" id = "mc" name = "question21" value = "j"><a class="y"> B). nectar feeder and filter feeder</a><br/>
+<input type = "radio" id = "mc" name = "question21" value = "C"> C). flesh eater and grain eater<br/>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). filter feeder and nectar feeder<br/>
+
+<p class = "questions">22. Which one of the following methods of controlling animal parasites is correctly matched to the parasite controlled?</p>
+<input type = "radio" id = "mc" name = "question22" value = "j"><a class="y"> A). Rotational Grazing - Ticks and tapeworms</a><br/>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B). Dipping - Fleas and tapeworms<br/>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C). Deworming - Liver flukes and ticks<br/>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). Spraying - Fleas and liver flukes<br/>
+
+<p class = "questions">23. Pupils gave the following statements about water. 
+<p>(i) Lathers easily </p>
+<p>(ii) Has a pleasant taste </p>
+<p>(iii) Has mineral salts </p>
+<p>(iv) Good for cleaning </p>
+Which two statements describe hard water?</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A). (i) and (ii)<br/>
+<input type = "radio" id = "mc" name = "question23" value = "j"><a class="y"> B). (ii) and (iii)</a><br/>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). (iii) and (iv)<br/>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D). (i) and (iv)<br/>
+
+<p class = "questions">24. Which one of the following pairs of diseases is as a result of drinking polluted water?</p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). Bilharzia and typhoid.<br/>
+<input type = "radio" id = "mc" name = "question24" value = "j"><a class="y"> B). Typhoid and cholera.</a><br/>
+<input type = "radio" id = "mc" name = "question24" value = "C"> C). Cholera and bilharzia.<br/>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). Malaria and cholera.<br/>
+
+<p class = "questions">25. In which one of the following practices is water recycled?</p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). Storing water for future use.<br/>
+<input type = "radio" id = "mc" name = "question25" value = "j"><a class="y"> B). Recovering clean water from dirty water.</a><br/>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). Harvesting rain water from roof tops.<br/>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D). Fetching water from a well. <br/>
+
+<p class = "questions">26. Which one of the following pairs of signs and symptoms is for cholera?</p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). Skin rash and diarrhoea.<br/>
+<input type = "radio" id = "mc" name = "question26" value = "B"> B). Blood in stool and abdominal pains.<br/>
+<input type = "radio" id = "mc" name = "question26" value = "j"><a class="y"> C). Abdominal pain and diarrhoea.</a><br/>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). Skin rash and blood in stool.<br/>
+
+<p class = "questions">27. Large furrows in the soil indicate?</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). rill erosion<br/>
+<input type = "radio" id = "mc" name = "question27" value = "j"><a class="y"> B). gulley erosion</a><br/>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). splash erosion<br/>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D). sheet erosion.<br/>
+
+<p class = "questions">28. Which one of the following statements is TRUE about clay soil?</p>
+<input type = "radio" id = "mc" name = "question28" value = "j"><a class="y"> A). Has small air spaces.</a><br/>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). Retains low amount of water.<br/>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). Allows water to drain through easily.<br/>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D). Has large soil particles.<br/>
+
+<p class = "questions">29. Which one of the following soil conservation measures conserves soil in the same way as mulching?</p>
+<input type = "radio" id = "mc" name = "question29" value = "j"><a class="y"> A). Planting cover crops.</a><br/>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B). Contour farming.<br/>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). Use of gabions.<br/>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D). Terracing.<br/>
+
+<p class = "questions">30. The following statements are true about breast milk EXCEPT</p>
+<input type = "radio" id = "mc" name = "question30" value = "j"><a class="y"> A). it cannot transmit diseases </a><br/>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B). it allows the mother and the baby to bond<br/>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C). its available in the correct form and at right temperature<br/>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D). its easier for infants to digest.<br/>
+
+<p class = "questions">31. A child who appears old with a wrinkled face is also likely to?</p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). lack blood<br/>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). have swollen abdomen<br/>
+<input type = "radio" id = "mc" name = "question31" value = "C"> C). have bow legs<br/>
+<input type = "radio" id = "mc" name = "question31" value = "j"><a class="y"> D). cry often.</a><br/>
+
+<p class = "questions">32. Which one of the following groups consists ONLY of foods that will provide energy to the body?</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). Maize, rice, milk. <br/>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B). Cassava, beans, fish. <br/>
+<input type = "radio" id = "mc" name = "question32" value = "j"><a class="y"> C). Ground nuts, coconut, sunflower.</a><br/>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D). Meat, wheat, peas.<br/>
+
+<p class = "questions">33. The diagram below illustrates a jiko.<p><img src="number33.jpg"></p> It is an improved jiko because the part labeled _____</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A). <b>J</b> takes less charcoal<br/>
+<input type = "radio" id = "mc" name = "question33" value = "j"><a class="y"> B). <b>K</b> is made of clay</a><br/>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). <b>L</b> is metallic<br/>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D). <b>M</b> is closed.<br/>
+
+<p class = "questions">34. Which one of the following sources of energy is exhaustible?</p>
+<input type = "radio" id = "mc" name = "question34" value = "j"><a class="y"> A). Petroleum</a><br/>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B). Wind<br/>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). Biogas<br/>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D). Trees.<br/>
+
+<p class = "questions">35. Which one of the following is an efficient way of using energy?</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). Drying grain using solar.<br/>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B). Using a vacuum flask to keep tea hot.<br/>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). Using biogas.<br/>
+<input type = "radio" id = "mc" name = "question35" value = "j"><a class="y"> D). Putting off wood fire when not in use.</a><br/>
+
+<p class = "questions">36. The following can produce electricity ?</p>
+<input type = "radio" id = "mc" name = "question36" value = "j"><a class="y"> A). solar drier</a><br/>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). biogas<br/>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C). torch battery<br/>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D). dynamo.<br/>
+
+<p class = "questions">37. A card with the word TEACHER written on it was placed in front of a mirror. Which three of the letters did not change in appearance?</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). R, A and C.<br/>
+<input type = "radio" id = "mc" name = "question37" value = "j"><a class="y"> B). T, A and H.</a><br/>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). H, E and R.<br/>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D). C, H and T.<br/>
+
+<p class = "questions">38. Which one of the following materials works in the same way as frosted glass?</p>
+<input type = "radio" id = "mc" name = "question38" value = "j"><a class="y"> A). Skylight.</a><br/>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). Mirror.<br/>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). Clear water.<br/>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D). Car windscreen.<br/>
+
+<p class = "questions">39. The property of light used in the working of a lamp in a room is that light</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A). travels in a straight line<br/>
+<input type = "radio" id = "mc" name = "question39" value = "j"><a class="y"> B). spreads in all directions</a><br/>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C). bends as it passes from one media to another<br/>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). forms shadows with opaque objects.<br/>
+
+<p class = "questions">40. In which one of the following processes is carbon dioxide used?</p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A). Making electric bulbs. <br/>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B). Burning substances. <br/>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). Fixing soil nutrients. <br/>
+<input type = "radio" id = "mc" name = "question40" value = "j"><a class="y"> D). Preserving soft drinks.</a><br/>
+
+<p class = "questions">41. After using a magnet, the next stage of separating a mixture of salt, sand and iron fillings is to?</p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). filter the mixture<br/>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B). decant the mixture <br/>
+<input type = "radio" id = "mc" name = "question41" value = "j"><a class="y"> C). add water to the mixture</a><br/>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D). sieve the mixture.<br/>
+
+<p class = "questions">42. The diagram below shows a set up used by pupils to demonstrate a certain property of matter. <p><img src="number42.jpg"></p>
+The mistake made in the set up was to?</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A). use balls of wax of the same size<br/>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). place balls of wax at equal intervals<br/>
+<input type = "radio" id = "mc" name = "question42" value = "j"><a class="y"> C). use a plank of wood</a><br/>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). place the candle at the end of the plank of wood<br/>
+
+<p class = "questions">43. Which one of the following groups of materials are correctly matched to magnetic and non magnetic respectively?</p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A). Office pins and steel wool<br/>
+<input type = "radio" id = "mc" name = "question43" value = "j"><a class="y"> B). Staples and copper coin </a><br/>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). Aluminium foil and nails<br/>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). Silver coin and glass<br/>
+
+<p class = "questions">44. Which one of the following machines works in the same way as a staircase?</p>
+<input type = "radio" id = "mc" name = "question44" value = "A"> A). Spade.<br/>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). Clawhammer.<br/>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). Crowbar.<br/>
+<input type = "radio" id = "mc" name = "question44" value = "j"><a class="y"> D). Ladder.</a><br/>
+
+<p class = "questions">45. Which one of the following practices will help to control soil pollution?</p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A). Burning wastes in dump sites.<br/>
+<input type = "radio" id = "mc" name = "question45" value = "j"><a class="y"> B). Using organic fertilisers.</a><br/>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C). Grouping wastes into categories.<br/>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). Planting cover crops.<br/>
+
+<p class = "questions">46. Which one of the following pairs CORRECTLY represents living and non-living components of the environment? (Living and non-living repectively)</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). Soil and bat. <br/>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B). Chameleon and mushroom plant.<br/>
+<input type = "radio" id = "mc" name = "question46" value = "j"><a class="y"> C). Earthworm and water</a><br/>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D). Oxygen and mineral salts.<br/>
+
+<p class = "questions">47. The following are some ways by which soil is conserved. 
+<p>(i) Reducing speed of surface runoff </p>
+<p>(ii) Trapping soil </p>
+<p>(iii) Reducing evaporation of soil water</p> 
+<p>(iv) Reducing impact of rain drops. </p>
+Which two ways are as result of contour farming?</p>
+<input type = "radio" id = "mc" name = "question47" value = "j"><a class="y"> A). (i) and (ii)</a><br/>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B). (ii) and (iii)<br/>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). (iii) and (iv)<br/>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). (i)and(iv)<br/>
+
+<p class = "questions">48. Which one of the following practices would help in maintaining strong teeth in humans?</p>
+<input type = "radio" id = "mc" name = "question48" value = "j"><a class="y"> A). Drinking milk.</a><br/>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). Using tooth picks after meals.<br/>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C). Using teeth to break hard objects.<br/>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D). Eating of bread.<br/>
+
+<p class = "questions">49. The diagram below represents a lever in use.<p><img src="number49.jpg"></p> If the lever is to make work easier, which one of the following will CORRECTLY represent the position of load, fulcrum and effort respectively?</p>
+<input type = "radio" id = "mc" name = "question49" value = "j"><a class="y"> A). X, Y, Z</a><br/>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B). Z, Y, X<br/>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C). Y, Z, X<br/>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). Z, X, Y<br/>
+
+<p class = "questions">50. In which one of the following is friction reduced by streamlining?</p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). Biro pen casing.<br/>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B). Skating shoes.<br/>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). Shoe soles.<br/>
+<input type = "radio" id = "mc" name = "question50" value = "j"><a class="y"> D). Vehicle bodies.</a><br/>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+
+    </div>
+	  </form>
+
+	  
+<script src="../../../javascript.js">
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

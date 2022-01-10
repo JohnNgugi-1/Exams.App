@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html>
+<link href="../style.css" rel="stylesheet">
+<script src="../script.js"></script>
+<head>
+<link href ="../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+<script src="../../2.5h.js"></script></head>
+<body>
+<h1>Good Luck</h1>
+<form id = "quiz" name = "quiz">
+<b>Computer Studies<p> Paper 2</b><p>
+
+2
+
+1.	(a)		In a school, students reside in three dormitories Red, Blue and Orange. Each dormitory is managed by a patron and each student is required to register for a game.<p>
+
+(i)	Open a database program and create a database named schoolgames that would be used to manage the games.	(1 mark)<p>
+
+(ii)	Create the tables named; Student, Patron, Dormitory and Game in the database created in (i) using the following specifications.	(7 marks)<p>
+
+<b>Student table</b><p>
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-qeid{font-weight:bold;font-style:italic;border-color:inherit;text-align:left}.tg .tg-xldj{border-color:inherit;text-align:left}.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}.tg .tg-0lax{text-align:left;vertical-align:top}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-qeid">Field name<br></th>
+    <th class="tg-xldj">Description<br></th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Stud No</td>
+    <td class="tg-0pky">Contains&nbsp;&nbsp;unique registration code</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Studname</td>
+    <td class="tg-0pky">Contains the name of a student</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gamecode</td>
+    <td class="tg-0pky">Contains codes of each game</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Dormcode</td>
+    <td class="tg-0lax">codes codes of each dormitory</td>
+  </tr>
+</table>
+
+<b>Patron table</b><p>
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-s268{text-align:left}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-s268">Field name</th>
+    <th class="tg-s268">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-s268">Patroncode</td>
+    <td class="tg-s268">Contains the&nbsp;&nbsp;patronode name</td>
+  </tr>
+  <tr>
+    <td class="tg-s268">Patronname</td>
+    <td class="tg-s268">Contains the patron name</td>
+  </tr>
+</table>
+
+<b>Dormitory table</b><p>
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-5ua9{font-weight:bold;text-align:left}.tg .tg-s268{text-align:left}.tg .tg-0lax{text-align:left;vertical-align:top}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-5ua9">Field name</th>
+    <th class="tg-5ua9">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-s268">Dormcode</td>
+    <td class="tg-s268">Contains the  Dormcode name</td>
+  </tr>
+  <tr>
+    <td class="tg-s268">Dormname</td>
+    <td class="tg-s268">Contains the domitory code</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Patroncode</td>
+    <td class="tg-0lax">Contains the domitory patron code</td>
+  </tr>
+</table>
+
+<b>Game table</b><p>
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}.tg .tg-xldj{border-color:inherit;text-align:left}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kiyi">Field name</th>
+    <th class="tg-kiyi">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-xldj">Gamecode</td>
+    <td class="tg-xldj">contains the game code</td>
+  </tr>
+  <tr>
+    <td class="tg-xldj">Gamename</td>
+    <td class="tg-xldj">contains the name of the game</td>
+  </tr>
+</table>
+
+(iii)	Create the relationships between the tables.	(3 marks)<p>
+
+	
+(b)	(i)	Create a form for each table that would be used for data entry.	(2 marks)<p>
+(ii)	Enter the following data into their respective tables:(9 marks)<p>
+
+<b>Student table</b><p>	
+
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}.tg .tg-xldj{border-color:inherit;text-align:left}.tg .tg-0lax{text-align:left;vertical-align:top}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kiyi">Stud No</th>
+    <th class="tg-kiyi">Stud name</th>
+    <th class="tg-1wig">Gamecode</th>
+    <th class="tg-1wig">Dormcode</th>
+  </tr>
+  <tr>
+    <td class="tg-xldj">Koo1</td>
+    <td class="tg-xldj">Ann </td>
+    <td class="tg-0lax">Gmoo4</td>
+    <td class="tg-0lax">D003</td>
+  </tr>
+  <tr>
+    <td class="tg-xldj">Koo2</td>
+    <td class="tg-xldj">Chris</td>
+    <td class="tg-0lax">Gmoo3</td>
+    <td class="tg-0lax">D001</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Koo3</td>
+    <td class="tg-0lax">Jared</td>
+    <td class="tg-0lax">Gmoo1</td>
+    <td class="tg-0lax">D002</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Koo4</td>
+    <td class="tg-0lax">Julian</td>
+    <td class="tg-0lax">Gmoo4</td>
+    <td class="tg-0lax">D003</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Koo5</td>
+    <td class="tg-0lax">Marion</td>
+    <td class="tg-0lax">Gmoo1</td>
+    <td class="tg-0lax">D003</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Koo6</td>
+    <td class="tg-0lax">Janet</td>
+    <td class="tg-0lax">Gmoo2</td>
+    <td class="tg-0lax">D003</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Koo7</td>
+    <td class="tg-0lax">Tom</td>
+    <td class="tg-0lax">Gmoo2</td>
+    <td class="tg-0lax">D002</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Koo8</td>
+    <td class="tg-0lax">Jerry</td>
+    <td class="tg-0lax">Gmoo3</td>
+    <td class="tg-0lax">D002</td>
+  </tr>
+</table>
+
+
+<b>Patron table</b><p>
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}.tg .tg-xldj{border-color:inherit;text-align:left}.tg .tg-0lax{text-align:left;vertical-align:top}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kiyi">Patroncode</th>
+    <th class="tg-kiyi">patronname</th>
+  </tr>
+  <tr>
+    <td class="tg-xldj">Poo1</td>
+    <td class="tg-xldj">Maurice</td>
+  </tr>
+  <tr>
+    <td class="tg-xldj">Poo2</td>
+    <td class="tg-xldj">Edward </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Poo3</td>
+    <td class="tg-0lax">Jane</td>
+  </tr>
+</table>
+
+<b>Dormitory table</b><p>
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}.tg .tg-0lax{text-align:left;vertical-align:top}.tg .tg-xldj{border-color:inherit;text-align:left}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kiyi">Dormcode</th>
+    <th class="tg-kiyi">Dormname</th>
+    <th class="tg-0lax">Patroname</th>
+  </tr>
+  <tr>
+    <td class="tg-xldj">D00l</td>
+    <td class="tg-xldj">Red</td>
+    <td class="tg-0lax">P001</td>
+  </tr>
+  <tr>
+    <td class="tg-xldj">D002</td>
+    <td class="tg-xldj">Blue</td>
+    <td class="tg-0lax">P002</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">D003</td>
+    <td class="tg-0lax">Orange</td>
+    <td class="tg-0lax">P003</td>
+  </tr>
+</table>
+
+<b>Games table</b><p>
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kiyi">Gamecode</th>
+    <th class="tg-kiyi">Gamename</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gmoo1</td>
+    <td class="tg-0pky">Basketball</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gmoo2</td>
+    <td class="tg-0pky">Volleyball</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gmoo3</td>
+    <td class="tg-0pky">Table Tenis</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Gmoo4</td>
+    <td class="tg-0pky">Netball</td>
+  </tr>
+</table>
+
+
+
+
+(c)	Create a query to extract each of the following details:<p>
+
+(i)	StudNo, Studentname and Gamename for all students who reside in the Orange dormitory or play Basketball. Save the query as orangeq.	(5 marks)<p>
+
+(ii)	StudNo, studentname, gamename for the students whose studentname start with letter “J”. Save the query as Jquery.	(3 marks)<p>
+
+(d)	(i)	Create a tabular report showing the StudNo, Studentname, Dormname, Patronname, Gamename and grouped by Gamename. Save the report as reportgame.
+(8 marks)<p>
+
+(ii)	Format the report created in (i) as follows:<p>
+
+I	Replace the report title with the text “players for each game”	(1 mark)<p>
+
+
+II	Enter your name and index as a report footer. III	Bold the dormitory names in the report.
+(e)	Print out each of the following:<p>
+
+(i)	Student, Patron, Game and Dormitory tables<p>
+
+(ii)	Jquery and orangeq<p>
+
+(iii)	reportgame<p>
+
+
+
+
+
+2	(a)	(i)	Open a word processing program and key in the following text as it appears. Save the documents as socialnetwork.	(11 marks)<p>
+
+<b>SOCIAL NETWORKING</b><p>
+Social networking platforms are used by organisation to improve communication and productivity by disseminating information among different groups of employees in a more efficient manner.<p> The advantages and disadvantages of social media are as follows.<p>
+<b>Advantages</b><p>
+•	Facilities open communication.<p>
+•	Allows employees to discuss ideas.<p>
+•	Provides an opportunity to widen business contracts.<p>
+•	Targets a wide audience.<p>
+•	Improves business reputation and client base.<p>
+•	Expands market research.<p>
+<b>Disadvantages</b><p>
+	Susceptible to fraud
+	Potentially results to hate speech
+	Destructs normal business operations<p>
+Employers do have the right to ban computer activity that is not work related, this approach may not yield optimal results.<p> If employees are to be allowed access to social networking platforms then a comprehensive and well defined policy should be established to prevent abuses.<p>
+
+(ii)	Format the document as follows:<p>
+I	Title:	Font size l8pts, font colour red, font type Tahoma.	(3 marks)<p> II	Apply double line spacing for the text under the sub title “Advantages”.
+(2 marks)<p>
+III	Apply a 4 lined drop cap on the first letter of first paragraph.	(3 marks)<p>
+IV	Apply a two-columns format with a line between for the text with the two subtitles such that “Advantages” are to the left column and
+“Disadvantages” are in the right column.	(4 marks)<p>
+V	Apply bold, italic and underline to subtitles “Advantages” and
+ 
+“Disadvantages”.<p>
+
+(iii)	Apply the following format to the document:
+ 
+(3 marks)<p>
+ 
+
+I	Insert a water mark with the text “social media” on the document of a font size of 20 and running diagonally from left to right.	(4 marks)<p>
+
+II	Insert page numbers at the bottom centre of every page.	(2 marks)<p>
+
+III	Insert the text “social networks” as a header aligned to the right. Apply italics to the header.	(3 marks)<p>
+
+ 
+(b)	The following is a letter from a Principal of Malimali school to other Principals inviting them for a seminar at the country education offices.<p>
+
+(i)	Open a new document and create the following as it appears. Save the document as Malimali	(2½ marks)<p>
+
+The Principal<p>
+ School<p>
+ Dear Sir<p>
+<b>RE:</b> SEMINAR MEETING<p>
+You are invited to attend the Principal’s seminar which is scheduled to be at the county education office on the 2<sup>nd</sup> of June 2015.<p> You are booked to be in <<Room>>
+We are looking forward to a successful event.<p> Yours Faithfully
+Lilango Jotema<p>
+Malimali School Principal<p>
+
+(ii)	Use a mail merge feature to generate customised mails for the addresses shown in the following table. Save the mail merged document as Aletters.	(9½ marks)
+
+<style type="text/css">.tg{border-collapse:collapse;border-spacing:0}.tg td{font-family:Arial,sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg th{font-family:Arial,sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#000}.tg .tg-kiyi{font-weight:bold;border-color:inherit;text-align:left}.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kiyi">School </th>
+    <th class="tg-kiyi">Room</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ginga School</td>
+    <td class="tg-0pky">Room 6</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Lubi School</td>
+    <td class="tg-0pky">Room 8</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Trans School</td>
+    <td class="tg-0pky">Room 10</td>
+  </tr>
+</table>
+(c)	Print out each of the following:<p>
+
+(i)	socialnetwork<p>
+
+(ii)	Malimali<p>
+
+(iii)	Aletters	(3 marks)<p>
+
+
+
+
+
+<input id = "button" type = "button" value = "Get Answers!" onclick = "answers();">
+
+
+<div id="myDIV">
+
+1 (a)(i)	Creating the database file @ 1	½<p>
+(ii)	Creating of tables (at least 3) @1 ½ <p>
+<b>Student table</b><p>
+ ✔ 4 Fields each @ ½ =2 <p>
+<b>Patron table</b><p>
+ ✔ 2	Fields each @ ½ =1 <p>
+<b>Dormitory table</b><p>
+ ✔ 3	Fields each @ ½ =1½<p>
+<b>Games table</b><p>
+ ✔ 2 Fields each @ ½ =1<p>
+(iii)	Relationship at least 3 each @ 1   =	<p>
+(b) (i)	4 forms for each table each @½ =2	= 2<p>
+(ii)	Entering data into the tables<p>
+<b>Student table</b><p>
+ ✔ 8 records each @ ½ =4  <p>
+<b>Patron table</b><p>
+ ✔ 3 records each @ ½ = 1½<p>
+<b>Dormitory table</b><p>
+ ✔ 3 records each @½  = 1½<p>
+<b>Games table</b><p>
+ ✔ 4 records each @ ½ =2	<p>
+<b>(c) (i)	Creating the orangeq query</b><p>
+ Invoking the use of query@ 1
+selecting the fields @ 1<p>
+Criteria applied to the fields @ 2<p>
+✔ Saving the query @ 1	<p>
+ 
+<b>(ii)	Creating the j query query </b><p>
+
+Invoking the use of query@ 1<p>
+Criteria (letter j) @ <p>
+✔ 1 Saving the query @ 1	<p>
+<b>(d) (i)	Creating  the report</b><p>
+Using the report feature @ 1 <p>
+selecting the report fields @ 1 <p>
+selecting the 4 fields each @ 1=4 
+Grouping @ 1<P>
+Saving the query @ 1	<p>
+(ii)	I. Replacing the report title @l<p>
+✔	H. Entering name and index as report footer<P>
+✔Name and index @ l<p>
+✔Position the items in the footer @ 1	<p>
+	HI. Bolding the text<p>
+✔Selecting the text @ 1<P>
+✔ applying bold format @l	<p>
+<b>(e)	Printing</b><p>
+(i)	4 Tables each @ 1 <p>
+(ii)	2 queris each @ 1 =2<p>
+(iii)	The report @ 1	<p>
+	
+ 
+<B>2 (a) (i)	Typing the story</B><P>
+Title @½
+Centering the title @½
+First paragraph @ 2
+Paragraph under advantages @ 2 
+Paragraph under disadvantages @ 2 
+Last paragraph @ 2
+Bullets used in the advantages @ ½
+Bullets used in the disadvantages @ '½ 
+Saving @ 1<p>
+<b>(ii)	I Formatting the title</b>,p>
+Font size 18 @l 
+Font colored @l
+Font typemahoma @l	<p>
+	<b>H Double underline</b><p>
+Selection of text under advantages @l 
+Applying double space @l	<p>
+	<b>IH Drop cap</b><p>
+Selection the first letter @l 
+Using drop cap feature @l 
+Dropping through 4 lines @ 1	<p>
+	<b>IV Two columns</b><p>
+Selection of text @l
+Using the column feature @l
+Applying a line between the columns @ 1 
+Advantages to the left @ /z 4
+Formats applied on subtitles
+Bold@1 
+Italics @l
+Underline @ 1	<P>
+<B>(iii)	I Water marks</B><P>
+Using the watermark feature @ 1
+Typing the text social media in the watermark field @l 
+Font size=20 @l
+Direction (Diagonal left to right) @l	<P>
+	<B>H Page numbering</B><P>
+Using page numbering feature @½
+Inserting page numbers @ 1 
+Centering the pages horizontally @/	2<P>
+	<B>III Header</B><P>
+Using the header field @ /
+Typing the text in the header field @ 1
+Alignment at the right @½
+Applying italics @ 1	<P>
+<B>(b)(i)	Main document</B><P>
+Typing text @l 
+Applying formats ½
+Saving the document @ 1	
+<P>
+ 
+
+<B>(ii)	Main document</B><P>
+Creation of datasource @3 
+Saving the datasource @l
+Using the mail merge feature @½<P>
+Inserting the 2 fields at each @l =2
+ Generating the merged document 2
+Saving the merged document @ 1	
+<P>
+<B>(c)	Printing the word documents</B><P>
+ Social network@I
+mail merge @l
+counsel letter @l	<P>
+
+
+
+</div>
+</form>
+</body>
+</html>

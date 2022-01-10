@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script>
+var timeInMinutes = 135;
+var currentTime = Date.parse(new Date());
+var deadline = new Date(currentTime + timeInMinutes*60*1000);
+ 
+ 
+function getTimeRemaining(endtime){
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
+ 
+function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    function updateClock(){
+        var t = getTimeRemaining(endtime);
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        if(t.total<=0){
+		 
+       clearInterval(timeinterval);
+	   Android.playAudio("Time is up!");
+            
+        }
+ 
+    }
+ 
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+}
+ 
+initializeClock('clockdiv', deadline);
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<p><img src="number1.jpg"></p>
+<b>Use the map of Dara area to answer questions 1-7</b>
+
+<p class = "questions">1. What is the direction oi the church from the school?</p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). North East<br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). South East<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). North West<br>
+<input type = "radio" id = "mc" name = "question1" value = "D"> D). South West<br>
+
+<p class = "questions">2. The type of settlement in Dara area can be described as</p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). linear<br>
+<input type = "radio" id = "mc" name = "question2" value = "B"> B). dense<br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). scattered <br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). nucleated<br>
+
+<p class = "questions">3. Dara area is likely to be a?</p>
+<input type = "radio" id = "mc" name = "question3" value = "A"> A). county <br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). location<br>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). division <br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). district<br>
+
+<p class = "questions">4. People of Dara area are mainly?</p>
+<input type = "radio" id = "mc" name = "question4" value = "A"> A). pagans<br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). muslims<br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). traditionalists <br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). Christians<br>
+
+<p class = "questions">5. Dara town has developed mainly because of?</p>
+<input type = "radio" id = "mc" name = "question5" value = "A"> A). security<br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). availability of water<br>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). road junction<br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). the school nearby<br>
+
+<p class = "questions">6. Which of the following economic activities is not carried out in Dara area?</p>
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). Mining<br>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). Pastoralism<br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). Farming<br>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). Trading<br>
+
+<p class = "questions">7. The climate of the North Eastern part of Dara area is?</p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). cool and wet<br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). hot and wet<br>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). hot and dry<br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). cool and dry<br>
+
+<p class = "questions">8. Which of the following is not an element of a good map?</p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). Title<br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). Shape<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). Key <br>
+<input type = "radio" id = "mc" name = "question8" value = "D"> D). Compass<br>
+
+<p class = "questions">9. Members of the county assembly are elected by?</p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). governors<br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). voters<br>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). president<br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). senators<br>
+
+<p class = "questions">10. Which of the following is the largest language group in Kenya?</p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). Nilotes<br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). Semites<br>
+<input type = "radio" id = "mc" name = "question10" value = "C"> C). Bantu<br>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). Cushites<br>
+
+<p class = "questions">11. Which of the following rivers drain in the Indian ocean?</p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). Kuja<br>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). Ewaso Nyiro Norh<br>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). Nzoia<br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). Tana<br>
+
+<p class = "questions">12. Which of the following cannot have its symbol on the key of a map?</p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). River<br>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). Road<br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). Margin<br>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). Quarry<br>
+
+<p class = "questions">13. Which of the following points of the compass is between North and North west?</p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). NNW<br>
+<input type = "radio" id = "mc" name = "question13" value = "B"> B). NW<br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). SSW<br>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). WW<br>
+
+<p class = "questions">14. Which of the following is the largest relief region in Kenya?</p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). Rift valley <br>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). Plateau<br>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). Highlands<br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). plains<br>
+
+<p class = "questions">15. Yatta, Merti and Lerochi are examples of</p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). plains<br>
+<input type = "radio" id = "mc" name = "question15" value = "B"> B). plateaus<br>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). rivers<br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). oceans<br>
+
+<p class = "questions">16. Which of the following is not a drainage features?</p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). Swamps<br>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). Mountains<br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). Rivers<br>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). Oceans<br>
+
+<p class = "questions">17. Which of the following is not a characteristic of tropical climatic region?</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). High temperatures<br>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). One rainy season<br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). Rainfall does not exceed 1000mm per year<br>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). The temperatures are low<br>
+
+<b>Use the map below to answer questions 18-23</b>
+<p><img src="number18.jpg"></p>
+
+<p class = "questions">18. The border country marked P is</p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). Sudan <br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). Somalia<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> C). Ethiopia<br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). Uganda<br>
+
+<p class = "questions">19. The feature marked S is?</p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A). Mt. Elgon <br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B). Mt. Marsabit<br>
+<input type = "radio" id = "mc" name = "question19" value = "C"> C). Mt. Kenya<br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D). Mt. Kulal<br>
+
+<p class = "questions">20. The line marked 0°is known as?</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A). Equator<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). date line<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). meridian <br>
+<input type = "radio" id = "mc" name = "question20" value = "D"> D). capricon<br>
+
+<p class = "questions">21. Town L is in which county in Kenya?</p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). Garissa<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B). Isiolo<br>
+<input type = "radio" id = "mc" name = "question21" value = "C"> C). Marsabit<br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). Turkana<br>
+
+<p class = "questions">22. The feature marked M is known as?</p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A). Awara plains<br>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B). Lorian swamp<br>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C). Lotikipi plains<br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). Wayamdero plateau<br>
+
+<p class = "questions">23. Which language group entered Kenya through the route marked X?</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A). Nilotes<br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B). Semites<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). Bantus<br>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D). Cushites<br>
+
+<p class = "questions">24. Which of the following communities does not belong to the coastal Bantu?</p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). Abagusii<br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B). Taita<br>
+<input type = "radio" id = "mc" name = "question24" value = "C"> C). Mijikenda<br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). Pokomo<br>
+
+<p class = "questions">25. The following are factors that influence population distribution EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). soils<br>
+<input type = "radio" id = "mc" name = "question25" value = "B"> B). climate<br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). longitude<br>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D). relief<br>
+
+<p class = "questions">26. The approximate size of Kenya is?</p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). 600,000km<sup>2</sup> <br>
+<input type = "radio" id = "mc" name = "question26" value = "B"> B). 582,000km<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C). 120,000km<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). 825,000km<sup>2</sup><br>
+
+<p class = "questions">27. Why is important to have a title on a map?</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). It shows the area represented by the map<br>
+<input type = "radio" id = "mc" name = "question27" value = "B"> B). It is shows features in the map.<br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). It is the heading<br>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D). It shows direction in a map<br>
+
+<p class = "questions">28. The long rains in Kenya are experienced between?</p>
+<input type = "radio" id = "mc" name = "question28" value = "A"> A). March - June<br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). October - December<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). September - November<br>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D). May - August<br>
+
+<p class = "questions">29. The following are ways through which people interact today EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A). intermarriage <br>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B). raids<br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). education <br>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D). games and sports<br>
+
+<p class = "questions">30. African traditional education took place _____</p>
+<input type = "radio" id = "mc" name = "question30" value = "A"> A). in the mornings<br>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B). during initiation<br>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C). throughout one’s life<br>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D). in the evenings<br>
+
+<p class = "questions">31. The following are factors that favour the growth of a certain crop;
+<p>(i) warm temperatures of about 25°c </p>
+<p>(ii) moderate rainfall between 500mm - 100mm per year </p>
+<p>(iii) Well drained fertile soils </p>
+<p>(iv) flat land where irrigation is carried out</p>
+The crop is likely to be be?</p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). wheat<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). cotton<br>
+<input type = "radio" id = "mc" name = "question31" value = "C"> C). rice<br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D). pyrethrum<br>
+
+<p class = "questions">32. Which of the following is not a traditional industry?</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). Pottery <br>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B). Basketry<br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C). Glass making <br>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D). Iron working<br>
+
+<p class = "questions">33. The following are problems facing dairy farming EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A). drought<br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B). shortage of labour<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). pests and diseases<br>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D). high cost of feeds <br>
+
+<p class = "questions">34. Low and forests in Kenya are MAINLY found in?</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A). Western Kenya<br>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B). Coastal region<br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). Lake basin<br>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D). Nothern Kenya<br>
+
+<p class = "questions">35. Acacia and Baobab trees are mainly found in _____ vegetation.</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). savannah<br>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B). swampy<br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). riverine<br>
+<input type = "radio" id = "mc" name = "question35" value = "D"> D). tropical rainforest<br>
+
+<p class = "questions">36. The original homeland of the Luo was?</p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A). Congo fores<br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). Southern Ethiopia<br>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C). Bar-el-Ghazel <br>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D). Shungwaya<br>
+
+<p class = "questions">37. Which of the following economic activities is most suitable where farms are small?</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). Tea growing <br>
+<input type = "radio" id = "mc" name = "question37" value = "B"> B). Herding<br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). Wheat farming <br>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D). Poultry farming<br>
+
+<p class = "questions">38. Black cotton soils are suitable for growing?</p>
+<input type = "radio" id = "mc" name = "question38" value = "A"> A). maize<br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). coffee<br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). cotton<br>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D). tea<br>
+
+<b>Use the diagram below to answer question 39-40</b>
+<p><img src="number39.jpg"></p>
+
+<p class = "questions">39. The side marked A is suitable for?</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A). pastoralism <br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B). mining<br>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C). tourism<br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). lumbering<br>
+
+<p class = "questions">40. The following counties experience the type of rainfall shown EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A). Embu<br>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B). Kisumu<br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). Meru <br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D). Nyeri<br>
+
+<p class = "questions">41. The following are aspects of our culture that should be preserved EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). dances and songs<br>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B). wife inheritance<br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C). traditional foods<br>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D). mode of dressing<br>
+
+<p class = "questions">42. Which one of the following is the MAIN factor influencing population distribution in Kenya?</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A). Soils<br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). Climate<br>
+<input type = "radio" id = "mc" name = "question42" value = "C"> C). Government policy<br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). Relief<br>
+
+<p class = "questions">43. The slopes of a rift valley are referred to as?</p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A). escarpment<br>
+<input type = "radio" id = "mc" name = "question43" value = "B"> B). faults<br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). horses<br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). valleys<br>
+
+<p class = "questions">44. Which of the following is an example of a fresh water lake?</p>
+<input type = "radio" id = "mc" name = "question44" value = "A"> A). Magadi<br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). Nakuru<br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). Turkana<br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D). Bogoria<br>
+
+<p class = "questions">45. Who is the head of state in Kenya?</p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A). Prime minister<br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B). Attorney general<br>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C). President<br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). Chief justice<br>
+
+<p class = "questions">46. Which of the following elements of weather is measured by a thermometer?</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). Temperature <br>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B). Air pressure<br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C). Humidity<br>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D). Rainfall<br>
+
+<p class = "questions">47. Kenva is divided into ____ counties</p>
+<input type = "radio" id = "mc" name = "question47" value = "A"> A). 49<br>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B). 47<br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). 52<br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). 46<br>
+
+<p class = "questions">48. The district officer is the head of a?</p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A). division<br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). district<br>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C). province<br>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D). location<br>
+
+<p class = "questions">49. ______ is cutting down of trees without replacing them.</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A). Deforestation<br>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B). Afforestation<br>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C). Reafforestation <br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). Agroforestry<br>
+
+<p class = "questions">50. Which of the following statements best gives the meaning of soil erosion?</p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). Carrying away of soil to safe places<br>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B). Breaking down of rocks into small particles<br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). Planting trees<br>
+<input type = "radio" id = "mc" name = "question50" value = "D"> D). Carrying away of top fertile soil by water and wind<br>
+
+<p class = "questions">51. Which of the following trees is a softwood?</p>
+<input type = "radio" id = "mc" name = "question51" value = "A"> A). Camphor<br>
+<input type = "radio" id = "mc" name = "question51" value = "B"> B). Eucalyptus<br>
+<input type = "radio" id = "mc" name = "question51" value = "C"> C). Dark <br>
+<input type = "radio" id = "mc" name = "question51" value = "D"> D). Mvule<br>
+
+<p class = "questions">52. Hills that are found isolated in the plateau region are known as?</p>
+<input type = "radio" id = "mc" name = "question52" value = "A"> A). horses<br>
+<input type = "radio" id = "mc" name = "question52" value = "B"> B). volcanos<br>
+<input type = "radio" id = "mc" name = "question52" value = "C"> C). inselbergs<br>
+<input type = "radio" id = "mc" name = "question52" value = "D"> D). plains<br>
+
+<p class = "questions">53. A place where a river starts is known as its?</p>
+<input type = "radio" id = "mc" name = "question53" value = "A"> A). mouth <br>
+<input type = "radio" id = "mc" name = "question53" value = "B"> B). delta<br>
+<input type = "radio" id = "mc" name = "question53" value = "C"> C). confluence<br>
+<input type = "radio" id = "mc" name = "question53" value = "D"> D). source<br>
+
+<p class = "questions">54. A land breeze occurs during the?</p>
+<input type = "radio" id = "mc" name = "question54" value = "A"> A). night<br>
+<input type = "radio" id = "mc" name = "question54" value = "B"> B). rainy season<br>
+<input type = "radio" id = "mc" name = "question54" value = "C"> C). day <br>
+<input type = "radio" id = "mc" name = "question54" value = "D"> D). dry season<br>
+
+<p class = "questions">55. Who was the third president of Kenya?</p>
+<input type = "radio" id = "mc" name = "question55" value = "A"> A). Mwai Kibaki <br>
+<input type = "radio" id = "mc" name = "question55" value = "B"> B). Daniel Moi<br>
+<input type = "radio" id = "mc" name = "question55" value = "C"> C). Uhuru Kenyatta<br>
+<input type = "radio" id = "mc" name = "question55" value = "D"> D). Jomo Kenyatta<br>
+
+<p class = "questions">56. Which one of the following is not an artifact that was used during war?</p>
+<input type = "radio" id = "mc" name = "question56" value = "A"> A). sling <br>
+<input type = "radio" id = "mc" name = "question56" value = "B"> B). calabash<br>
+<input type = "radio" id = "mc" name = "question56" value = "C"> C). spear<br>
+<input type = "radio" id = "mc" name = "question56" value = "D"> D). shield<br>
+
+<p class = "questions">57. In which year did Kenya become independent?</p>
+<input type = "radio" id = "mc" name = "question57" value = "A"> A). 1964 <br>
+<input type = "radio" id = "mc" name = "question57" value = "B"> B). 1965<br>
+<input type = "radio" id = "mc" name = "question57" value = "C"> C). 1963<br>
+<input type = "radio" id = "mc" name = "question57" value = "D"> D). 1962<br>
+
+<p class = "questions">58. Who appoints the members of the county executive committee?</p>
+<input type = "radio" id = "mc" name = "question58" value = "A"> A). Senator<br>
+<input type = "radio" id = "mc" name = "question58" value = "B"> B). President<br>
+<input type = "radio" id = "mc" name = "question58" value = "C"> C). Governor  <br>
+<input type = "radio" id = "mc" name = "question58" value = "D"> D). Speaker<br>
+
+<p class = "questions">59. A group of hills is known as?</p>
+<input type = "radio" id = "mc" name = "question59" value = "A"> A). escarpments<br>
+<input type = "radio" id = "mc" name = "question59" value = "B"> B). ranges<br>
+<input type = "radio" id = "mc" name = "question59" value = "C"> C). hills chain <br>
+<input type = "radio" id = "mc" name = "question59" value = "D"> D). inselbergs<br>
+
+<p class = "questions">60. Who is a representative of the national government at the county level?</p>
+<input type = "radio" id = "mc" name = "question60" value = "A"> A). M.C.A<br>
+<input type = "radio" id = "mc" name = "question60" value = "B"> B). chief<br>
+<input type = "radio" id = "mc" name = "question60" value = "C"> C). D.O<br>
+<input type = "radio" id = "mc" name = "question60" value = "D"> D). County commissioner<br>
+
+
+<p><b>SECTION B</b></p>
+
+<p><b>CHRISTIAN RELIGIOUS EDUCATION</b></p>
+<p class = "questions">61. On the fifth day God created?</p>
+<input type = "radio" id = "mc" name = "question61" value = "A"> A). heavenly bodies<br>
+<input type = "radio" id = "mc" name = "question61" value = "B"> B). light and darkness<br>
+<input type = "radio" id = "mc" name = "question61" value = "C"> C). land animals<br>
+<input type = "radio" id = "mc" name = "question61" value = "D"> D). sea creatures<br>
+
+<p class = "questions">62. The first passover feast was celebrated in?</p>
+<input type = "radio" id = "mc" name = "question62" value = "A"> A). Cannan<br>
+<input type = "radio" id = "mc" name = "question62" value = "B"> B). Egypt<br>
+<input type = "radio" id = "mc" name = "question62" value = "C"> C). Nazareth<br>
+<input type = "radio" id = "mc" name = "question62" value = "D"> D). Goshen<br>
+
+<p class = "questions">63. Which one of the following does not show human beings taking care of God's creation?</p>
+<input type = "radio" id = "mc" name = "question63" value = "A"> A). Feeding animals<br>
+<input type = "radio" id = "mc" name = "question63" value = "B"> B). Ploughing near river banks<br>
+<input type = "radio" id = "mc" name = "question63" value = "C"> C). Giving animals light work <br>
+<input type = "radio" id = "mc" name = "question63" value = "D"> D). Planting trees in dry areas<br>
+
+<p class = "questions">64. The following are examples of physical growth EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question64" value = "A"> A). Increase in height<br>
+<input type = "radio" id = "mc" name = "question64" value = "B"> B). Increase in weight<br>
+<input type = "radio" id = "mc" name = "question64" value = "C"> C). Change in mood<br>
+<input type = "radio" id = "mc" name = "question64" value = "D"> D). Enlargement of sexual organs<br>
+
+<p class = "questions">65. Noah was saved during the floods mainly because?</p>
+<input type = "radio" id = "mc" name = "question95" value = "A"> A). he knew how to pray<br>
+<input type = "radio" id = "mc" name = "question95" value = "B"> B). he had a big family<br>
+<input type = "radio" id = "mc" name = "question95" value = "C"> C). he trusted God's word<br>
+<input type = "radio" id = "mc" name = "question95" value = "D"> D). he had built an ark<br>
+
+<p class = "questions">66. Which one is the sixth commandment?</p>
+<input type = "radio" id = "mc" name = "question66" value = "A"> A). Do not commit murder<br>
+<input type = "radio" id = "mc" name = "question66" value = "B"> B). Respect your father and mother<br>
+<input type = "radio" id = "mc" name = "question66" value = "C"> C). Do not commit adultery<br>
+<input type = "radio" id = "mc" name = "question66" value = "D"> D). Do not steal<br>
+
+<p class = "questions">67. Who among the following prophets was chosen by God when he was still young?</p>
+<input type = "radio" id = "mc" name = "question67" value = "A"> A). Isaiah <br>
+<input type = "radio" id = "mc" name = "question67" value = "B"> B). Elisha<br>
+<input type = "radio" id = "mc" name = "question67" value = "C"> C). Jeremiah <br>
+<input type = "radio" id = "mc" name = "question67" value = "D"> D). Elijah<br>
+
+<p class = "questions">68. “I am fearfully and wonderfully made.” Who said these words?</p>
+<input type = "radio" id = "mc" name = "question68" value = "A"> A). David <br>
+<input type = "radio" id = "mc" name = "question68" value = "B"> B). Peter<br>
+<input type = "radio" id = "mc" name = "question68" value = "B"> C). Joseph <br>
+<input type = "radio" id = "mc" name = "question68" value = "D"> D). Jacob<br>
+
+<p class = "questions">69. During the passover, the Israelites ate all the following EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question69" value = "A"> A). bitter herbs<br>
+<input type = "radio" id = "mc" name = "question69" value = "B"> B). bread with yeast<br>
+<input type = "radio" id = "mc" name = "question69" value = "C"> C). lamb’s meat<br>
+<input type = "radio" id = "mc" name = "question69" value = "D"> D). unleavened bread<br>
+
+<p class = "questions">70. Which one of the following books of the Bible is NOT a gospel?</p>
+<input type = "radio" id = "mc" name = "question70" value = "A"> A). Luke<br>
+<input type = "radio" id = "mc" name = "question70" value = "B"> B). Mark<br>
+<input type = "radio" id = "mc" name = "question70" value = "C"> C). John <br>
+<input type = "radio" id = "mc" name = "question70" value = "D"> D). Exodus<br>
+
+<p class = "questions">71. The message of John the baptist was about? </p>
+<input type = "radio" id = "mc" name = "question71" value = "A"> A). love and forgiveness<br>
+<input type = "radio" id = "mc" name = "question71" value = "B"> B). repentance and baptism<br>
+<input type = "radio" id = "mc" name = "question71" value = "C"> C). holiness and kindness<br>
+<input type = "radio" id = "mc" name = "question71" value = "D"> D). purity and humility<br>
+
+<p class = "questions">72. According to prophet Jeremiah, the new covenant will be written _____ </p>
+<input type = "radio" id = "mc" name = "question72" value = "A"> A). on stone tablets<br>
+<input type = "radio" id = "mc" name = "question72" value = "B"> B). on scrolls<br>
+<input type = "radio" id = "mc" name = "question72" value = "C"> C). in people's hearts<br>
+<input type = "radio" id = "mc" name = "question72" value = "D"> D). in the books of law<br>
+
+<p class = "questions">73. Which one of the following does NOT describe a true witness?</p>
+<input type = "radio" id = "mc" name = "question73" value = "A"> A). A person who shares with others<br>
+<input type = "radio" id = "mc" name = "question73" value = "B"> B). A person who gives witness in court<br>
+<input type = "radio" id = "mc" name = "question73" value = "C"> C). A person who talks about the deeds of Jesus<br>
+<input type = "radio" id = "mc" name = "question73" value = "D"> D). A person who forgives others<br>
+
+<p class = "questions">74. Which one of the following is not a truth from the apostles creed?</p>
+<input type = "radio" id = "mc" name = "question74" value = "A"> A). Jesus was born of virgin Mary<br>
+<input type = "radio" id = "mc" name = "question74" value = "B"> B). Jesus ascended to heaven<br>
+<input type = "radio" id = "mc" name = "question74" value = "C"> C). Jesus resurrected on the fourth day<br>
+<input type = "radio" id = "mc" name = "question74" value = "D"> D). Jesus will come to judge the living and the dead<br>
+
+<p class = "questions">75. The Holy spirit came down in the form of a dove during the?</p>
+<input type = "radio" id = "mc" name = "question75" value = "A"> A). the baptism of Jesus<br>
+<input type = "radio" id = "mc" name = "question75" value = "B"> B). the birth of Jesus<br>
+<input type = "radio" id = "mc" name = "question75" value = "C"> C). the death of Jesus<br>
+<input type = "radio" id = "mc" name = "question75" value = "D"> D). the presentation of Jesus<br>
+
+<p class = "questions">76. The following are fruits of the Holy spirit EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question76" value = "A"> A). peace<br>
+<input type = "radio" id = "mc" name = "question76" value = "B"> B). patience<br>
+<input type = "radio" id = "mc" name = "question76" value = "C"> C). joy <br>
+<input type = "radio" id = "mc" name = "question76" value = "D"> D). faith<br>
+
+<p class = "questions">77. The parable of the lost son teaches Christians about?</p>
+<input type = "radio" id = "mc" name = "question77" value = "A"> A). being ready always<br>
+<input type = "radio" id = "mc" name = "question77" value = "B"> B). helping our neighbours<br>
+<input type = "radio" id = "mc" name = "question77" value = "C"> C). repentance and forgiveness<br>
+<input type = "radio" id = "mc" name = "question77" value = "D"> D). seeking God’s kingdom<br>
+
+<p class = "questions">78. Jesus healed a man with evil spirit on a sabbath of?</p>
+<input type = "radio" id = "mc" name = "question78" value = "A"> A). Capernaum<br>
+<input type = "radio" id = "mc" name = "question78" value = "B"> B). Joppa<br>
+<input type = "radio" id = "mc" name = "question78" value = "C"> C). Cana<br>
+<input type = "radio" id = "mc" name = "question78" value = "D"> D). Goshen<br>
+
+<p class = "questions">79. By helping a man with demons. Jesus showed that?</p>
+<input type = "radio" id = "mc" name = "question79" value = "A"> A). He had power over nature<br>
+<input type = "radio" id = "mc" name = "question79" value = "B"> B). He had power over sickness<br>
+<input type = "radio" id = "mc" name = "question79" value = "C"> C). He had power over evil spirits<br>
+<input type = "radio" id = "mc" name = "question79" value = "D"> D). He was the was the saviour of the word<br>
+
+<p class = "questions">80. Jesus had the last meal with his disciples at?</p>
+<input type = "radio" id = "mc" name = "question80" value = "A"> A). Bethlehem<br>
+<input type = "radio" id = "mc" name = "question80" value = "B"> B). Shechem<br>
+<input type = "radio" id = "mc" name = "question80" value = "C"> C). Canaan <br>
+<input type = "radio" id = "mc" name = "question80" value = "D"> D). Jerusalem<br>
+
+<p class = "questions">81. In African traditional societies, children were taught through?</p>
+<input type = "radio" id = "mc" name = "question81" value = "A"> A). writing <br>
+<input type = "radio" id = "mc" name = "question81" value = "B"> B). storytelling<br>
+<input type = "radio" id = "mc" name = "question81" value = "C"> C). drawing <br>
+<input type = "radio" id = "mc" name = "question81" value = "D"> D). reading<br>
+
+<p class = "questions">82. In African traditional societies, people worshipped in shrines because?</p>
+<input type = "radio" id = "mc" name = "question82" value = "A"> A). they were far from their homes<br>
+<input type = "radio" id = "mc" name = "question82" value = "B"> B). they were God’s dwelling places<br>
+<input type = "radio" id = "mc" name = "question82" value = "C"> C). they provided good shade<br>
+<input type = "radio" id = "mc" name = "question82" value = "D"> D). they were considered holy<br>
+
+<p class = "questions">83. During which of the following rites of passage in African traditional societies was dowry paid?</p>
+<input type = "radio" id = "mc" name = "question83" value = "A"> A). Initation <br>
+<input type = "radio" id = "mc" name = "question83" value = "B"> B). Naming<br>
+<input type = "radio" id = "mc" name = "question83" value = "C"> C). Marriage<br>
+<input type = "radio" id = "mc" name = "question83" value = "D"> D). Death<br>
+
+<p class = "questions">84. People who told about the future in African traditional societies were called?</p>
+<input type = "radio" id = "mc" name = "question84" value = "A"> A). prophets<br>
+<input type = "radio" id = "mc" name = "question84" value = "B"> B). warriors<br>
+<input type = "radio" id = "mc" name = "question84" value = "C"> C). witchdoctors<br>
+<input type = "radio" id = "mc" name = "question84" value = "D"> D). priests<br>
+
+<p class = "questions">85. Which one of the following can lead to child abuse?</p>
+<input type = "radio" id = "mc" name = "question85" value = "A"> A). Responsible parenthood<br>
+<input type = "radio" id = "mc" name = "question85" value = "B"> B). Death of parents<br>
+<input type = "radio" id = "mc" name = "question85" value = "C"> C). Good performance at school<br>
+<input type = "radio" id = "mc" name = "question85" value = "D"> D). Having concern for others<br>
+
+<p class = "questions">86. Parents can help maintain peace at home by?</p>
+<input type = "radio" id = "mc" name = "question146" value = "A"> A). punishing their children<br>
+<input type = "radio" id = "mc" name = "question146" value = "B"> B). given children alot of work<br>
+<input type = "radio" id = "mc" name = "question146" value = "C"> C). providing for the family needs<br>
+<input type = "radio" id = "mc" name = "question146" value = "D"> D). fighting infront of their children<br>
+
+<p class = "questions">87. Christians can strive to lead a righteous life by doing all the following EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question87" value = "A"> A). praying<br>
+<input type = "radio" id = "mc" name = "question87" value = "B"> B). helping the needy<br>
+<input type = "radio" id = "mc" name = "question87" value = "C"> C). revenging <br>
+<input type = "radio" id = "mc" name = "question87" value = "D"> D). forgiving<br>
+
+<p class = "questions">88. A good youth leader should do all the following EXCEPT?</p>
+<input type = "radio" id = "mc" name = "question88" value = "A"> A). serve others<br>
+<input type = "radio" id = "mc" name = "question88" value = "B"> B). pray regularly<br>
+<input type = "radio" id = "mc" name = "question88" value = "C"> C). respect others<br>
+<input type = "radio" id = "mc" name = "question88" value = "D"> D). praise oneself<br>
+
+<p class = "questions">89. Christians can show respect to the authority BEST by</p>
+<input type = "radio" id = "mc" name = "question89" value = "A"> A). paying taxes<br>
+<input type = "radio" id = "mc" name = "question89" value = "B"> B). acquiring wealth<br>
+<input type = "radio" id = "mc" name = "question89" value = "C"> C). being hardworking<br>
+<input type = "radio" id = "mc" name = "question89" value = "D"> D). being obedient<br>
+
+<p class = "questions">90. Jane, a standard five pupil likes abusing other pupils in her class. Which one of the following Christian values does she lack?</p>
+<input type = "radio" id = "mc" name = "question90" value = "A"> A). Humility<br>
+<input type = "radio" id = "mc" name = "question90" value = "B"> B). Obedient<br>
+<input type = "radio" id = "mc" name = "question90" value = "C"> C). Patient<br>
+<input type = "radio" id = "mc" name = "question90" value = "D"> D). Responsibility<br>
+
+
+<p><b>ISLAMIC RELIGIOUS EDUCATION</b></p>
+<p class = "questions">61. </p>
+<input type = "radio" id = "mc" name = "question91" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question91" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question91" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question91" value = "D"> D). <br>
+
+<p class = "questions">62. </p>
+<input type = "radio" id = "mc" name = "question92" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question92" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question92" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question92" value = "D"> D). <br>
+
+<p class = "questions">63. </p>
+<input type = "radio" id = "mc" name = "question93" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question93" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question93" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question93" value = "D"> D). <br>
+
+<p class = "questions">64. </p>
+<input type = "radio" id = "mc" name = "question94" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question94" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question94" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question94" value = "D"> D). <br>
+
+<p class = "questions">65. </p>
+<input type = "radio" id = "mc" name = "question95" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question95" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question95" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question95" value = "D"> D). <br>
+
+<p class = "questions">66. </p>
+<input type = "radio" id = "mc" name = "question96" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question96" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question96" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question96" value = "D"> D). <br>
+
+<p class = "questions">67. </p>
+<input type = "radio" id = "mc" name = "question97" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question97" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question97" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question97" value = "D"> D). <br>
+
+<p class = "questions">68. </p>
+<input type = "radio" id = "mc" name = "question98" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question98" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question98" value = "B"> C). <br>
+<input type = "radio" id = "mc" name = "question98" value = "D"> D). <br>
+
+<p class = "questions">69. </p>
+<input type = "radio" id = "mc" name = "question99" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question99" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question99" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question99" value = "D"> D). <br>
+
+<p class = "questions">70. </p>
+<input type = "radio" id = "mc" name = "question100" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question100" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question100" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question100" value = "D"> D). <br>
+
+<p class = "questions">71. </p>
+<input type = "radio" id = "mc" name = "question101" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question101" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question101" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question101" value = "D"> D). <br>
+
+<p class = "questions">72. </p>
+<input type = "radio" id = "mc" name = "question102" value = "A"> A). <br>
+<input type = "radio" id = "mc" name = "question102" value = "B"> B). <br>
+<input type = "radio" id = "mc" name = "question102" value = "C"> C). <br>
+<input type = "radio" id = "mc" name = "question102" value = "D"> D). <br>
+
+<p class = "questions">73. </p>
+<input type = "radio" id = "mc" name = "question103" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question103" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question103" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question103" value = "D"> D. <br>
+
+<p class = "questions">74. </p>
+<input type = "radio" id = "mc" name = "question104" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question104" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question104" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question104" value = "D"> D. <br>
+
+<p class = "questions">75. </p>
+<input type = "radio" id = "mc" name = "question105" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question105" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question105" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question105" value = "D"> D. <br>
+
+<p class = "questions">76. </p>
+<input type = "radio" id = "mc" name = "question106" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question106" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question106" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question106" value = "D"> D. <br>
+
+<p class = "questions">77. </p>
+<input type = "radio" id = "mc" name = "question107" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question107" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question107" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question107" value = "D"> D. <br>
+
+<p class = "questions">78. </p>
+<input type = "radio" id = "mc" name = "question108" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question108" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question108" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question108" value = "D"> D. <br>
+
+<p class = "questions">79. </p>
+<input type = "radio" id = "mc" name = "question109" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question109" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question109" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question109" value = "D"> D. <br>
+
+<p class = "questions">80. </p>
+<input type = "radio" id = "mc" name = "question110" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question110" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question110" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question110" value = "D"> D. <br>
+
+<p class = "questions">81. </p>
+<input type = "radio" id = "mc" name = "question111" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question111" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question111" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question111" value = "D"> D. <br>
+
+<p class = "questions">82. </p>
+<input type = "radio" id = "mc" name = "question112" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question112" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question112" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question112" value = "D"> D. <br>
+
+<p class = "questions">83. </p>
+<input type = "radio" id = "mc" name = "question113" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question113" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question113" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question113" value = "D"> D. <br>
+
+<p class = "questions">84. </p>
+<input type = "radio" id = "mc" name = "question114" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question114" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question114" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question114" value = "D"> D. <br>
+
+<p class = "questions">85. </p>
+<input type = "radio" id = "mc" name = "question115" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question115" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question115" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question115" value = "D"> D. <br>
+
+<p class = "questions">86. </p>
+<input type = "radio" id = "mc" name = "question116" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question116" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question116" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question116" value = "D"> D. <br>
+
+<p class = "questions">87. </p>
+<input type = "radio" id = "mc" name = "question117" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question117" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question117" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question117" value = "D"> D. <br>
+
+<p class = "questions">88. </p>
+<input type = "radio" id = "mc" name = "question118" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question118" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question118" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question118" value = "D"> D. <br>
+
+<p class = "questions">89. </p>
+<input type = "radio" id = "mc" name = "question119" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question119" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question119" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question119" value = "D"> D. <br>
+
+<p class = "questions">90. </p>
+<input type = "radio" id = "mc" name = "question120" value = "A"> A. <br>
+<input type = "radio" id = "mc" name = "question120" value = "B"> B. <br>
+<input type = "radio" id = "mc" name = "question120" value = "C"> C. <br>
+<input type = "radio" id = "mc" name = "question120" value = "D"> D. <br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+<!- <input id = "button" type = "button" value = "Get Results!" onclick = "check();"> 
+
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+<a href = 'grade.html' id="button">marking scheme </a>
+    </div>
+	  </form>
+
+	  
+<script>
+
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var question7 = document.quiz.question7.value;
+	var question8 = document.quiz.question8.value;
+	var question9 = document.quiz.question9.value;
+	var question10 = document.quiz.question10.value;
+	var question11 = document.quiz.question11.value;
+	var question12 = document.quiz.question12.value;
+	var question13 = document.quiz.question13.value;
+	var question14 = document.quiz.question14.value;
+	var question15 = document.quiz.question15.value;
+	var question16 = document.quiz.question16.value;
+	var question17 = document.quiz.question17.value;
+	var question18 = document.quiz.question18.value;
+	var question19 = document.quiz.question19.value;
+	var question20 = document.quiz.question20.value;
+	var question21 = document.quiz.question21.value;
+	var question22 = document.quiz.question22.value;
+	var question23 = document.quiz.question23.value;
+	var question24 = document.quiz.question24.value;
+	var question25 = document.quiz.question25.value;
+	var question26 = document.quiz.question26.value;
+	var question27 = document.quiz.question27.value;
+	var question28 = document.quiz.question28.value;
+	var question29 = document.quiz.question29.value;
+	var question30 = document.quiz.question30.value;
+	var question31 = document.quiz.question31.value;
+	var question32 = document.quiz.question32.value;
+	var question33 = document.quiz.question33.value;
+	var question34 = document.quiz.question34.value;
+	var question35 = document.quiz.question35.value;
+	var question36 = document.quiz.question36.value;
+	var question37 = document.quiz.question37.value;
+	var question38 = document.quiz.question38.value;
+	var question39 = document.quiz.question39.value;
+	var question40 = document.quiz.question40.value;
+	var question41 = document.quiz.question41.value;
+	var question42 = document.quiz.question42.value;
+	var question43 = document.quiz.question43.value;
+	var question44 = document.quiz.question44.value;
+	var question45 = document.quiz.question45.value;
+	var question46 = document.quiz.question46.value;
+	var question47 = document.quiz.question47.value;
+	var question48 = document.quiz.question48.value;
+	var question49 = document.quiz.question49.value;
+	var question50 = document.quiz.question50.value;
+	var correct = 0;
+
+
+	if (question1 == "C") {
+		correct++;
+}
+	if (question2 == "B") {
+		correct++;
+}	
+	if (question3 == "C") {
+		correct++;
+	}
+	if (question4 == "C") {
+		correct++;
+}
+	if (question5 == "D") {
+		correct++;
+}	
+	if (question6 == "A") {
+		correct++;
+	}
+		
+	if (question7 == "A") {
+		correct++;
+}
+	if (question8 == "A") {
+		correct++;
+}	
+	if (question9 == "C") {
+		correct++;
+	}
+		
+	if (question10 == "D") {
+		correct++;
+}
+	if (question11 == "A") {
+		correct++;
+}	
+	if (question12 == "B") {
+		correct++;
+	}
+	if (question13 == "A") {
+		correct++;
+}
+	if (question14 == "D") {
+		correct++;
+}	
+	if (question15 == "C") {
+		correct++;
+	}
+	if (question16 == "B") {
+		correct++;
+}
+	if (question17 == "C") {
+		correct++;
+	
+}	
+	if (question18 == "B") {
+		correct++;
+	}
+	if (question19 == "C") {
+		correct++;
+}
+	if (question20 == "B") {
+		correct++;
+}	
+	if (question21 == "D") {
+		correct++;	
+	}
+	if (question22 == "C") {
+		correct++;
+}	
+	if (question23 == "A") {
+		correct++;
+	}
+	if (question24 == "D") {
+		correct++;
+}
+	if (question25 == "C") {
+		correct++;
+}	
+	if (question26 == "B") {
+		correct++;
+	}
+		
+	if (question27 == "D") {
+		correct++;
+}
+	if (question28 == "C") {
+		correct++;
+}	
+	if (question29 == "A") {
+		correct++;
+	}
+		
+	if (question30 == "B") {
+		correct++;
+}
+	if (question31 == "C") {
+		correct++;
+}	
+	if (question32 == "C") {
+		correct++;
+	}
+	if (question33 == "B") {
+		correct++;
+}
+	if (question34 == "B") {
+		correct++;
+}	
+	if (question35 == "A") {
+		correct++;
+	}
+	if (question36 == "A") {
+		correct++;
+}
+	if (question37 == "B") {
+		correct++;
+}	
+	if (question38 == "D") {
+		correct++;
+	}
+	if (question39 == "A") {
+		correct++;
+}
+	if (question40 == "C") {
+		correct++;
+}	
+	if (question41 == "D") {
+		correct++;	
+	}
+	if (question42 == "C") {
+		correct++;
+}	
+	if (question43 == "C") {
+		correct++;
+	}
+	if (question44 == "B") {
+		correct++;
+}
+	if (question45 == "A") {
+		correct++;
+}	
+	if (question46 == "A") {
+		correct++;
+	}
+		
+	if (question47 == "A") {
+		correct++;
+}
+	if (question48 == "B") {
+		correct++;
+}	
+	if (question49 == "A") {
+		correct++;
+	}
+		
+	if (question50 == "C") {
+		correct++;
+}
+    var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+
+	document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("text").innerHTML = texts[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " out of 50 correct.";
+	document.getElementById("percentage").innerHTML = "Marks " + Math.round(correct/50*100)/1 + "%"
+
+	}
+	
+
+var numQues = 90;
+var numChoi = 4;
+var answers = new Array(90);
+answers[0] = "C";
+answers[1] = "A";
+answers[2] = "B";
+answers[3] = "D";
+answers[4] = "C";
+answers[5] = "A";
+answers[6] = "A";
+answers[7] = "B";
+answers[8] = "B";
+answers[9] = "C";
+answers[10] = "D";
+answers[11] = "C";
+answers[12] = "A";
+answers[13] = "B";
+answers[14] = "B";
+answers[15] = "B";
+answers[16] = "D";
+answers[17] = "C";
+answers[18] = "A";
+answers[19] = "A";
+answers[20] = "D"; 
+answers[21] = "A";
+answers[22] = "C";
+answers[23] = "A";
+answers[24] = "C";
+answers[25] = "B";
+answers[26] = "A";
+answers[27] = "A";
+answers[28] = "B";
+answers[29] = "C";
+answers[30] = "C";
+answers[31] = "C";
+answers[32] = "B";
+answers[33] = "B";
+answers[34] = "A";
+answers[35] = "C";
+answers[36] = "D";
+answers[37] = "C";
+answers[38] = "D";
+answers[39] = "B";
+answers[40] = "B";
+answers[41] = "B";
+answers[42] = "A";
+answers[43] = "C";
+answers[44] = "C";
+answers[45] = "A";
+answers[46] = "B";
+answers[47] = "A";
+answers[48] = "A";
+answers[49] = "D";
+answers[50] = "B";
+answers[51] = "C";
+answers[52] = "D";
+answers[53] = "A";
+answers[54] = "A";
+answers[55] = "B";
+answers[56] = "C";
+answers[57] = "C";
+answers[58] = "B";
+answers[59] = "D";
+answers[60] = "D"; 
+answers[61] = "B";
+answers[62] = "B";
+answers[63] = "C";
+answers[64] = "C";
+answers[65] = "D";
+answers[66] = "C";
+answers[67] = "A";
+answers[68] = "B";
+answers[69] = "D";
+answers[70] = "B";
+answers[71] = "C";
+answers[72] = "B";
+answers[73] = "C";
+answers[74] = "A";
+answers[75] = "D";
+answers[76] = "C";
+answers[77] = "A";
+answers[78] = "C";
+answers[79] = "D";
+answers[80] = "B";
+answers[81] = "B";
+answers[82] = "C";
+answers[83] = "A";
+answers[84] = "B";
+answers[85] = "C";
+answers[86] = "C";
+answers[87] = "D";
+answers[88] = "D";
+answers[89] = "A";
+
+
+function getScore(form) {
+  var correct = 0;
+  var currElt;
+  var currSelection;
+var d = document.getElementById("after_submit").style.visibility = "visible"; 
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          correct++;
+          break;
+        }
+      }
+    }
+  }
+  
+  var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct > 72) {
+		score = 0;
+	}
+
+	if (correct > 66 && correct < 72) {
+		score = 1;
+	}
+if (correct >= 63 && correct <= 66) {
+		score = 2;
+	}
+if (correct > 57 && correct < 63) {
+		score = 3;
+	}
+if (correct >= 54 && correct <= 57) {
+		score = 4;
+	}
+if (correct > 48 && correct < 54) {
+		score = 5;
+	}
+if (correct >= 45 && correct <= 48) {
+		score = 6;
+	}
+if (correct > 39 && correct < 45) {
+		score = 7;
+	}
+if (correct >= 36 && correct <= 39) {
+		score = 8;
+	}
+if (correct > 30 && correct < 36) {
+		score = 9;
+	}
+if (correct >= 27 && correct <= 30) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 27) {
+		score = 11;
+	}
+
+  correct = Math.round(correct/90*100);
+  document.getElementById("percentage").innerHTML = "Marks " + correct + "%";
+  document.getElementById("number_correct").innerHTML = "You got " + correct + " out of 90 correct";
+  document.getElementById("text").innerHTML = texts[score];
+  document.getElementById("message").innerHTML = messages[score];
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+   d.style.visibility = "visible"; 
+}
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

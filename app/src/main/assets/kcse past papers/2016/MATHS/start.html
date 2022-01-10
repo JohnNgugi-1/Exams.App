@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script src="../../../math.js">
+
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<p class = "questions">1. What is thirteen million, eleven thousand one hundred and one in symbols?</p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). 1311101<br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). 13011011<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). 13110101<br>
+<input type = "radio" id = "mc" name = "question1" value = "j"><a class="y"> D). 13011101</a><br>
+
+<p class = "questions">2. How many groups of a hundred are there in the total value of digit 5 for the number 450319.2?</p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). 50<br>
+<input type = "radio" id = "mc" name = "question2" value = "j"><a class="y"> B). 500</a><br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). 5 000<br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). 50 000<br>
+
+<p class = "questions">3. What is the value of <p><img src="number3.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question3" value = "A"> A). 0.03<br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). 0.3<br>
+<input type = "radio" id = "mc" name = "question3" value = "j"><a class="y"> C). 3</a><br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). 30<br>
+ 
+<p class = "questions">4. The figure drawn below is a rectangle.<p><img src="number4.jpg"></p>What is the perimeter of the rectangle?</p>
+<input type = "radio" id = "mc" name = "question4" value = "j"><a class="y"> A). 52 cm</a><br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). 42 cm<br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). 26 cm<br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). 9 cm<br>
+
+<p class = "questions">5. What is 340068 divided by 17?</p>
+<input type = "radio" id = "mc" name = "question5" value = "j"><a class="y"> A). 20 004</a><br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). 2 004<br>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). 204<br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). 24<br>
+ 
+<p class = "questions">6. What is the difference between LCM of 12 and 24 and the GCD of 54 and 36?</p>  
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). 42<br>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). 24<br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). 18<br>
+<input type = "radio" id = "mc" name = "question6" value = "j"><a class="y"> D). 6</a><br>
+
+<p class = "questions">7. What is the value of <br/>&frac14; &divide; &frac12 of &frac12; + (&frac23; - &frac16;)?</p>
+<input type = "radio" id = "mc" name = "question7" value = "j"><a class="y"> A). 1<sup>1</sup>&frasl;<sub>2</sub></a><br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). 1<sup>1</sup>&frasl;<sub>6</sub><br>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). <sup>3</sup>&frasl;<sub>4</sub><br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). <sup>9</sup>&frasl;<sub>16</sub><br>
+
+<p class = "questions">8. What is the next number in the pattern 3, 10, 5, 12, 7, 14, 9, 16,...?</p>
+<input type = "radio" id = "mc" name = "question8" value = "j"><a class="y"> A). 11</a><br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). 18<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). 21<br>
+<input type = "radio" id = "mc" name = "question8" value = "D"> D). 23<br>
+
+<p class = "questions">9. The area of the trapezium JKLM drawn below is 544 cm2. Line JK is parallel to 
+line LM and line JM is the perpendicular distance.<p><img src="number9.jpg"></p>What is the length of line KL?</p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). 12 cm<br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). 16 cm<br>
+<input type = "radio" id = "mc" name = "question9" value = "j"><a class="y"> C). 20 cm</a><br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). 28 cm<br>
+
+<p class = "questions">10. Six men can complete a job in 20 days. If the men work at the same rate, how many more are needed to complete the job in 12 days?</p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). 16<br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). 10<br>
+<input type = "radio" id = "mc" name = "question10" value = "C"> C). 8<br>
+<input type = "radio" id = "mc" name = "question10" value = "j"><a class="y"> D). 4</a><br>
+
+<p class = "questions">11. The mean of ten numbers is 5.8. Nme of the numbers are 5, 9, 3, 7, 6, 4, 6, 5 and 7. What is the product of the mode and median of the numbers?</p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). 54<br>
+<input type = "radio" id = "mc" name = "question11" value = "j"><a class="y"> B). 36</a><br>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). 30<br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). 12<br>
+
+<p class = "questions">12. A businessman borrowed sh 40 000 from a lending  institution  at a simple interest rate of 2<sup>1</sup>&frasl;<sub>2</sub>% per month. How much did he pay back at the end of one year?</p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). sh 1000<br>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). sh l2000<br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). sh 41000<br>
+<input type = "radio" id = "mc" name = "question12" value = "j"><a class="y"> D). sh 52000</a><br>
+
+<p class = "questions">13. What is the value of <p><img src="number13.jpg"></p> When r = 4, s = t + 2 and t = r - 1</p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). 37<br>
+<input type = "radio" id = "mc" name = "question13" value = "j"><a class="y"> B). 17</a><br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). 12<br>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). 9<br>
+
+<p class = "questions">14. A vendor sold <sup>2</sup>&frasl;<sub>5</sub> and <sup>1</sup>&frasl;<sub>4</sub> to students. He also sold <sup>3</sup>&frasl;<sub>7</sub> of the remaining fruits to others. If the vendor was left with 168 fruits, how many fruits were sold to students?</p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). 126<br>
+<input type = "radio" id = "mc" name = "question14" value = "j"><a class="y"> B). 210</a><br>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). 336<br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). 840<br>
+
+<p class = "questions">15. The diagram below shows a plot of land drawn to scale 1:100 000.<p><img src="number15.jpg"></p>What is the actual area of the plot, in ares?</p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). 28<br>
+<input type = "radio" id = "mc" name = "question15" value = "B"> B). 2 800<br>
+<input type = "radio" id = "mc" name = "question15" value = "j"><a class="y"> C). 280 000</a><br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). 28 000 000<br>
+
+<p class = "questions">16. Juma paid sh 11 900 for a bicycle after getting a discount of 15%. How much more would he have paid had he been given a discount of 10%?</p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). 1 260<br>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). 2 100<br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). 1 400<br>
+<input type = "radio" id = "mc" name = "question16" value = "j"><a class="y"> D). 700</a><br>
+
+<p class = "questions">17. A 26-seater bus and a 14-seater matatu were to transport 494 pupils to a sports meeting. If the matatu made an extra trip than the bus, how many pupils did the matatu transport?</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). 312<br>
+<input type = "radio" id = "mc" name = "question17" value = "j"><a class="y"> B). 182</a><br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). 168<br>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). 13<br>
+
+<p class = "questions">18. Using a pair of compasses and a ruler construct a triangle UVW such that lines VW — 7 cm, UV = 8cm and UW — 6 cm. Draw a circle which passes through U, V and W. 
+<p>What is the length of the radius of the circle?</p></p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). 2.0 cm<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). 3.9 cm<br>
+<input type = "radio" id = "mc" name = "question18" value = "j"><a class="y"> C). 4.2 cm</a><br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). 8.3 cm<br>
+
+<p class = "questions">19. The figure PQRS drawn below is a parallelogram. Angle PSR = 70°, angle PQT = 30° and line TQ — line TR.<p><img src="number19.jpg"></p>
+What is the size of the angle marked x?</p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A). 70°<br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B). 80°<br>
+<input type = "radio" id = "mc" name = "question19" value = "j"><a class="y"> C). 100°</a><br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D). 120°<br>
+
+<p class = "questions">20. A children's home was supplied with 40 cartons of milk. Each carton contained 60 two-hundred millilitre packets of milk. How many litres of milk were supplied?</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A). 480 000<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). 4 800<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). 2 400<br>
+<input type = "radio" id = "mc" name = "question20" value = "j"><a class="y"> D). 480</a><br>
+
+<p class = "questions">21. The following stack of cubes was dipped in paint <p><img src="number21.jpg"></p>How many cubes had paint on two faces only?</p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). 9<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B). 22<br>
+<input type = "radio" id = "mc" name = "question21" value = "j"><a class="y"> C). 24</a><br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). 60<br>
+
+<p class = "questions">22. A dairy farmer sold milk from 8<sup>th</sup> December 2011 to 8<sup>th</sup> March 2012. How many days 
+did the farmer sell the milk?</p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A). 90<br>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B). 91<br>
+<input type = "radio" id = "mc" name = "question22" value = "j"><a class="y"> C). 92</a><br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). 93<br>
+
+<p class = "questions">23. In a school the ratio of boys to girls is 3:2. There are 600 pupils in the school. During an athletic competition <sup>1</sup>&frasl;<sub>6</sub> of the girls and <sup>1</sup>&frasl;<sub>5</sub> of the boys took part. How many pupils took part in the competition?</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A). 448<br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B). 288<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). 200<br>
+<input type = "radio" id = "mc" name = "question23" value = "j"><a class="y"> D). 112</a><br>
+
+<p class = "questions">24. The table below shows the number of pupils absent from a class of 42 pupils, in a certain week.
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="250">
+<tr>
+    <td>&nbsp;</td>
+	<td><b>Mon</b></td>
+	<td><b>Tue</b></td>
+	<td><b>Wed</b></td>
+	<td><b>Thur</b></td>
+	<td><b>Fri</b></td>
+</tr>
+<tr>
+    <td><b>Girls</b></td>
+	<td>4</td>
+	<td>3</td>
+	<td>2</td>
+	<td>3</td>
+	<td>5</td>
+</tr>
+<tr>
+    <td><b>Boys</b></td>
+	<td>2</td>
+	<td>3</td>
+	<td>3</td>
+	<td>2</td>
+	<td>3</td>
+</tr>
+</table><br/>What was the total class attendance for that week?</p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). 12<br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B). 30<br>
+<input type = "radio" id = "mc" name = "question24" value = "j"><a class="y"> C). 180</a><br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). 210<br>
+
+<p class = "questions">25. Construct a parallelogram WXYZ such that lines WX = 5 cm and XY = 7.5 cm. Angle WZY = 135°. Join W to Y and Z to X and let the point of intersection be O. What is the length of line WO?</p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). 2.6 cm<br>
+<input type = "radio" id = "mc" name = "question25" value = "B"> B). 5.2 cm<br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). 5.8 cm<br>
+<input type = "radio" id = "mc" name = "question25" value = "j"><a class="y"> D). 11.6 cm</a><br>
+
+<p class = "questions">26. What is <sup>3</sup>&frasl;<sub>7</sub>(21m + 42n) + <sup>5</sup>&frasl;<sub>6</sub>(18m — 18n) expressed in its simplest form?</p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). 6m + 3n<br>
+<input type = "radio" id = "mc" name = "question26" value = "j"><a class="y"> B). 24m + 3n</a><br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C). 24m - 3n<br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). 24m + 33n<br>
+
+<p class = "questions">27. A sales agent is paid a basic salary of 
+sh 12 000 and a commission of 3% for goods sold above sh 50 000. In a certain month, his total earnings were sh 15 000. What was the value of the total sales?</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). sh 51 500<br>
+<input type = "radio" id = "mc" name = "question27" value = "B"> B). sh 65 000<br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). sh 100 000<br>
+<input type = "radio" id = "mc" name = "question27" value = "j"><a class="y"> D). sh 150 000</a><br>
+
+<p class = "questions">28. The pie chart below represents the types of vehicles imported in Kenya in a certain year.<p><img src="number28.jpg"></p>
+If 16 000 Mazdas were imported, how many more Toyotas than Suzukis were imported?</p>
+<input type = "radio" id = "mc" name = "question28" value = "A"> A). 48 000<br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). 28 800<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). 19 200<br>
+<input type = "radio" id = "mc" name = "question28" value = "j"><a class="y"> D). 9 600</a><br>
+
+<p class = "questions">29. A train left town Q on Thursday at 
+6.45 pm and took 9 hours 30 minutes to reach town R. At what time and day did it reach town R in 24 hour clock system?</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A). 0315 h Friday<br>
+<input type = "radio" id = "mc" name = "question29" value = "j"><a class="y"> B). 0415 h Friday</a><br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). 0415 h Thursday<br>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D). 1615 h Thursday<br>
+
+<p class = "questions">30. A cylindrical tank whose height is 3.5 m has a diameter of 2.8 m. If it is full of 
+water, how many more litres are needed to fill the tank? (Take &#120529; = <sup>22</sup>&frasl;<sub>7</sub>).</p>
+<input type = "radio" id = "mc" name = "question30" value = "j"><a class="y"> A). 8 624</a><br>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B). 12 936<br>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C). 21 560<br>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D). 34 496<br>
+
+<p class = "questions">31. In the quadrilateral EFGH drawn below, line EF is parallel to GH. The dotted line JG is the perpendicular height. The area of the quadrilateral is 3600 m2.
+<p><img src="number31.jpg"></p>What is the length of line EF?</p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). 72 m<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). 75 m<br>
+<input type = "radio" id = "mc" name = "question31" value = "j"><a class="y"> C). 90 m</a><br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D). 120 m<br>
+
+<p class = "questions">32. Halima bought the following items from a shop.
+<p>2kg of sugar @ sh 112.00</p>
+<p>4 packets of &frac12; litre milk @ sh 40.00 </p>
+<p>1&frac14; kg cooking fat at sh 120 per kg </p>
+<p>2 kg of wheat flour for sh 210</p>
+<p>1&frac12; kg of salt at sh 24 per kg</p>
+She paid for the items using two 500 shillings notes. How much balance did she receive?</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). sh 220<br>
+<input type = "radio" id = "mc" name = "question32" value = "j"><a class="y"> B). sh 300</a><br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C). sh 494<br>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D). sh 780<br>
+
+<p class = "questions">33. A watch loses 5 seconds every hour. The watch was set correct on Wednesday at 
+6.30 am. What time did it show at 6.30 pm the next Wednesday?</p>
+<input type = "radio" id = "mc" name = "question33" value = "j"><a class="y"> A). 6.15 pm</a><br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B). 6.16 pm<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). 6.29 pm<br>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D). 6.45 pm<br>
+
+<p class = "questions">34. A man was 27 years older than his son ten years ago. His wife is 4 years younger than he is. If their total age is 116 years now, how old is the son?</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A). 12<br>
+<input type = "radio" id = "mc" name = "question34" value = "j"><a class="y"> B). 22</a><br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). 45<br>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D). 49<br>
+
+<p class = "questions">35. The table below shows commission charged on postal orders.
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="250">
+<tr>
+    
+	<td><b>Value of Order</b></td>
+	<td><b>Commission</b></td>
+	
+</tr>
+<tr>
+	<td>1000</td>
+	<td>33.00</td>
+</tr>
+<tr>
+	<td>2000</td>
+	<td>36.00</td>
+</tr>
+<tr>
+	<td>3000</td>
+	<td>69.00</td>
+</tr>
+<tr>
+	<td>4000</td>
+	<td>117.00</td>
+</tr>
+</table><br/>
+Mary was to send sh 7 000 using postal orders. Which one of the following combinations of value of orders shows the least commission she would be charged?</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). sh 4000, sh 1000, sh 1000 and sh 1000<br>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B). sh 3 000, sh 3 000 and sh 1000 <br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). sh 4000 and sh 3000<br>
+<input type = "radio" id = "mc" name = "question35" value = "j"><a class="y"> D). sh 2000, sh 2000, sh 2000 and sh 1000</a><br>
+
+<p class = "questions">36. What is the value of <b>x</b> in the equation<p><img src="number36.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A). 2<br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). 3<br>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C). 5<br>
+<input type = "radio" id = "mc" name = "question36" value = "j"><a class="y"> D). 6</a><br>
+
+<p class = "questions">37. The area of a square plot of land is 3.24 hectares. The owner of the plot wanted to fence all round placing posts at intervals of 5 metres. How many posts were required?</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). 720<br>
+<input type = "radio" id = "mc" name = "question37" value = "B"> B). 180<br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). 145<br>
+<input type = "radio" id = "mc" name = "question37" value = "j"><a class="y"> D). 144</a><br>
+
+<p class = "questions">38. The figure drawn below is a right-angled triangular prism.<p><img src="number38.jpg"></p>
+What is the volume of the prism?</p>
+<input type = "radio" id = "mc" name = "question38" value = "j"><a class="y"> A). 3 000 cm<sup>3</sup></a><br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). 3 200 cm<sup>3</sup><br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). 6 000 cm<sup>3</sup><br>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D). 6 500 cm<sup>3</sup><br>
+
+<p class = "questions">39. In an election, three candidates took part. The winning candidate got 0.429 of the votes cast while the other two got 0.386 and 0.184 respectively. There were 84 spoilt votes. How many votes did the winner get?</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A). 15 456<br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B). 32 424<br>
+<input type = "radio" id = "mc" name = "question39" value = "j"><a class="y"> C). 36 036</a><br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). 84 000<br>
+
+<p class = "questions">40. A lorry was loaded with 150 cartons of cooking fat and 120 bales of flour. Each carton of cooking fat contained twelve 
+2 kg tins. The mass of an empty carton was 500 grams. Each bale of flour contained twelve 2 kg packets. What was the total load in tonnes?</p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A). 6.480<br>
+<input type = "radio" id = "mc" name = "question40" value = "j"><a class="y"> B). 6.555</a><br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). 6.615<br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D). 6555<br>
+
+<p class = "questions">41. In the figure below lines <b>UV</b> and <b>CD</b> are parallel. Lines <b>WX</b> and <b>YZ</b> are Transversals.
+<p><img src="number41.jpg"></p>Which one of the following statements is true about the figure?</p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). angles <i>r</i> and <i>l</i> are co-interior<br>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B). angle <i>j</i> is vertically opposite to angle <i>n</i><br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C). angle <i>e</i> is alternate to angle <i>t</i><br>
+<input type = "radio" id = "mc" name = "question41" value = "j"><a class="y"> D). angle <i>r</i> corresponds to angle <i>f</i></a><br>
+
+<p class = "questions">42. A farmer harvested 1 200 crates of tomatoes in the year 2011. This was a 20% decrease from the year 2010. How many crates of tomatoes did the farmer harvest in the year 2010?</p>
+<input type = "radio" id = "mc" name = "question42" value = "j"><a class="y"> A). 1 500</a><br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). 1 440<br>
+<input type = "radio" id = "mc" name = "question42" value = "C"> C). 960<br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). 240<br>
+
+<p class = "questions">43. The figure below represents a half of a cylindrical piece of wood of diameter 28 cm and a length 50 cm.
+What is the surface area of the wood? (Take &#120529; = <sup>22</sup>&frasl;<sub>7</sub>).</p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A). 6 416 cm<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question43" value = "j"><a class="y"> B). 4 216 cm<sup>2</sup></a><br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). 3 908 cm<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). 2 816 cm<sup>2</sup><br>
+
+<p class = "questions">44. Chepkoech has k bananas. Omollo has two more bananas than Chepkoech. Nekesa has three bananas less than the total 
+number that both Chepkoech and Omollo have. How many bananas do they have altogether?</p>
+<input type = "radio" id = "mc" name = "question44" value = "j"><a class="y"> A). 4k + 1</a><br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). 4k + 3<br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). 4k + 4<br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D). 4k + 7<br>
+
+<p class = "questions">45. The table below shows a bus timetable from town J to town P.<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="300">
+<tr>
+    
+	<td><b>Town</b></td>
+	<td><b>Arrival Time</b></td>
+	<td><b>Departure Time</b></td>
+</tr>
+<tr>
+	<td><b>J</b></td>
+	<td>&nbsp;</td>
+	<td>6.25 am</td>
+</tr>
+<tr>
+	<td><b>K</b></td>
+	<td>8.05 am</td>
+	<td>8.30 am</td>
+</tr>
+<tr>
+	<td><b>L</b></td>
+	<td>9.50 am</td>
+	<td>10.10 am</td>
+</tr>
+<tr>
+	<td><b>M</b></td>
+	<td>11.25 am</td>
+	<td>11.40 am</td>
+</tr>
+<tr>
+	<td><b>N</b></td>
+	<td>1.10 pm</td>
+	<td>1.40 pm</td>
+</tr>
+<tr>
+	<td><b>P</b></td>
+	<td>2.20 pm</td>
+	<td>3.00 pm</td>
+</tr>
+</table><br/>
+What is the distance from town M to town N if the bus travelled at an average speed of 80 km/h?</p>
+<input type = "radio" id = "mc" name = "question45" value = "j"><a class="y"> A). 120 km</a><br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B). 140 km<br>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C). 160 km<br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). 180 km<br>
+
+<p class = "questions">46. The figure below represents the net of a solid.<p><img src="number46.jpg"></p>What solid can be formed from the net?</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). Rectangular pyramid<br>
+<input type = "radio" id = "mc" name = "question46" value = "j"><a class="y"> B). Triangular pyramid</a><br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C). Rectangular prism<br>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D). Triangular prism<br>
+
+<p class = "questions">47. The table below shows bus fares to different towns in shillings.<p><img src="number47.jpg"></p>
+A man, his wife and their 3 children left Njiwa for Kanga. They stopped at Tausi and then continued with the journey to Kanga in another bus. The buses used the same table and the fare for children is half that of adults. How much did they pay altogether?</p>
+<input type = "radio" id = "mc" name = "question47" value = "A"> A). sh 3 750<br>
+<input type = "radio" id = "mc" name = "question47" value = "j"><a class="y"> B). sh 2 625</a><br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). sh2 450<br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). sh 1 875<br>
+
+<p class = "questions">48. The figure KLMN drawn below is a square of sides 40 cm.<p><img src="number48.jpg"></p>
+What is the area of the shaded part? (Take &#120529; = 3.14).</p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A). 1 256 cm<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). 972 cm<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question48" value = "j"><a class="y"> C). 628 cm<sup>2</sup></a><br>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D). 344 cm<sup>2</sup><br>
+
+<p class = "questions">49. The graph shown below represents the journey of a motorist travelling from town Q to town R and back.<p><img src="number49.jpg"></p>
+What was the average speed of the car for the whole journey?</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A). 40 km/h<br>
+<input type = "radio" id = "mc" name = "question49" value = "j"><a class="y"> B). 80 km/h</a><br>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C). 90 km/h<br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). 96 km/h<br>
+
+<p class = "questions">50. The shapes below show a sequence of a pattern.<p><img src="number50.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). <p><img src="50a.jpg"></p><br>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B). <p><img src="50b.jpg"></p><br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). <p><img src="50c.jpg"></p><br>
+<input type = "radio" id = "mc" name = "question50" value = "j"><a class="y"> D). <p><img src="50d.jpg"></p></a><br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+
+    </div>
+	  </form>
+
+	  
+<script src="../../../javascript.js">
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

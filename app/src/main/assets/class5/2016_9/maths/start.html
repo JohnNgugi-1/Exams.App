@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script>
+var timeInMinutes = 120;
+var currentTime = Date.parse(new Date());
+var deadline = new Date(currentTime + timeInMinutes*60*1000);
+ 
+ 
+function getTimeRemaining(endtime){
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
+ 
+function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    function updateClock(){
+        var t = getTimeRemaining(endtime);
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        if(t.total<=0){
+		 
+       clearInterval(timeinterval);
+	    Android.playAudio("Time is up!");
+            
+        }
+ 
+    }
+ 
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+}
+ 
+initializeClock('clockdiv', deadline);
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<p class = "questions">1. Write in figures, four hundred thousand two thousand and eighty nine</p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). 402089 <br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). 402809<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). 400289 <br>
+<input type = "radio" id = "mc" name = "question1" value = "D"> D). 402890<br>
+
+<p class = "questions">2. What is the place value of digit 3 in 134927?</p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). Hundred thousand<br>
+<input type = "radio" id = "mc" name = "question2" value = "B"> B). Ten thousands<br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). Thousands<br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). Hundreds<br>
+
+<p class = "questions">3. Round off 9165 to the nearest hundred</p>
+<input type = "radio" id = "mc" name = "question3" value = "A"> A). 9000 <br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). 9170<br>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). 9100 <br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). 9200<br>
+ 
+<p class = "questions">4. Complete the factor tree and find the values of letters Q and R 
+<p><img src="number4.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question4" value = "A"> A). Q=9, R=3<br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). Q=9, R=1 <br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). Q=8, R=3<br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). Q=9, R=2<br>
+
+<p class = "questions">5. Which one of these numbers is divisible by 9?</p>
+<input type = "radio" id = "mc" name = "question5" value = "A"> A). 1211<br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). 1984<br>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). 1161 <br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). 1653<br>
+ 
+<p class = "questions">6. In a certain district, there are 860 people. <sup>1</sup>&frasl;<sub>4</sub>% of the people are children How many adults are there?</p>  
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). 215 <br>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). 525<br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). 115 <br>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). 645<br>
+
+<p class = "questions">7. Name the angle drawn below <p><img src="number7.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). right angle<br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). obtuse angle<br>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). reflex angle<br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). acute angle<br>
+
+<p class = "questions">8. Find the sum of all prime numbers between 40 and 60.</p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). 196 <br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). 304<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). 243 <br>
+<input type = "radio" id = "mc" name = "question8" value = "D"> D). 247<br>
+
+<p class = "questions">9. What is the L.C.M of 18, 24 and 40?</p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). 180 <br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). 360<br>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). 240 <br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). 260<br>
+
+<p class = "questions">10. Simplify <sup>36</sup>&frasl;<sub>60</sub> to its simplest form</p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). <sup>36</sup>&frasl;<sub>60</sub><br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). <sup>12</sup>&frasl;<sub>20</sub><br>
+<input type = "radio" id = "mc" name = "question10" value = "C"> C). <sup>6</sup>&frasl;<sub>10</sub><br>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). <sup>3</sup>&frasl;<sub>5</sub><br>
+
+<p class = "questions">11. Work out: <p><img src="number11.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). 9<br>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). 5<br>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). 10<br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). 12<br>
+
+<p class = "questions">12. Change <sup>45</sup>&frasl;<sub>100</sub> into a decimal</p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). 0.45<br>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). 45<br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). 4.5<br>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). 0.045<br>
+
+<p class = "questions">13. A school bought 36 cartons of milk. 
+Each carton contained 450 packets of milk. How many packets of milk did the school buy?</p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). 16120 <br>
+<input type = "radio" id = "mc" name = "question13" value = "B"> B). 16200<br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). 486 <br>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). 21600<br>
+
+<p class = "questions">14. Work out: <sup>6</sup>&frasl;<sub>7</sub> - <sup>2</sup>&frasl;<sub>3</sub> =</p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). <sup>3</sup>&frasl;<sub>21</sub><br>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). <sup>2</sup>&frasl;<sub>41</sub><br>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). <sup>4</sup>&frasl;<sub>21</sub><br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). <sup>9</sup>&frasl;<sub>21</sub><br>
+
+<p class = "questions">15. What is the next number in the pattern?<p>13, 17, 19, 23, ____</p></p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). 29<br>
+<input type = "radio" id = "mc" name = "question15" value = "B"> B). 25<br>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). 27<br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). 33<br>
+
+<p class = "questions">16. Find the G.C.D. of 12. 18 and 24 </p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). 3<br>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). 6<br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). 4<br>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). 12<br>
+
+<p class = "questions">17. Change 3<sup>1</sup>&frasl;<sub>14</sub> into an improper fraction</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). <sup>14</sup>&frasl;<sub>43</sub><br>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). <sup>42</sup>&frasl;<sub>41</sub><br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). <sup>14</sup>&frasl;<sub>42</sub><br>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). <sup>43</sup>&frasl;<sub>14</sub><br>
+
+<p class = "questions">18. Express 0.45 as a fraction and simplify</p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). <sup>45</sup>&frasl;<sub>100</sub><br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). <sup>7</sup>&frasl;<sub>20</sub><br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> C). <sup>9</sup>&frasl;<sub>30</sub><br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). <sup>9</sup>&frasl;<sub>20</sub><br>
+
+<p class = "questions">19. A bus carried 960 people in 30trips. How many people did it carry per trip if it carried the same number of people every trip?</p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A). 32 <br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B). 27<br>
+<input type = "radio" id = "mc" name = "question19" value = "C"> C). 28 <br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D). 42<br>
+
+<p class = "questions">20. Add 9.62 + 10.57 + 11.13</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A). 30.23<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). 31.32<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). 31.23 <br>
+<input type = "radio" id = "mc" name = "question20" value = "D"> D). 30.13<br>
+
+<p class = "questions">21. Find the perimeter of the figure below <p><img src="number21.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). 144m<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B). 441m<br>
+<input type = "radio" id = "mc" name = "question21" value = "C"> C). 1152m<br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). 96m<br>
+
+<p class = "questions">22. How many <sup>1</sup>&frasl;<sub>4</sub> litre bottles can be used to fill a 121itre bottle'</p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A). 24<br>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B). 36<br>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C). 48<br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). 18<br>
+
+<p class = "questions">23. Add: 31620 + 41512 + 219 =</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A). 74451<br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B). 73531<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). 73350<br>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D). 73351<br>
+
+<p class = "questions">24. What is 0.08m in cm</p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). 9cm<br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B). 8cm<br>
+<input type = "radio" id = "mc" name = "question24" value = "C"> C). 10cm<br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). 6cm<br>
+
+<p class = "questions">25. Work out: 316 x 24 =</p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). 7854 <br>
+<input type = "radio" id = "mc" name = "question25" value = "B"> B). 7084<br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). 7548 <br>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D). 7584<br>
+
+<p class = "questions">26. Find the area of the square below in square units <p><img src="number26.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). 18<br>
+<input type = "radio" id = "mc" name = "question26" value = "B"> B). 25<br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C). 16<br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). 36<br>
+
+<p class = "questions">27. Convert 885 cents into shillings and cents</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). sh.8 85cts<br>
+<input type = "radio" id = "mc" name = "question27" value = "B"> B). sh.88 85cts<br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). sh.8 25cts<br>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D). sh.8 75cts<br>
+
+<p class = "questions">28. Multiply: <p><img src="number28.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question28" value = "A"> A). 80m 74cm<br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). 80m 64cm<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). 70m 64cm<br>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D). 90m 64cm<br>
+
+<p class = "questions">29. What is <sup>1</sup>&frasl;<sub>4</sub> of 144?</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A). 24<br>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B). 48<br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). 54<br>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D). 36<br>
+
+<p class = "questions">30. Divide: <p><img src="number30.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question30" value = "A"> A). 144 rem 4<br>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B). 144 rem 3 <br>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C). 144<br>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D). 144 rem 6<br>
+
+<p class = "questions">31. Add: <p><img src="number31.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). 333m 99cm<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). 335m 9cm<br>
+<input type = "radio" id = "mc" name = "question31" value = "C"> C). 334m 01cm<br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D). 334m 99cm<br>
+
+<p class = "questions">32. Multiply four and a quarter by eight</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). 34<br>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B). 44<br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C). 33<br>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D). 49<br>
+
+<p class = "questions">33. How many small cubes make the stack below?</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A). 84 <br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B). 96<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). 124 <br>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D). 140<br>
+
+<p class = "questions">34. Add 2<sup>1</sup>&frasl;<sub>4</sub> hours to 4<sup>1</sup>&frasl;<sub>2</sub> hours and give your 
+answer in minutes</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A). 360<br>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B). 220<br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). 405<br>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D). 340<br>
+
+<p class = "questions">35. Convert <sup>2</sup>&frasl;<sub>4</sub> into a decimal</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). 0.5<br>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B). 0.6<br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). 0.8<br>
+<input type = "radio" id = "mc" name = "question35" value = "D"> D). 0.9<br>
+
+<p class = "questions">36. How many groups of 100 are there in 900000?</p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A). 900 <br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). 9000<br>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C). 90 <br>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D). 1000<br>
+
+<p class = "questions">37. An athlete began his morning exercise at 
+the time shown on the clock below and ended it after 1<sup>1</sup>&frasl;<sub>2</sub> hours. 
+At what time did he end the exercise? <p><img src="number37.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). 11.00am<br>
+<input type = "radio" id = "mc" name = "question37" value = "B"> B). 10.30am<br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). 10.00am<br>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D). 9.30am<br>
+
+<p class = "questions">38. What is <sup>1</sup>&frasl;<sub>2</sub> x 98?</p>
+<input type = "radio" id = "mc" name = "question38" value = "A"> A). 39<br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). 196<br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). 49<br>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D). 102<br>
+
+<p class = "questions">39. How many days were there in the months of January, February and March in the year 2014?</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A). 89<br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B). 91<br>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C). 92<br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). 90<br>
+
+<p class = "questions">40. A pair of shoes costs sh.750. Amina bought five such pairs. How much money did she pay?</p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A). sh.3750<br>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B). sh.3950<br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). sh.3050<br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D). sh.2650<br>
+
+<p class = "questions">41. Work out: <p><img src="number41.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). 9wks 1 day<br>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B). l0wks l day <br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C). 10wks 6 days<br>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D). 11wks 1 day<br>
+
+<p class = "questions">42. In a basket, there were y oranges p oranges went bad. How many good oranges were left?</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A). y + p<br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). y x p<br>
+<input type = "radio" id = "mc" name = "question42" value = "C"> C). y - p<br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). <sup>y</sup>&frasl;<sub>p</sub><br>
+
+<p class = "questions">43. How many hours are there in 3000 minutes?</p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A). 120 <br>
+<input type = "radio" id = "mc" name = "question43" value = "B"> B). 60<br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). 30<br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). 50<br>
+
+<b>The table beiow shows the tvne of vehicles counted by std.4 pupils during a day. Use it to answer questions 44-46</b>
+<p><img src="number44.jpg"></p>
+
+<p class = "questions">44. Which type of vehicle was least counted?</p>
+<input type = "radio" id = "mc" name = "question44" value = "A"> A). Tuk-tuk<br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). Vans<br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). Lorries<br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D). Buses<br>
+
+<p class = "questions">45. How many more cars than vans were counted?</p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A). 8<br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B). 4<br>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C). 6<br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). 5<br>
+
+<p class = "questions">46. How many vehicles were counted altogether?</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). 58 <br>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B). 61<br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C). 49<br>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D). 51<br>
+
+<p class = "questions">47. Multipy: 0.6 x 9</p>
+<input type = "radio" id = "mc" name = "question47" value = "A"> A). 5.2 <br>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B). 6.1<br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). 7.4 <br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). 5.4<br>
+
+<p class = "questions">48. Subtract: <sup>7</sup>&frasl;<sub>8</sub> - <sup>2</sup>&frasl;<sub>5</sub></p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A). <sup>19</sup>&frasl;<sub>40</sub><br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). <sup>9</sup>&frasl;<sub>40</sub><br>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C). <sup>8</sup>&frasl;<sub>40</sub><br>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D). <sup>23</sup>&frasl;<sub>40</sub><br>
+
+<p class = "questions">49. Which one of the following is NOT a prime number?</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A). 19<br>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B). 57<br>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C). 59<br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). 53<br>
+
+<p class = "questions">50. What is the next shape in the pattern below ?
+<p><img src="number50.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). <p><img src="number50a.jpg"></p><br>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B). <p><img src="number50b.jpg"></p><br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). <p><img src="number50c.jpg"></p><br>
+<input type = "radio" id = "mc" name = "question50" value = "D"> D). <p><img src="number50d.jpg"></p><br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+<!- <input id = "button" type = "button" value = "Get Results!" onclick = "check();"> 
+
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+<a href = 'grade.html' id="button">marking scheme </a>
+    </div>
+	  </form>
+
+	  
+<script>
+
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var question7 = document.quiz.question7.value;
+	var question8 = document.quiz.question8.value;
+	var question9 = document.quiz.question9.value;
+	var question10 = document.quiz.question10.value;
+	var question11 = document.quiz.question11.value;
+	var question12 = document.quiz.question12.value;
+	var question13 = document.quiz.question13.value;
+	var question14 = document.quiz.question14.value;
+	var question15 = document.quiz.question15.value;
+	var question16 = document.quiz.question16.value;
+	var question17 = document.quiz.question17.value;
+	var question18 = document.quiz.question18.value;
+	var question19 = document.quiz.question19.value;
+	var question20 = document.quiz.question20.value;
+	var question21 = document.quiz.question21.value;
+	var question22 = document.quiz.question22.value;
+	var question23 = document.quiz.question23.value;
+	var question24 = document.quiz.question24.value;
+	var question25 = document.quiz.question25.value;
+	var question26 = document.quiz.question26.value;
+	var question27 = document.quiz.question27.value;
+	var question28 = document.quiz.question28.value;
+	var question29 = document.quiz.question29.value;
+	var question30 = document.quiz.question30.value;
+	var question31 = document.quiz.question31.value;
+	var question32 = document.quiz.question32.value;
+	var question33 = document.quiz.question33.value;
+	var question34 = document.quiz.question34.value;
+	var question35 = document.quiz.question35.value;
+	var question36 = document.quiz.question36.value;
+	var question37 = document.quiz.question37.value;
+	var question38 = document.quiz.question38.value;
+	var question39 = document.quiz.question39.value;
+	var question40 = document.quiz.question40.value;
+	var question41 = document.quiz.question41.value;
+	var question42 = document.quiz.question42.value;
+	var question43 = document.quiz.question43.value;
+	var question44 = document.quiz.question44.value;
+	var question45 = document.quiz.question45.value;
+	var question46 = document.quiz.question46.value;
+	var question47 = document.quiz.question47.value;
+	var question48 = document.quiz.question48.value;
+	var question49 = document.quiz.question49.value;
+	var question50 = document.quiz.question50.value;
+	var correct = 0;
+
+
+	if (question1 == "C") {
+		correct++;
+}
+	if (question2 == "B") {
+		correct++;
+}	
+	if (question3 == "C") {
+		correct++;
+	}
+	if (question4 == "C") {
+		correct++;
+}
+	if (question5 == "D") {
+		correct++;
+}	
+	if (question6 == "A") {
+		correct++;
+	}
+		
+	if (question7 == "A") {
+		correct++;
+}
+	if (question8 == "A") {
+		correct++;
+}	
+	if (question9 == "C") {
+		correct++;
+	}
+		
+	if (question10 == "D") {
+		correct++;
+}
+	if (question11 == "A") {
+		correct++;
+}	
+	if (question12 == "B") {
+		correct++;
+	}
+	if (question13 == "A") {
+		correct++;
+}
+	if (question14 == "D") {
+		correct++;
+}	
+	if (question15 == "C") {
+		correct++;
+	}
+	if (question16 == "B") {
+		correct++;
+}
+	if (question17 == "C") {
+		correct++;
+	
+}	
+	if (question18 == "B") {
+		correct++;
+	}
+	if (question19 == "C") {
+		correct++;
+}
+	if (question20 == "B") {
+		correct++;
+}	
+	if (question21 == "D") {
+		correct++;	
+	}
+	if (question22 == "C") {
+		correct++;
+}	
+	if (question23 == "A") {
+		correct++;
+	}
+	if (question24 == "D") {
+		correct++;
+}
+	if (question25 == "C") {
+		correct++;
+}	
+	if (question26 == "B") {
+		correct++;
+	}
+		
+	if (question27 == "D") {
+		correct++;
+}
+	if (question28 == "C") {
+		correct++;
+}	
+	if (question29 == "A") {
+		correct++;
+	}
+		
+	if (question30 == "B") {
+		correct++;
+}
+	if (question31 == "C") {
+		correct++;
+}	
+	if (question32 == "C") {
+		correct++;
+	}
+	if (question33 == "B") {
+		correct++;
+}
+	if (question34 == "B") {
+		correct++;
+}	
+	if (question35 == "A") {
+		correct++;
+	}
+	if (question36 == "A") {
+		correct++;
+}
+	if (question37 == "B") {
+		correct++;
+}	
+	if (question38 == "D") {
+		correct++;
+	}
+	if (question39 == "A") {
+		correct++;
+}
+	if (question40 == "C") {
+		correct++;
+}	
+	if (question41 == "D") {
+		correct++;	
+	}
+	if (question42 == "C") {
+		correct++;
+}	
+	if (question43 == "C") {
+		correct++;
+	}
+	if (question44 == "B") {
+		correct++;
+}
+	if (question45 == "A") {
+		correct++;
+}	
+	if (question46 == "A") {
+		correct++;
+	}
+		
+	if (question47 == "A") {
+		correct++;
+}
+	if (question48 == "B") {
+		correct++;
+}	
+	if (question49 == "A") {
+		correct++;
+	}
+		
+	if (question50 == "C") {
+		correct++;
+}
+    var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+
+	document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("text").innerHTML = texts[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " out of 50 correct.";
+	document.getElementById("percentage").innerHTML = "Marks " + Math.round(correct/50*100)/1 + "%"
+
+	}
+	
+
+var numQues = 50;
+var numChoi = 4;
+var answers = new Array(50);
+answers[0] = "C";
+answers[1] = "B";
+answers[2] = "D";
+answers[3] = "A";
+answers[4] = "C";
+answers[5] = "D";
+answers[6] = "B";
+answers[7] = "A";
+answers[8] = "B";
+answers[9] = "D";
+answers[10] = "C";
+answers[11] = "A";
+answers[12] = "B";
+answers[13] = "C";
+answers[14] = "B";
+answers[15] = "B";
+answers[16] = "D";
+answers[17] = "D";
+answers[18] = "A";
+answers[19] = "B";
+answers[20] = "A"; 
+answers[21] = "C";
+answers[22] = "D";
+answers[23] = "B";
+answers[24] = "D";
+answers[25] = "C";
+answers[26] = "A";
+answers[27] = "B";
+answers[28] = "D";
+answers[29] = "A";
+answers[30] = "B";
+answers[31] = "A";
+answers[32] = "B";
+answers[33] = "C";
+answers[34] = "A";
+answers[35] = "B";
+answers[36] = "C";
+answers[37] = "C";
+answers[38] = "D";
+answers[39] = "A";
+answers[40] = "B";
+answers[41] = "C";
+answers[42] = "D";
+answers[43] = "B";
+answers[44] = "B";
+answers[45] = "D";
+answers[46] = "D";
+answers[47] = "A";
+answers[48] = "B";
+answers[49] = "C";
+
+function getScore(form) {
+  var correct = 0;
+  var currElt;
+  var currSelection;
+var d = document.getElementById("after_submit").style.visibility = "visible"; 
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          correct++;
+          break;
+        }
+      }
+    }
+  }
+  
+  var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+  correct = Math.round(correct/numQues*100);
+  document.getElementById("percentage").innerHTML = "Marks " + correct + "%";
+  document.getElementById("number_correct").innerHTML = "You got " + correct/2 + " out of 50 correct";
+  document.getElementById("text").innerHTML = texts[score];
+  document.getElementById("message").innerHTML = messages[score];
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+   d.style.visibility = "visible"; 
+}
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

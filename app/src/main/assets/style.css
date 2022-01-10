@@ -1,0 +1,194 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+
+
+#quiz {
+margin-left: 1px;
+      	margin-right: 1px;
+      	background: #d2def2;
+      	padding: 10px 20px 10px 20px;
+      	border-radius: 20px;
+
+      	}
+
+
+input {
+	margin-bottom: 20px;
+	display: block;
+}
+
+#textbox {
+	height: 25px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	padding-left: 5px;
+}
+
+
+#button {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+
+
+
+#button:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#after_submit {
+	visibility: hidden;
+	background: #ff5459;
+	padding: 10px 10px 10px 10px;
+	width: 400px;
+	border-radius: 20px;
+	margin-left: 20px;
+	font-size: 30px;
+
+
+}
+
+#picture {
+	width: 375px;
+	height: 245px;
+}
+
+
+
+#mc {
+	display: inline;
+} 
+button {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+.countdown-wrap:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    background: none;
+    
+    border: 0px solid #111;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: block;
+    position: absolute;
+    top: 0%;
+    transform: translate(0,-50%);
+    left: 0px;
+}
+ 
+.countdown-wrap {
+    width: 100%;
+    
+    margin-left: auto;
+    margin-right: 0px;
+    position: fixed;
+	padding: 0px 0px 0px 35%;
+}
+ 
+div#clockdiv {
+    text-align: center;
+    background: transparent;
+    
+    border: 0px solid #111;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    
+    padding: 0px 0 0px;
+}
+ 
+.countdown-wrap:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    background: none;
+    
+    border: 0px solid #111;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: px;
+    display: block;
+    position: absolute;
+    top: 0%;
+    transform: translate(0,50%);
+    /* top: 0px; */
+    right: 0px;
+}
+ 
+div#clockdiv > div > span:nth-child(1) {
+    width: 40px;
+    max-width: 50px;
+    font: bold 15px 'Droid Sans', Arial, sans-serif;
+    text-align: center;
+    color: #0000FF;
+
+    
+    border-top: 0px solid #fff;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    margin: 0 0px;
+    padding: 0px 0;
+    display: inline-block;
+    position: relative;
+}
+ 
+div#clockdiv > div {
+    display: inline-block;
+    width: 40px;
+}
+ 
+div#clockdiv > div > span:nth-child(1):before {
+    content: "";
+    width: 0%;
+    height: 0px;
+    background: none;
+    display: block;
+    padding: 0 px;
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    z-index: -1;
+}
+ 
+div#clockdiv > div > span:nth-child(1):after {
+    content: "";
+    width: 0%;
+    height: 0px;
+    background: none;
+    border-top: 0px solid #333;
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+ 
+ 
+span.time-label {
+    font: bold 10px 'Droid Sans', Arial, sans-serif;
+    color: #0000FF;
+    text-shadow: 0px 0px 0px ;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 0px;
+}
+}

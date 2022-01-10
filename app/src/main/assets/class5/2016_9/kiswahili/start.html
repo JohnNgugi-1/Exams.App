@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script>
+var timeInMinutes = 100;
+var currentTime = Date.parse(new Date());
+var deadline = new Date(currentTime + timeInMinutes*60*1000);
+ 
+ 
+function getTimeRemaining(endtime){
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
+ 
+function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    function updateClock(){
+        var t = getTimeRemaining(endtime);
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        if(t.total<=0){
+		 
+       clearInterval(timeinterval);
+	    Android.playAudio("Time is up!");
+            
+        }
+ 
+    }
+ 
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+}
+ 
+initializeClock('clockdiv', deadline);
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<b>Soma kifungu kifuatachc kisha uchague jibu sahihi kujazia nafasi wazi kuanzia 1 - 15</b>
+<p>Mawasiliano ni ile hali ya _____1 ujumbe _____2 ya watu _____3 au zaidi. 
+Bila shaka, wanadamu hawawezi kuishi _____4 kuasiliana. Hata hivyo, mawasiliano _____5 
+sharti _____6 heshima na adabu inayofaa. Aina _____7 muhimu sana ya mawasiliano ni 
+salamu. Si vizun watu _____8 njia pasi kujuhana hali. Mdogo asimpite mkubwa 
+_____9 bila kumwamkua. Amwamkue kwa kusema _____10.</p>
+<p>Lugha inayotumika _____11 mawasiliano lazima ______12 inayoeleweka na watu 
+husika. Bila ya kuwepo lugha _____13, basi watu hawawezi kuelewana kwa _____14 
+Kupitia njia ya mawasiliano, watu _____15 kujuliana hali na kutangamana.</p>
+
+<p class = "questions">1. </p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). kupasha<br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). kupashia<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). kupashana<br>
+<input type = "radio" id = "mc" name = "question1" value = "D"> D). kupashua<br>
+
+<p class = "questions">2. </p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). katika<br>
+<input type = "radio" id = "mc" name = "question2" value = "B"> B). mfano<br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). ndani<br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). baina<br>
+
+<p class = "questions">3. </p>
+<input type = "radio" id = "mc" name = "question3" value = "A"> A). wapili<br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). wawili<br>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). mbili<br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). miwili<br>
+ 
+<p class = "questions">4. </p>
+<input type = "radio" id = "mc" name = "question4" value = "A"> A). bila<br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). bali<br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). hila<br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). ila<br>
+
+<p class = "questions">5. </p>
+<input type = "radio" id = "mc" name = "question5" value = "A"> A). wenyewe<br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). chenyewe<br>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). lenyewe<br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). yenyewe<br>
+ 
+<p class = "questions">6. </p>  
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). yazingatie<br>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). izingatie<br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). mzingatie<br>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). wazingatie<br>
+
+<p class = "questions">7.  </p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). mmoja<br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). moja<br>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). kimoja<br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). limoja<br>
+
+<p class = "questions">8. </p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). kupitana<br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). kupita<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). kupishana<br>
+<input type = "radio" id = "mc" name = "question8" value = "D"> D). kupitiana<br>
+
+<p class = "questions">9. </p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). yake<br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). chake<br>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). zake<br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). wake<br>
+
+<p class = "questions">10. </p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). sasa<br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). mambo<br>
+<input type = "radio" id = "mc" name = "question10" value = "C"> C). shikamoo<br>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). niaje<br>
+
+<p class = "questions">11. </p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). katika<br>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). ndani<br>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). katikati<br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). mle<br>
+
+<p class = "questions">12. </p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). yawe<br>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). iwe<br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). liwe<br>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). wawe<br>
+
+<p class = "questions">13. </p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). yeyote<br>
+<input type = "radio" id = "mc" name = "question13" value = "B"> B). lolote<br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). chochote<br>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). yoyote<br>
+
+<p class = "questions">14. </p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). kunzungumza<br>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). kuzungumza<br>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). kuzugumza<br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). kusungumza<br>
+
+<p class = "questions">15. </p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). hawezi<br>
+<input type = "radio" id = "mc" name = "question15" value = "B"> B). huwezi<br>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). huweza<br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). aweza<br>
+
+<b>Kutoka swali la 16 - 30, jibu kwa kufuata maagizo</b>
+
+<p class = "questions">16. Chagua sentensi iliyo na matumizi sahihi ya 'amba'</p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). Mfuko ambao ulishonwa ni wa mwanafunzi<br>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). Wino ambayo ulimwagika ni wangu.<br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). Kiti ambao ni kipya ni hiki<br>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). Mkate ambayo uliliwa ni mtamu<br>
+
+<p class = "questions">17. Chagua nomino ambayo inapatikana katika ngeli ya U-ZI.</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). kabati<br>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). uteo<br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). marashi<br>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). uji<br>
+
+<p class = "questions">18. Ni matumizi yapi ya '-ote' si sahihi?</p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). Nguo zote zitauzwa.<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). Umati wote ulifurahia.<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> C). Kalamu zote zitatumiwa.<br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). Chakula vote kitaliwa na wageni.<br>
+
+<p class = "questions">19. Jaza pengo kwa kivumishi cha idadi. Watu _____ walifariki kwenye ajali hiyo.</p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A). watatu <br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B). tano<br>
+<input type = "radio" id = "mc" name = "question19" value = "C"> C). nne<br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D). sita<br>
+
+<p class = "questions">20. Kifaa cha ufundi kinachotumika kukatia mbao huitwa?</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A). keekee<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). bisibisi<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). msumeno <br>
+<input type = "radio" id = "mc" name = "question20" value = "D"> D). parafujo<br>
+
+<p class = "questions">21. Kanusha:  Mtoto ameenda kumtembelea babu.</p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). Mtoto hakwenda kumtembelea babu<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B). Mtoto hataenda kumtembelea babu<br>
+<input type = "radio" id = "mc" name = "question21" value = "C"> C). Mtoto haendi kumtembelea babu.<br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). Mtoto hajaenda kumtembelea babu.<br>
+
+<p class = "questions">22. Andika wingi wa: Hiki ni chombo cha mvuvi</p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A). Hiki ni chombo cha wavuvi<br>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B). Hivi ni vyoinbo vya wavuvi<br>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C). Hivi ni vyombo vya mvuvi<br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). Hizi ni vyombo vya wavuvi<br>
+
+<p class = "questions">23. 10111 kwa maneno ni</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A). Elfu kumi na kumi na moja<br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B). Elfu kumi mia moja na moja<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). Elfu kumi mia moja na kumi na moja<br>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D). Elfu moja mia, moja na kumi na moja<br>
+
+<p class = "questions">24. Katika neno 'Kitoto', kiambishi 'ki’ kimetumika kuonyesha?</p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). udogo <br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B). masharti<br>
+<input type = "radio" id = "mc" name = "question24" value = "C"> C). ngeli<br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). kitenzi<br>
+
+<p class = "questions">25. Ni sentensi gani iliyo na kivumishi cha sifa?</p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). Watoto hawa husoma hadithi.<br>
+<input type = "radio" id = "mc" name = "question25" value = "B"> B). Mti mrefu ulikatwa jana.<br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). Pendo anapika chakula.<br>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D). Kiti hiki ni cha mwalimu<br>
+
+<p class = "questions">26. Jaza pengo kwa kiulizi sahihi: 
+Ni pesa _____ zinazohitajika?</p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). ipi<br>
+<input type = "radio" id = "mc" name = "question26" value = "B"> B). gani<br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C). yupi<br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). ngapi<br>
+
+<p class = "questions">27. Kitenzi ‘washa' katika hali ya kutendea kitakuwa?</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). washwa<br>
+<input type = "radio" id = "mc" name = "question27" value = "B"> B). washia<br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). Wakisha<br>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D). wakishia<br>
+
+<p class = "questions">28. Kamilisha tashbihi: Halima ni mpole kama _____</p>
+<input type = "radio" id = "mc" name = "question28" value = "A"> A). samaki<br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). nguruwe<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). njiwa<br>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D). mhubiri<br>
+
+<p class = "questions">29. Chagua sentensi iliyoandikwa kumaanisha muda sio mrefu uliopita</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A). Juma atatumwa dukani.<br>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B). Mtoto alisoma kwa bidii.<br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). Kitabu kinasomwa na mwanafunzi<br>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D). Mgeni wetu amewasili<br>
+
+<p class = "questions">30. Chagua kihusishi katika sentensi hii: Mwalimu alipita katikati ya watoto hao. </p>
+<input type = "radio" id = "mc" name = "question30" value = "A"> A). katikati ya<br>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B). watoto<br>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C). alipita<br>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D). hao<br>
+
+<b>Soma ufahamu huu kisha ujibu maswali 31 - 40 </b>
+<p>Kila wakati watoto hufunzwa kuwaheshimu wakubwa wao. Mafunzo haya huanzia 
+pale nyumbani na huendelezwa shuleni. Methali kuwa heshima si......... 
+huwahaikauki midomoni mwao. Watoto wanapokua na kupelekwa shuleni, walimu 
+huyaendeleza mafunzo hayo hayo ya kuwa na heshima. </p>
+<p>Ni kitendo cha heshima mtoto kumwamkua mkubwa wake kwa heshima. Kumpita 
+mtu mkubwa kwako bila kumjulia hali ni kitendo kinachoonyesha ukatili. 
+Naye mkubwa akisalimiwa ajibu kwa heshima kwani heshima ni kati ya watu wawili. </p>
+<p>Mtoto aliye na heshima huyafuata maagizo anayopewa vizuri. Kwa maneno 
+mengine, yeye huwa mtiifu. Kamwe hawafanyi wazazi wake <u>kupandwa na mori</u> 
+kila mara, kwani, yeye hutii. Mawaidha anayoyafuata kwa makini humsaidia 
+kufanikiwa maishani. Yeye hufurahia maisha yake ya <u>siku za usoni</u> na hula 
+matunda ya jasho lake. Kinyume na hayo, mtoto asiyekuwa na heshima huwa ni 
+kero kwa wazazi wake. Daima, yeye hufanya vitendo vya kuudhi. Hakuna mtu 
+anayetaka kuhusishwa naye kwani <u>nazi mbovu harabu ya nzima</u>. Maisha yake 
+hujawa na ila mbalimbali. Hatimaye. mtoto wa aina hii hana budi kujuta 
+kwani majuto ni mjukuu.</p>
+
+<p class = "questions">31. Watoto hufunzwa nini?</p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). Kuhudhuria shule mapema.<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). Kuwaheshimu tu wazazi wao.<br>
+<input type = "radio" id = "mc" name = "question31" value = "C"> C). Kuwa na heshima kwa wakuu wao.<br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D). Kuwaheshimu walimu wao.<br>
+
+<p class = "questions">32. Kamilisha methali ilivotumikakatika taarifa : Heshima si.......</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). afya<br>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B). utumwa<br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C). mali<br>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D). haki<br>
+
+<p class = "questions">33. Watoto huanzia kufunzwa kuhusu heshima wapi?</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A). Nyumbani<br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B). Chuoni<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). Shuleni<br>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D). Kazini<br>
+
+<p class = "questions">34. Maana ya msemo 'kupandwa na mori' ni?</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A). kuwa na majuto<br>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B). kuona wivu<br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). kupatwa na hasira<br>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D). kuwa na furaha<br>
+
+<p class = "questions">35. Ni kitendo kipi kinachoonyesha ukatili miongoni mwa watoto?</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). Kumsalimia mkuu wake<br>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B). Kuwaheshimu wazazi<br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). Kusoma kwa bidii<br>
+<input type = "radio" id = "mc" name = "question35" value = "D"> D). Kutomsalimia mkubwa wake<br>
+
+<p class = "questions">36. Maana ya maneno ‘siku za usoni’ ni?</p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A). siku zilizopita<br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). siku zijazo<br>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C). siku za huzuni<br>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D). siku za majonzi<br>
+
+<p class = "questions">37. Mwandishi anashauri kuwa mkubwa akisalimiwa</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). ajibu kwa heshima<br>
+<input type = "radio" id = "mc" name = "question37" value = "B"> B). aulize maswali<br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). apuuze salamu<br>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D). afanye ujuha<br>
+
+<p class = "questions">38. Si kweli kuwa mtoto mwenye heshima</p>
+<input type = "radio" id = "mc" name = "question38" value = "A"> A). hufaulu maishani<br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). hupendwa na wazazi<br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). huambulia patupu<br>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D). hufuata mawaidha<br>
+
+<p class = "questions">39. ‘Nazi mbovu harabu ya nzima’ Hii ni?</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A). semi<br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B). kitendawili<br>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C). fumbo<br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). methali<br>
+
+<p class = "questions">40. Kichwa kifaacho taarifa hii ni?</p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A). Umuhimu wa elimu<br>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B). Umuhimu wa heshima<br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). Jukumu la wazazi<br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D). Majuto ni mjukuu<br>
+
+<b>Soma ufahamu huu, kisha ujibu inaswali 41-50 </b>
+<p>Paliondokea wanaume wawili waliopendana kama chanda na pete. Mmoja 
+aliitwa Mboko na mwenzake aliitwa Kombo. Walifanya kazi ya kupanda mimea 
+na kufuga wanyama. Kazi hii waliipenda sana. Hata hivyo, Mboko alikuwa 
+mvivu na hakupenda kufanya kazi nyingi. Mara nyingi alipenda <u>kulaza damu</u>. 
+Kwa upande wake, Kombo alikuwa mwanaume mwenye bidii ya mchwa. Alifanya 
+kazi yake kwa kujitolea. </p>
+<p>Wakati huo wote, mvua ilikuwa ikishuhudiwa kwa wingi na kamwe 
+hakukukosa kunyesha. Wanaume hao waliyajaza maghala yao kwa vyakula 
+mbalimbali walivyovivuna kutoka shambani kwao. Maisha yalikuwa rahisi kwao 
+pamoja na familia zao. Walikula hadi shibe lao, kwa kuwa chakula kilikuwa 
+kwa wingi. Kombo hakulalamika kuhusu hali ya uzembe wa mwenzake. 
+Alitarajia kuwa angebadilika na kuitupilia mbali tabia ile mbaya. 
+Hata hivyo matarajio yake yalikuwa kando sana na ukweli. Mboko alizidi 
+kuwa kupe. Kamwe hakujua kuwa mtegemea cha nduguye.,... </p>
+<p>Ulifika wakati ambapo mvua haikunyesha. Maghala yao yakawa matupu. 
+<u>Chakula kikaadimika kama maziwa ya kuku</u>. Kombo akamwonya rafikiye 
+ajikakamue kutafuta chakula lakini maneno yake yakawa yanaangukia sikio 
+lililotiwa nta. Alipoona kuwa hataweza kukidhia familia mbili zote kwa 
+mahitaji yao. Kombo na familia yake waliamua kuhamia nchi ya mbali. Mboko 
+alishindwa kujilisha na kulisha familia yake. Alimlilia rafikiye Kombo 
+lakini fimbo ya mbali haiui nyoka.</p>
+
+<p class = "questions">41. Mboko na Kombo walikuwa?</p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). wavuvi<br>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B). wasasi<br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C). wakulima <br>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D). wafanyibiashara<br>
+
+<p class = "questions">42. Maneno ‘kulaza damu’ yanamaanisha?</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A). kuwa mvivu <br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). kushirikiana<br>
+<input type = "radio" id = "mc" name = "question42" value = "C"> C). kutia juhudi <br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). kupendana<br>
+
+<p class = "questions">43. Ila ya Mboko ilikuwani gani?</p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A). Alipenda kula<br>
+<input type = "radio" id = "mc" name = "question43" value = "B"> B). Alikuwa mwizi<br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). Alikuwa mchoyo <br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). Alikuwa mzembe<br>
+
+<p class = "questions">44. Maisha yalikuwa rahisi kwa wanaume hao kwa sababu?</p>
+<input type = "radio" id = "mc" name = "question44" value = "A"> A). mvua ilinyesha kila mara<br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). walikuwa na maghala mengi<br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). walifuga mifugo wengi<br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D). waliishi kwa ushirikiano<br>
+
+<p class = "questions">45. Kwa nini Kombo hakulalamika kuhusu tabia ya mwenzake?</p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A). Mvua ilikosa kunyesha<br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B). Alimpenda sana<br>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C). Walikuwa na chakula kingi<br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). Alikuwa mwenye bidii<br>
+
+<p class = "questions">46. Kamilishamethali hii: 
+Mtegemea cha nduguve _____</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). hafi njaa<br>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B). hufa maskini<br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C). haachi kunona<br>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D). hafai kamwe<br>
+
+<p class = "questions">47. ’Chakula kikaadimika kama maziwa ya kuku’ sentensi hii imetumia?</p>
+<input type = "radio" id = "mc" name = "question47" value = "A"> A). tashbihi<br>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B). methali<br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). semi<br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). tanakali<br>
+
+<p class = "questions">48. Kombo alimhimiza mwenzake kufanya nini?</p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A). Kuhamia nchi nyingine<br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). Kutafuta shamba lake<br>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C). Kutafuta chakula<br>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D). Kuuza chakula<br>
+
+<p class = "questions">49. Si ukweli kusema kuwa hatimaye?</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A). Kombo alihamia nchi ya mbali<br>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B). Familia ya Mboko ilikosa chakula<br>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C). Mboko alishindwa kulisha familia yake<br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). Mboko alifuata maagizo ya Kombo<br>
+
+<p class = "questions">50. Kutokana na makala haya, tunajifunza kuwa?</p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). urafiki wa kupe ndio mzuri<br>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B). uzembe haufai maishani<br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). kilimo sio kazi nzuri<br>
+<input type = "radio" id = "mc" name = "question50" value = "D"> D). mvua haina manufaa mengi<br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+<!- <input id = "button" type = "button" value = "Get Results!" onclick = "check();"> 
+
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+<a href = 'grade.html' id="button">marking scheme </a>
+    </div>
+	  </form>
+
+	  
+<script>
+
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var question7 = document.quiz.question7.value;
+	var question8 = document.quiz.question8.value;
+	var question9 = document.quiz.question9.value;
+	var question10 = document.quiz.question10.value;
+	var question11 = document.quiz.question11.value;
+	var question12 = document.quiz.question12.value;
+	var question13 = document.quiz.question13.value;
+	var question14 = document.quiz.question14.value;
+	var question15 = document.quiz.question15.value;
+	var question16 = document.quiz.question16.value;
+	var question17 = document.quiz.question17.value;
+	var question18 = document.quiz.question18.value;
+	var question19 = document.quiz.question19.value;
+	var question20 = document.quiz.question20.value;
+	var question21 = document.quiz.question21.value;
+	var question22 = document.quiz.question22.value;
+	var question23 = document.quiz.question23.value;
+	var question24 = document.quiz.question24.value;
+	var question25 = document.quiz.question25.value;
+	var question26 = document.quiz.question26.value;
+	var question27 = document.quiz.question27.value;
+	var question28 = document.quiz.question28.value;
+	var question29 = document.quiz.question29.value;
+	var question30 = document.quiz.question30.value;
+	var question31 = document.quiz.question31.value;
+	var question32 = document.quiz.question32.value;
+	var question33 = document.quiz.question33.value;
+	var question34 = document.quiz.question34.value;
+	var question35 = document.quiz.question35.value;
+	var question36 = document.quiz.question36.value;
+	var question37 = document.quiz.question37.value;
+	var question38 = document.quiz.question38.value;
+	var question39 = document.quiz.question39.value;
+	var question40 = document.quiz.question40.value;
+	var question41 = document.quiz.question41.value;
+	var question42 = document.quiz.question42.value;
+	var question43 = document.quiz.question43.value;
+	var question44 = document.quiz.question44.value;
+	var question45 = document.quiz.question45.value;
+	var question46 = document.quiz.question46.value;
+	var question47 = document.quiz.question47.value;
+	var question48 = document.quiz.question48.value;
+	var question49 = document.quiz.question49.value;
+	var question50 = document.quiz.question50.value;
+	var correct = 0;
+
+
+	if (question1 == "C") {
+		correct++;
+}
+	if (question2 == "B") {
+		correct++;
+}	
+	if (question3 == "C") {
+		correct++;
+	}
+	if (question4 == "C") {
+		correct++;
+}
+	if (question5 == "D") {
+		correct++;
+}	
+	if (question6 == "A") {
+		correct++;
+	}
+		
+	if (question7 == "A") {
+		correct++;
+}
+	if (question8 == "A") {
+		correct++;
+}	
+	if (question9 == "C") {
+		correct++;
+	}
+		
+	if (question10 == "D") {
+		correct++;
+}
+	if (question11 == "A") {
+		correct++;
+}	
+	if (question12 == "B") {
+		correct++;
+	}
+	if (question13 == "A") {
+		correct++;
+}
+	if (question14 == "D") {
+		correct++;
+}	
+	if (question15 == "C") {
+		correct++;
+	}
+	if (question16 == "B") {
+		correct++;
+}
+	if (question17 == "C") {
+		correct++;
+	
+}	
+	if (question18 == "B") {
+		correct++;
+	}
+	if (question19 == "C") {
+		correct++;
+}
+	if (question20 == "B") {
+		correct++;
+}	
+	if (question21 == "D") {
+		correct++;	
+	}
+	if (question22 == "C") {
+		correct++;
+}	
+	if (question23 == "A") {
+		correct++;
+	}
+	if (question24 == "D") {
+		correct++;
+}
+	if (question25 == "C") {
+		correct++;
+}	
+	if (question26 == "B") {
+		correct++;
+	}
+		
+	if (question27 == "D") {
+		correct++;
+}
+	if (question28 == "C") {
+		correct++;
+}	
+	if (question29 == "A") {
+		correct++;
+	}
+		
+	if (question30 == "B") {
+		correct++;
+}
+	if (question31 == "C") {
+		correct++;
+}	
+	if (question32 == "C") {
+		correct++;
+	}
+	if (question33 == "B") {
+		correct++;
+}
+	if (question34 == "B") {
+		correct++;
+}	
+	if (question35 == "A") {
+		correct++;
+	}
+	if (question36 == "A") {
+		correct++;
+}
+	if (question37 == "B") {
+		correct++;
+}	
+	if (question38 == "D") {
+		correct++;
+	}
+	if (question39 == "A") {
+		correct++;
+}
+	if (question40 == "C") {
+		correct++;
+}	
+	if (question41 == "D") {
+		correct++;	
+	}
+	if (question42 == "C") {
+		correct++;
+}	
+	if (question43 == "C") {
+		correct++;
+	}
+	if (question44 == "B") {
+		correct++;
+}
+	if (question45 == "A") {
+		correct++;
+}	
+	if (question46 == "A") {
+		correct++;
+	}
+		
+	if (question47 == "A") {
+		correct++;
+}
+	if (question48 == "B") {
+		correct++;
+}	
+	if (question49 == "A") {
+		correct++;
+	}
+		
+	if (question50 == "C") {
+		correct++;
+}
+    var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+
+	document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("text").innerHTML = texts[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " out of 50 correct.";
+	document.getElementById("percentage").innerHTML = "Marks " + Math.round(correct/50*100)/1 + "%"
+
+	}
+	
+
+var numQues = 50;
+var numChoi = 4;
+var answers = new Array(50);
+answers[0] = "C";
+answers[1] = "D";
+answers[2] = "B";
+answers[3] = "A";
+answers[4] = "D";
+answers[5] = "A";
+answers[6] = "B";
+answers[7] = "C";
+answers[8] = "D";
+answers[9] = "C";
+answers[10] = "A";
+answers[11] = "B";
+answers[12] = "D";
+answers[13] = "B";
+answers[14] = "C";
+answers[15] = "A";
+answers[16] = "B";
+answers[17] = "D";
+answers[18] = "A";
+answers[19] = "C";
+answers[20] = "D"; 
+answers[21] = "B";
+answers[22] = "C";
+answers[23] = "A";
+answers[24] = "B";
+answers[25] = "D";
+answers[26] = "B";
+answers[27] = "C";
+answers[28] = "D";
+answers[29] = "A";
+answers[30] = "C";
+answers[31] = "B";
+answers[32] = "A";
+answers[33] = "B";
+answers[34] = "D";
+answers[35] = "B";
+answers[36] = "A";
+answers[37] = "C";
+answers[38] = "D";
+answers[39] = "B";
+answers[40] = "C";
+answers[41] = "A";
+answers[42] = "D";
+answers[43] = "A";
+answers[44] = "C";
+answers[45] = "B";
+answers[46] = "A";
+answers[47] = "C";
+answers[48] = "D";
+answers[49] = "B";
+
+
+function getScore(form) {
+  var correct = 0;
+  var currElt;
+  var currSelection;
+var d = document.getElementById("after_submit").style.visibility = "visible"; 
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          correct++;
+          break;
+        }
+      }
+    }
+  }
+  
+  var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+  correct = Math.round(correct/numQues*100);
+  document.getElementById("percentage").innerHTML = "Marks " + correct + "%";
+  document.getElementById("number_correct").innerHTML = "You got " + correct/2 + " out of 50 correct";
+  document.getElementById("text").innerHTML = texts[score];
+  document.getElementById("message").innerHTML = messages[score];
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+   d.style.visibility = "visible"; 
+}
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

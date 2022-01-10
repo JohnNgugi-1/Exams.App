@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script>
+var timeInMinutes = 100;
+var currentTime = Date.parse(new Date());
+var deadline = new Date(currentTime + timeInMinutes*60*1000);
+ 
+ 
+function getTimeRemaining(endtime){
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
+ 
+function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    function updateClock(){
+        var t = getTimeRemaining(endtime);
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        if(t.total<=0){
+		 
+       clearInterval(timeinterval);
+	    Android.playAudio("Time is up!");
+            
+        }
+ 
+    }
+ 
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+}
+ 
+initializeClock('clockdiv', deadline);
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<p class = "questions">1. The sun sets in the</p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). West<br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). North<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). East <br>
+<input type = "radio" id = "mc" name = "question1" value = "D"> D). South<br>
+
+<p class = "questions">2. One of the following <b>cannot</b> give us milk. Which one is it?</p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). Goat<br>
+<input type = "radio" id = "mc" name = "question2" value = "B"> B). Cow<br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). Camel<br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). Ostrich<br>
+
+<p class = "questions">3. Which type of soil has the largest soil particles?</p>
+<input type = "radio" id = "mc" name = "question3" value = "A"> A). Clay<br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). Sand<br>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). Loam<br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). Mixture of clay and sand<br>
+ 
+<p class = "questions">4. Which of the following is not a living thing?</p>
+<input type = "radio" id = "mc" name = "question4" value = "A"> A). <img src="number4a.jpg"><br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). <img src="number4b.jpg"><br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). <img src="number4c.jpg"><br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). <img src="number4d.jpg"><br>
+
+<p class = "questions">5. The experiment below shows that soil has _____
+<p><img src="number5.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question5" value = "A"> A). water<br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). humus<br>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). air<br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). mineral salts<br>
+ 
+<p class = "questions">6. Plants are harvested during the _____ season.</p>  
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). rainy <br>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). dry<br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). wet<br>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). cold<br>
+
+<p class = "questions">7.  Clouds that usually bring heavy rain are called</p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). cumulus<br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). dark grey<br>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). nimbus<br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). black<br>
+
+<p class = "questions">8. The diagram below shows that the weather is?
+<p><img src="number8.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). windy<br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). rainy<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). cloudy<br>
+<input type = "radio" id = "mc" name = "question8" value = "D"> D). sunny<br>
+
+<p class = "questions">9. Shedding teeth is ______</p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). making teeth stronger<br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). loosing milk teeth<br>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). loosing permanent teeth<br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). putting a shed on the teeth<br>
+
+<p class = "questions">10. The mouth of a bird is called?</p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). beak<br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). stalk<br>
+<input type = "radio" id = "mc" name = "question10" value = "C"> C). horn<br>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). beaker<br>
+
+<p class = "questions">11. We get wool from?</p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). poultry<br>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). sheep<br>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). cow<br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). turkey<br>
+
+<p class = "questions">12. ______ is not a cereal crop.</p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). millet<br>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). sorghum<br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). coconut<br>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). maize<br>
+
+<p class = "questions">13. The total number of incissors in the mouth is?</p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). 2<br>
+<input type = "radio" id = "mc" name = "question13" value = "B"> B). 8<br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). 6<br>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). 4<br>
+
+<p class = "questions">14. The phase of the moon below is called
+<p><img src="number14.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). crescent<br>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). gibbous<br>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). half<br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). new moon<br>
+
+<p class = "questions">15. When we observe the sky at night, we are not able to see the</p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). sun<br>
+<input type = "radio" id = "mc" name = "question15" value = "B"> B). moon<br>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). sky<br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). stars<br>
+
+<p class = "questions">16. Weeds are _____ crops. </p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). useful<br>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). harmful<br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). advantageous<br>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). beneficial<br>
+
+<p class = "questions">17. A young sheep is called?</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). kid<br>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). calf<br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). puppy<br>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). lamb<br>
+
+<p class = "questions">18. The best soil to model this cup is _____
+<p><img src="number18.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). sand<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). clay<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> C). loam<br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). a mixture of loam and sand<br>
+
+<p class = "questions">19. The best soil for planting crops is?</p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A. clay<br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B. loam<br>
+<input type = "radio" id = "mc" name = "question19" value = "C"> C. sand  <br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D. all of them<br>
+
+<p class = "questions">20. One of the following animals can fly. Which one is it?</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A). Bat<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). Ostrich<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). Kiwi<br>
+<input type = "radio" id = "mc" name = "question20" value = "D"> D). Tortoise<br>
+
+<p class = "questions">21. The rough layer formed by food remains on the teeth is called?</p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). plaque<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B). gum<br>
+<input type = "radio" id = "mc" name = "question21" value = "C"> C). cavities<br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). carries<br>
+
+<p class = "questions">22. Which one of these is not a characteristic of living things?</p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A). Grow<br>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B). Move<br>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C). Remove waste<br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). Swimming<br>
+
+<p class = "questions">23. The following are uses of water at the home except?</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A). Cooking <br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B). Washing<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). Irrigation<br>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D). Bathing<br>
+
+<p class = "questions">24. A barrier built across a river is called?</p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). ocean<br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B). dam<br>
+<input type = "radio" id = "mc" name = "question24" value = "C"> C). borehole<br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). well<br>
+
+<p class = "questions">25. All the following are heavenly bodies except?</p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). Stars<br>
+<input type = "radio" id = "mc" name = "question25" value = "B"> B). Trees<br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). Sun <br>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D). Moon<br>
+
+<p class = "questions">26. Our sense organ of sight is the</p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). eye<br>
+<input type = "radio" id = "mc" name = "question26" value = "B"> B). nose<br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C). ear<br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). mouth<br>
+
+<p class = "questions">27. Animals that feed on plants only are called</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). Omnivores<br>
+<input type = "radio" id = "mc" name = "question27" value = "B"> B). Insectivores<br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). Carnivores<br>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D). Herbivores<br>
+
+<p class = "questions">28. Which one of the following is NOT a domestic animal?</p>
+<input type = "radio" id = "mc" name = "question28" value = "A"> A). elephant<br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). goat<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). camel<br>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D). sheep<br>
+
+<p class = "questions">29. Which one of the following is a root vegetable?</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A). Potatoes<br>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B). Radishes<br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). Maize<br>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D). Sweet potatoes<br>
+
+<p class = "questions">30. During which hour of the day would the shadow be shortest?</p>
+<input type = "radio" id = "mc" name = "question30" value = "A"> A). Morning<br>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B). Noon<br>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C). Night<br>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D). Evening<br>
+
+<p class = "questions">31. How does the animal shown below move?
+<p><img src="number31.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). Walking<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). Swimming<br>
+<input type = "radio" id = "mc" name = "question31" value = "C"> C). Hopping <br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D). Slithering<br>
+
+<p class = "questions">32. Which fluid cannot transmit HIV/AIDS?</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). Blood<br>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B). Urine<br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C). Semen<br>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D). Saliva<br>
+
+<p class = "questions">33. Sound moves in _____ directions.</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A). two<br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B). all<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). opposite<br>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D). some<br>
+
+<p class = "questions">34. Animals that feed only on the flesh of other animals are referred to as?</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A). omnivorous<br>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B). insectivorous<br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). herbivorous<br>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D). carnivorous<br>
+
+<p class = "questions">35. The main difference between an animal and a plant is that</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). plants move from place to place<br>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B). animals make their own food<br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). animals have no sense organs<br>
+<input type = "radio" id = "mc" name = "question35" value = "D"> D). plants make their own food<br>
+
+<p class = "questions">36. The hotness or coldness of a place is known as?</p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A). rainfall<br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). sunshine<br>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C). temperature<br>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D). clouds<br>
+
+<p class = "questions">37. Which one of the following is not a way of water storage?</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). <img src="number37a.jpg"><br>
+<input type = "radio" id = "mc" name = "question37" value = "B"> B). <img src="number37b.jpg"><br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). <img src="number37c.jpg"><br>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D). <img src="number37d.jpg"><br>
+
+<p class = "questions">38. The body of the fish is covered by?</p>
+<input type = "radio" id = "mc" name = "question38" value = "A"> A). skin<br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). feather <br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). scales<br>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D). wings<br>
+
+<p class = "questions">39. The people who study the weather pattern are called?</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A). predictors<br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B). meteorologists<br>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C). scientists<br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). prophets<br>
+
+<p class = "questions">40. This instrument below is used for measuring?
+<p><img src="number40.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A). wind<br>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B). temperature<br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). rainfall<br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D). clouds<br>
+
+<p class = "questions">41. Too much rainfall mainly causes</p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). drought<br>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B). storm <br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C). harvest<br>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D). floods<br>
+
+<p class = "questions">42. Giving birth to young ones in animals is called?</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A). growth<br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). move<br>
+<input type = "radio" id = "mc" name = "question42" value = "C"> C). reproduction <br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). increasing<br>
+
+<p class = "questions">43. A housefly has ____ wings.</p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A). 4<br>
+<input type = "radio" id = "mc" name = "question43" value = "B"> B). 2<br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). 3<br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). 6<br>
+
+<p class = "questions">44. Which one of the following is not a fruit?</p>
+<input type = "radio" id = "mc" name = "question44" value = "A"> A). Coconut<br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). Mango<br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). Pyrethrum<br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D). Pineapple<br>
+
+<p class = "questions">45. Which plant has a leaf like the one shown below?
+<p><img src="number45.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A). Kales<br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B). Cabbages<br>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C). Beans<br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). Maize<br>
+
+<p class = "questions">46. The farm animal used for transporting goods is the?</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). sheep<br>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B). donkey<br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C). cow<br>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D). goat<br>
+
+<p class = "questions">47. The method of cleaning water used below is called?
+<p><img src="number47.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question47" value = "A"> A). Distillation<br>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B). Decantation<br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). Filtering <br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). Fetching<br>
+
+<p class = "questions">48. Which one of the following foods makes our teeth to be strong?</p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A). Chewing gum<br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). Biscuits<br>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C). Carrots<br>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D). Sweets<br>
+
+<p class = "questions">49. Maize, rice and wheat are examples of a group of crops called?</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A). vegetables<br>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B). legumes<br>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C). cereals<br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). tubers<br>
+
+<p class = "questions">50. Living things are both _____ and _____</p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). plants and animals<br>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B). animals and wind<br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). plants and clay<br>
+<input type = "radio" id = "mc" name = "question50" value = "D"> D). animals and stones<br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+<!- <input id = "button" type = "button" value = "Get Results!" onclick = "check();"> 
+
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+<a href = 'grade.html' id="button">marking scheme </a>
+    </div>
+	  </form>
+
+	  
+<script>
+
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var question7 = document.quiz.question7.value;
+	var question8 = document.quiz.question8.value;
+	var question9 = document.quiz.question9.value;
+	var question10 = document.quiz.question10.value;
+	var question11 = document.quiz.question11.value;
+	var question12 = document.quiz.question12.value;
+	var question13 = document.quiz.question13.value;
+	var question14 = document.quiz.question14.value;
+	var question15 = document.quiz.question15.value;
+	var question16 = document.quiz.question16.value;
+	var question17 = document.quiz.question17.value;
+	var question18 = document.quiz.question18.value;
+	var question19 = document.quiz.question19.value;
+	var question20 = document.quiz.question20.value;
+	var question21 = document.quiz.question21.value;
+	var question22 = document.quiz.question22.value;
+	var question23 = document.quiz.question23.value;
+	var question24 = document.quiz.question24.value;
+	var question25 = document.quiz.question25.value;
+	var question26 = document.quiz.question26.value;
+	var question27 = document.quiz.question27.value;
+	var question28 = document.quiz.question28.value;
+	var question29 = document.quiz.question29.value;
+	var question30 = document.quiz.question30.value;
+	var question31 = document.quiz.question31.value;
+	var question32 = document.quiz.question32.value;
+	var question33 = document.quiz.question33.value;
+	var question34 = document.quiz.question34.value;
+	var question35 = document.quiz.question35.value;
+	var question36 = document.quiz.question36.value;
+	var question37 = document.quiz.question37.value;
+	var question38 = document.quiz.question38.value;
+	var question39 = document.quiz.question39.value;
+	var question40 = document.quiz.question40.value;
+	var question41 = document.quiz.question41.value;
+	var question42 = document.quiz.question42.value;
+	var question43 = document.quiz.question43.value;
+	var question44 = document.quiz.question44.value;
+	var question45 = document.quiz.question45.value;
+	var question46 = document.quiz.question46.value;
+	var question47 = document.quiz.question47.value;
+	var question48 = document.quiz.question48.value;
+	var question49 = document.quiz.question49.value;
+	var question50 = document.quiz.question50.value;
+	var correct = 0;
+
+
+	if (question1 == "C") {
+		correct++;
+}
+	if (question2 == "B") {
+		correct++;
+}	
+	if (question3 == "C") {
+		correct++;
+	}
+	if (question4 == "C") {
+		correct++;
+}
+	if (question5 == "D") {
+		correct++;
+}	
+	if (question6 == "A") {
+		correct++;
+	}
+		
+	if (question7 == "A") {
+		correct++;
+}
+	if (question8 == "A") {
+		correct++;
+}	
+	if (question9 == "C") {
+		correct++;
+	}
+		
+	if (question10 == "D") {
+		correct++;
+}
+	if (question11 == "A") {
+		correct++;
+}	
+	if (question12 == "B") {
+		correct++;
+	}
+	if (question13 == "A") {
+		correct++;
+}
+	if (question14 == "D") {
+		correct++;
+}	
+	if (question15 == "C") {
+		correct++;
+	}
+	if (question16 == "B") {
+		correct++;
+}
+	if (question17 == "C") {
+		correct++;
+	
+}	
+	if (question18 == "B") {
+		correct++;
+	}
+	if (question19 == "C") {
+		correct++;
+}
+	if (question20 == "B") {
+		correct++;
+}	
+	if (question21 == "D") {
+		correct++;	
+	}
+	if (question22 == "C") {
+		correct++;
+}	
+	if (question23 == "A") {
+		correct++;
+	}
+	if (question24 == "D") {
+		correct++;
+}
+	if (question25 == "C") {
+		correct++;
+}	
+	if (question26 == "B") {
+		correct++;
+	}
+		
+	if (question27 == "D") {
+		correct++;
+}
+	if (question28 == "C") {
+		correct++;
+}	
+	if (question29 == "A") {
+		correct++;
+	}
+		
+	if (question30 == "B") {
+		correct++;
+}
+	if (question31 == "C") {
+		correct++;
+}	
+	if (question32 == "C") {
+		correct++;
+	}
+	if (question33 == "B") {
+		correct++;
+}
+	if (question34 == "B") {
+		correct++;
+}	
+	if (question35 == "A") {
+		correct++;
+	}
+	if (question36 == "A") {
+		correct++;
+}
+	if (question37 == "B") {
+		correct++;
+}	
+	if (question38 == "D") {
+		correct++;
+	}
+	if (question39 == "A") {
+		correct++;
+}
+	if (question40 == "C") {
+		correct++;
+}	
+	if (question41 == "D") {
+		correct++;	
+	}
+	if (question42 == "C") {
+		correct++;
+}	
+	if (question43 == "C") {
+		correct++;
+	}
+	if (question44 == "B") {
+		correct++;
+}
+	if (question45 == "A") {
+		correct++;
+}	
+	if (question46 == "A") {
+		correct++;
+	}
+		
+	if (question47 == "A") {
+		correct++;
+}
+	if (question48 == "B") {
+		correct++;
+}	
+	if (question49 == "A") {
+		correct++;
+	}
+		
+	if (question50 == "C") {
+		correct++;
+}
+    var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+
+	document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("text").innerHTML = texts[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " out of 50 correct.";
+	document.getElementById("percentage").innerHTML = "Marks " + Math.round(correct/50*100)/1 + "%"
+
+	}
+	
+
+var numQues = 50;
+var numChoi = 4;
+var answers = new Array(50);
+answers[0] = "A";
+answers[1] = "D";
+answers[2] = "B";
+answers[3] = "D";
+answers[4] = "C";
+answers[5] = "B";
+answers[6] = "C";
+answers[7] = "C";
+answers[8] = "B";
+answers[9] = "A";
+answers[10] = "B";
+answers[11] = "C";
+answers[12] = "B";
+answers[13] = "B";
+answers[14] = "A";
+answers[15] = "B";
+answers[16] = "D";
+answers[17] = "B";
+answers[18] = "B";
+answers[19] = "A";
+answers[20] = "A"; 
+answers[21] = "D";
+answers[22] = "C";
+answers[23] = "B";
+answers[24] = "B";
+answers[25] = "A";
+answers[26] = "D";
+answers[27] = "A";
+answers[28] = "B";
+answers[29] = "B";
+answers[30] = "D";
+answers[31] = "B";
+answers[32] = "B";
+answers[33] = "D";
+answers[34] = "D";
+answers[35] = "C";
+answers[36] = "A";
+answers[37] = "C";
+answers[38] = "B";
+answers[39] = "C";
+answers[40] = "D";
+answers[41] = "C";
+answers[42] = "A";
+answers[43] = "C";
+answers[44] = "D";
+answers[45] = "B";
+answers[46] = "C";
+answers[47] = "C";
+answers[48] = "C";
+answers[49] = "A";
+
+
+function getScore(form) {
+  var correct = 0;
+  var currElt;
+  var currSelection;
+var d = document.getElementById("after_submit").style.visibility = "visible"; 
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          correct++;
+          break;
+        }
+      }
+    }
+  }
+  
+  var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+  correct = Math.round(correct/numQues*100);
+  document.getElementById("percentage").innerHTML = "Marks " + correct + "%";
+  document.getElementById("number_correct").innerHTML = "You got " + correct/2 + " out of 50 correct";
+  document.getElementById("text").innerHTML = texts[score];
+  document.getElementById("message").innerHTML = messages[score];
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+   d.style.visibility = "visible"; 
+}
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

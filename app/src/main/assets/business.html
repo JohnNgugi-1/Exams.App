@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<head>
+<button onclick="goBack()">Go back</button><br/>
+</head>
+<body>
+
+<p></p>
+<div>
+  <iframe src="https://docs.google.com/gview?embedded=true&url=http://www.ednet.ns.ca/files/curriculum/ScienceP-Science1-Handbook.pdf"  ></iframe>
+</div>
+<style>
+
+iframe {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll
+  
+}</style>
+<script>
+function goBack(){
+window.history.go(-2);
+}
+</script>
+</body>
+
+</html>
+

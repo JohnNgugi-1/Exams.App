@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SomaKcpe</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">I will succeed. I am a winner.</string>
+    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_home">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="interstitial1">ca-app-pub-8737004905441026/3091506195</string>
+    <string name="banner_home1">ca-app-pub-8737004905441026/3751456529</string>
+
+    <string name="banner_elementary">ca-app-pub-8737004905441026/4432508022</string>
+    <string name="banner_high">ca-app-pub-8737004905441026/1125293184</string>
+    <string name="banner_header">ca-app-pub-8737004905441026/1676506262</string>
+    <string name="rewarded">ca-app-pub-8737004905441026/3325611737</string>
+
+    <string name="more">#StayHome</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Elementary School</string>
+    <string name="menu_slideshow">High School</string>
+    <string name="menu_tools">Motivation</string>
+    <string name="menu_kcse">KCSE App</string>
+    <string name="menu_share">Contact Us</string>
+    <string name="menu_send">Notes </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

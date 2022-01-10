@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script>
+var timeInMinutes = 100;
+var currentTime = Date.parse(new Date());
+var deadline = new Date(currentTime + timeInMinutes*60*1000);
+ 
+ 
+function getTimeRemaining(endtime){
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
+ 
+function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    function updateClock(){
+        var t = getTimeRemaining(endtime);
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        if(t.total<=0){
+		 
+       clearInterval(timeinterval);
+	    Android.playAudio("Time is up!");
+            
+        }
+ 
+    }
+ 
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+}
+ 
+initializeClock('clockdiv', deadline);
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<p><b>The passage below contains blank spaces numbered 1 to 15. 
+For each blank space choose the correct answer to fill in the blank spaces.</b></p>
+<p>Honesty, as the wise saying 1_____ is the best policy. It is important that we form a 2_____ of 
+always speaking the truth. Irrespective 3_____ the situation we 4_____ in. 
+Being assertive and standing   5_____ ground is another social value we 6_____ in. 
+Apologise if 7_____ be but never be tempted to 8_____ a lie.</p> 
+<p>Lying will only make others 9_____ confidence 10_____ you. Once 11_____ is lost, 
+relationships are broken 12_____ they can never be 13_____.Life without 
+friends becomes very 14______. Let us all learn to speak the truth and it shall 15_____ 
+us free.</p>
+
+<p class = "questions">1. </p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). comes<br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). goes<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). says<br>
+<input type = "radio" id = "mc" name = "question1" value = "D"> D). speaks<br>
+
+<p class = "questions">2. </p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). manner<br>
+<input type = "radio" id = "mc" name = "question2" value = "B"> B). habit<br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). like<br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). talk <br>
+
+<p class = "questions">3. </p>
+<input type = "radio" id = "mc" name = "question3" value = "A"> A). for<br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). on<br>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). at<br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). of<br>
+ 
+<p class = "questions">4. </p>
+<input type = "radio" id = "mc" name = "question4" value = "A"> A). are<br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). was<br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). were<br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). came<br>
+
+<p class = "questions">5. </p>
+<input type = "radio" id = "mc" name = "question5" value = "A"> A). out<br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). onto<br>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). our<br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). upon<br>
+ 
+<p class = "questions">6. </p>  
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). would<br>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). could<br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). should<br>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). might<br>
+
+<p class = "questions">7.  </p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). would<br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). need<br>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). shall<br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). wanted<br>
+
+<p class = "questions">8. </p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). say<br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). tell<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). speak<br>
+<input type = "radio" id = "mc" name = "question8" value = "D"> D). want<br>
+
+<p class = "questions">9. </p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). bring<br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). feel<br>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). lose<br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). give<br>
+
+<p class = "questions">10. </p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). for<br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). on<br>
+<input type = "radio" id = "mc" name = "question10" value = "C"> C). of<br>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). in<br>
+
+<p class = "questions">11. </p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). yours<br>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). theirs<br>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). trust<br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). bright<br>
+
+<p class = "questions">12. </p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). and<br>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). down<br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). but<br>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). away<br>
+
+<p class = "questions">13. </p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). mended<br>
+<input type = "radio" id = "mc" name = "question13" value = "B"> B). built<br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). worked<br>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). brought<br>
+
+<p class = "questions">14. </p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). boring<br>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). happy<br>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). pleased<br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). fan<br>
+
+<p class = "questions">15. </p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). bring<br>
+<input type = "radio" id = "mc" name = "question15" value = "B"> B). save<br>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). set<br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). take<br>
+
+<p><b>For question 16 to 18 choose the BEST answer to fill the sentences below.</b></p>
+<p class = "questions">16. The monkey ______ tail was cut escaped narrowly.</p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). whom<br>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). whose<br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). which<br>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). who<br>
+
+<p class = "questions">17. The teacher gave the pupils _____ newspapers to read.</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). afew<br>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). a few<br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). a<br>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). an<br>
+
+<p class = "questions">18. My elder sister finally ____ after spending many years abroad.</p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). got up<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). got back<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> C). got off<br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). got down<br>
+
+<p><b>For questions 19 to 21, choose the BEST word to replace the underlined words 
+from the alternatives provided.</b></p>
+<p class = "questions">19. There was a <u>surprise attack</u> as the bank was about to close.</p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A. theft<br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B. robber<br>
+<input type = "radio" id = "mc" name = "question19" value = "C"> C. raid<br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D. gang<br>
+
+<p class = "questions">20. The leopard killed the hog which was in the <u>pig's house</u>.</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A. nest<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B. stable<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C. sty<br>
+<input type = "radio" id = "mc" name = "question20" value = "D"> D. den<br>
+
+<p class = "questions">21. Nyakang'a <U>bent down<</U> her head because of shame.</p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A. combed<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B. headed<br>
+<input type = "radio" id = "mc" name = "question21" value = "C"> C. shaved<br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D. drooped<br>
+
+<p><b>In  question  22  and  23,  provide  the  correct question tags.</b></p>
+<p class = "questions">22. Wabora shouted at Meki,</p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A. wasn't it<br>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B. isn't it<br>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C. don't he<br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D. didn't he<br>
+
+<p class = "questions">23. My money is musing,</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A. is it<br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B. wasn't it<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C. was it<br>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D. isn't it<br>
+
+<p><b>In question 24 and 25, choose the word that  LEAST  fits  in  each  group.</b></p>
+<p class = "questions">24. </p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A. nest<br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B. lair<br>
+<input type = "radio" id = "mc" name = "question24" value = "C"> C. shelf<br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D. shell<br>
+
+<p class = "questions">25. </p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A. eel<br>
+<input type = "radio" id = "mc" name = "question25" value = "B"> B. wine<br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C. vinegar<br>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D. milk<br>
+
+<p><b>READ THE FOLLOWING'PASSAGE AND ANSWER QUESTIONS THAT FOLLOW </b></p>
+<p>Long ago the hare, the hyena and the dog used to live as  great friends. Even other animals 
+would always  shudder with amazement how these three animals  could be so friendly 
+and yet very different from each other! </p>
+<p>Then, one day the hyena was invited for a party by his in-laws. And like a good friend, he 
+decided to ask his friends to accompany him to his in-laws for the feast. The friends on their 
+part did not disappoint him and they agreed to offer company. </p>
+<p>The hyena and his friends were given a reception of the highest degree one could expect from 
+in-laws. They were treated to a great feast. They ate and drank to their fill. They danced and 
+got the best possible entertainment. It was really an entertaining visit; a very colourful 
+entertainment! </p>
+<p>When darkness came and it was already night time, the hyena and his friends were shown 
+where to sleep. This was in the same room where sheep and goats were kept. But the greedy 
+hyena could not be trusted! In the thick of the*night, all the animals were deeply asleep except 
+the hyena-. The. greedy hyena could not control his hunger. He kept yawning and swallowing the 
+saliva of glutton and glancing at the sheep near him. He stealthily walked to one ram and held 
+it by the throat so as to not make noise and awaken the friends. Very quickly the hyena 
+strangled and ate the ram. Then he smeared blood on the lips of his friends carefully and then 
+went to sleep as if nothing had happened. But the hyena's tricks did not work quite well. His 
+friends licked their lips while still in sleep and they became as clean as they had been before. </p>
+<p>When the hyena's father-in-law went to check his flock, he discovered that one ram was 
+missing' He at once asked his guest to explain who was responsible for the ungrateful act. 
+Nobody answered. Perhaps the matter would have ended unresolved. But the hare thought it 
+was a good chance for him to trick down the thief. So he called the hyena's father-in -law and 
+whispered for a little while. Then the hyena's in-law rushed out. No sooner had he left than he
+reappeared. He returned, brandishing a panga in hand and shouting viciously. "I have discovered
+the thief who killed my ram and I am going to teach him a lesson. I will slash and crush him like flour"</p>
+<p>The hyena was already trembling with fear and trying hard not to show it. He was panic- stricken. 
+Then, suddenly, the dog dashed out and ran as fast as his legs could carry him with thin sweat 
+dripping out of his body. The hyena burst out into a loud laughter which reached the dog's ears. 
+This laughter made the dog confirm his fears that the hare had actually blamed him for the offence. 
+That is why to this day the dog and the hare do not see eye to eye.</p>
+
+<p class = "questions">26. The word <b>shudder</b> has been underlined, which of the words provided has the same in meaning?</p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A. worry<br>
+<input type = "radio" id = "mc" name = "question26" value = "B"> B. shock<br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C. shaken<br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D. terrible<br>
+
+<p class = "questions">27. From the passage we learn that</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A. the hare, the hyena and the dog lived in amazement.<br>
+<input type = "radio" id = "mc" name = "question27" value = "B"> B. the hare, the hyena and the dog lived harmoniously.<br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C. the other animals envied their shudder with amazement.<br>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D. the other animals wanted to join the hare, hyena and dog.<br>
+
+<p class = "questions">28. According to the passage, it is TRUE to say that</p>
+<input type = "radio" id = "mc" name = "question28" value = "A"> A. The hyena was accompanied by his friends.<br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B. The hare requested his friends to accompany him.<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C. The dog was accompanied by his friends.<br>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D. The in-laws accompanied their friends.<br>
+
+<p class = "questions">29. The hyena and his friends were given an exceptional reception because</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A. Hyena demanded for that kind of reception.<br>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B. Hyena and his friends needed such reception.<br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C. In-laws had to give such a reception.<br>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D. In-laws demanded such a reception.<br>
+
+<p class = "questions">30. It is FALSE to state that</p>
+<input type = "radio" id = "mc" name = "question30" value = "A"> A. the hyena and his friends were great heroes<br>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B. the in-laws were very generous.<br>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C. the hare and the dog accompanied the hyena.<br>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D. the friends did not disappoint the hyena<br>
+
+<p class = "questions">31. At the end of the feast they ____</p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A. were given a reception of the highest degree.<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B. ate and drank to their fill.<br>
+<input type = "radio" id = "mc" name = "question31" value = "C"> C. strangled and ate a ram.<br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D. were shown where to put up.<br>
+
+<p class = "questions">32. The hyena could not sleep because he was</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A. sleepless<br>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B. yawning.<br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C. angry.<br>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D. greedy<br>
+
+
+<p class = "questions">33. Before he killed the ram, he made sure that</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A. all and sundry were asleep,<br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B. all the sheep were asleep,<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C. everybody was out of sight, .<br>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D. not a soul was around<br>
+
+<p class = "questions">34. But the hyenas 'trick' refer to the</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A. licking blood<br>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B. blood on the lips<br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C. eating the ram<br>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D. missing ram.<br>
+
+<p class = "questions">35. When the hyena's friends woke up, they</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A. had no blood on their lips,<br>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B. had some blood on their lips<br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C. were very hungry.<br>
+<input type = "radio" id = "mc" name = "question35" value = "D"> D. were very angry.<br>
+
+<p class = "questions">36. Who suffered for no good reason?</p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A. The hyena<br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B. The dog.<br>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C. The hare.<br>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D. The friends.<br>
+
+<p class = "questions">37. According to the passage, it is TRUE to state that</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A. the dog ate the ram.<br>
+<input type = "radio" id = "mc" name = "question37" value = "B"> B. the hare ate the ram.<br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C. the hare knew the thief.<br>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D. the dog did not eat the ram.<br>
+
+<p class = "questions">38. The BEST title for this passage is?</p>
+<input type = "radio" id = "mc" name = "question38" value = "A"> A. friend in need is a friend in deed.<br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B. Trustworthy friends.<br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C. Unfaithful friend.<br>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D. The best friends.<br>
+
+<p>Many people treat their bodies in the same way. It is easy to remember to eat enough to
+satisfy hunger. just as it is easy to remember to put petrol in a car. But it is often forgotten that
+body building foods (proteins) and foods to keep the body healthy (vitamins and mineral salts) 
+are  also  needed to keep the vital parts in good working order. Such foods are important 
+for children especially when they are growing fast.</p>
+<p>A new born baby should have the,mother's milk. This means that the mother must 
+eat plenty of good food to have sufficient milk. She should also drink a lot of milk, water 
+and fruit juices, but not too much tea or coffee. If she does  not have enough milk, she should go to the 
+hospital or a health centre to learn the proper way of mixing milk with sugar and water for the baby to take. </p>
+<p>The feeding of a baby requires special care. For example one should never feed a baby 
+with the bottle without proper advice from qualified people. In addition, we should ensure that 
+babies get proper food. Drinks like tea and squash are not good for babies. </p>
+<p>Even when a baby is breast - feeding, he must learn to feed at regular times. 
+Some people mistakenly think that a baby cries just because he is hungry. 
+There are many things which make a baby cry; his clothes may be wet or he may be 
+<b>uncomfortable</b> and want to be turned over. Most common of all, he may have wind in his stomach. 
+When a baby sucks, he sucks milk and wind, so that his stomach is full of 
+milk as well as wind. If you do not get the wind out after a feed, he will 
+become uncomfortable and soon begin to cry. When you have finished feeding him, pat him gently 
+on the back to make him release some of the wind through the mouth. Then he will sleep peacefully.
+
+<p class = "questions">39. According to the first paragraph we should eat enough to?</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A. be like fuelled car<br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B. satisfy hunger<br>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C. in order to grow fast<br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D. to keep the vital parts in good working order<br>
+
+<p class = "questions">40. When children are growing fast it is very important for them to</p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A. satisfy hunger and thirst<br>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B. take only body-building foods<br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C. take the right variety of food<br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D. take the correct amount of starch<br>
+
+<p class = "questions">41. A new born baby means?</p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A. a mother's first child<br>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B. a clean fresh baby<br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C. the last born in a family<br>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D. a baby that has just been born<br>
+
+<p class = "questions">42. Feeding a baby at regular times means?</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A. feeding him frequently<br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B. feeding him for a given time<br>
+<input type = "radio" id = "mc" name = "question42" value = "C"> C. feeding him at definite time<br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D. feeding him when he has cried<br>
+
+<p class = "questions">43. Which of the following best explains why babies cry?</p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A. being hungry or uncomfortable<br>
+<input type = "radio" id = "mc" name = "question43" value = "B"> B. having wind or being wet<br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C. being fed irregularly<br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D. wanting to be turned over<br>
+
+<p class = "questions">44. Which of the following should a mother take caution when taking?</p>
+<input type = "radio" id = "mc" name = "question44" value = "A"> A. water<br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B. fruit juice<br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C. coffee<br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D. milk<br>
+
+<p class = "questions">45. Which is the opposite of the word in bold in the story?</p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A. discomfort<br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B. comfortable<br>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C. comfort<br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D. smart<br>
+
+<p class = "questions">46. Besides sucking milk, the baby sucks?</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A. water<br>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B. tea<br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C. coffee<br>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D. wind<br>
+
+<p class = "questions">47. The following are said not to be good for babies except</p>
+<input type = "radio" id = "mc" name = "question47" value = "A"> A. milk<br>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B. tea<br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C. coffee<br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D. squash<br>
+
+<p class = "questions">48. Why should a mother visit a hospital or .a health centre according to the passage?</p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A. to take a child to clinic<br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B. to learn the proper way of mixing milk with sugar and water for the baby to take<br>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C. to learn the proper way of mixing milk with sugar and water to take<br>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D. to be given advice on proper diet<br>
+
+<p class = "questions">49. The phrase <b>.'in addition'</b> as used in the passage can be replaced with _____</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A. beside<br>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B. however<br>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C. although<br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D. besides<br>
+
+<p class = "questions">50. The best summary of this passage would be?</p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A. breast feeding<br>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B. balanced diet<br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C. health and hygiene<br>
+<input type = "radio" id = "mc" name = "question50" value = "D"> D. a mother's diet<br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+<!- <input id = "button" type = "button" value = "Get Results!" onclick = "check();"> 
+
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+<a href = 'grade.html' id="button">marking scheme </a>
+    </div>
+	  </form>
+
+	  
+<script>
+
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var question7 = document.quiz.question7.value;
+	var question8 = document.quiz.question8.value;
+	var question9 = document.quiz.question9.value;
+	var question10 = document.quiz.question10.value;
+	var question11 = document.quiz.question11.value;
+	var question12 = document.quiz.question12.value;
+	var question13 = document.quiz.question13.value;
+	var question14 = document.quiz.question14.value;
+	var question15 = document.quiz.question15.value;
+	var question16 = document.quiz.question16.value;
+	var question17 = document.quiz.question17.value;
+	var question18 = document.quiz.question18.value;
+	var question19 = document.quiz.question19.value;
+	var question20 = document.quiz.question20.value;
+	var question21 = document.quiz.question21.value;
+	var question22 = document.quiz.question22.value;
+	var question23 = document.quiz.question23.value;
+	var question24 = document.quiz.question24.value;
+	var question25 = document.quiz.question25.value;
+	var question26 = document.quiz.question26.value;
+	var question27 = document.quiz.question27.value;
+	var question28 = document.quiz.question28.value;
+	var question29 = document.quiz.question29.value;
+	var question30 = document.quiz.question30.value;
+	var question31 = document.quiz.question31.value;
+	var question32 = document.quiz.question32.value;
+	var question33 = document.quiz.question33.value;
+	var question34 = document.quiz.question34.value;
+	var question35 = document.quiz.question35.value;
+	var question36 = document.quiz.question36.value;
+	var question37 = document.quiz.question37.value;
+	var question38 = document.quiz.question38.value;
+	var question39 = document.quiz.question39.value;
+	var question40 = document.quiz.question40.value;
+	var question41 = document.quiz.question41.value;
+	var question42 = document.quiz.question42.value;
+	var question43 = document.quiz.question43.value;
+	var question44 = document.quiz.question44.value;
+	var question45 = document.quiz.question45.value;
+	var question46 = document.quiz.question46.value;
+	var question47 = document.quiz.question47.value;
+	var question48 = document.quiz.question48.value;
+	var question49 = document.quiz.question49.value;
+	var question50 = document.quiz.question50.value;
+	var correct = 0;
+
+
+	if (question1 == "C") {
+		correct++;
+}
+	if (question2 == "B") {
+		correct++;
+}	
+	if (question3 == "C") {
+		correct++;
+	}
+	if (question4 == "C") {
+		correct++;
+}
+	if (question5 == "D") {
+		correct++;
+}	
+	if (question6 == "A") {
+		correct++;
+	}
+		
+	if (question7 == "A") {
+		correct++;
+}
+	if (question8 == "A") {
+		correct++;
+}	
+	if (question9 == "C") {
+		correct++;
+	}
+		
+	if (question10 == "D") {
+		correct++;
+}
+	if (question11 == "A") {
+		correct++;
+}	
+	if (question12 == "B") {
+		correct++;
+	}
+	if (question13 == "A") {
+		correct++;
+}
+	if (question14 == "D") {
+		correct++;
+}	
+	if (question15 == "C") {
+		correct++;
+	}
+	if (question16 == "B") {
+		correct++;
+}
+	if (question17 == "C") {
+		correct++;
+	
+}	
+	if (question18 == "B") {
+		correct++;
+	}
+	if (question19 == "C") {
+		correct++;
+}
+	if (question20 == "B") {
+		correct++;
+}	
+	if (question21 == "D") {
+		correct++;	
+	}
+	if (question22 == "C") {
+		correct++;
+}	
+	if (question23 == "A") {
+		correct++;
+	}
+	if (question24 == "D") {
+		correct++;
+}
+	if (question25 == "C") {
+		correct++;
+}	
+	if (question26 == "B") {
+		correct++;
+	}
+		
+	if (question27 == "D") {
+		correct++;
+}
+	if (question28 == "C") {
+		correct++;
+}	
+	if (question29 == "A") {
+		correct++;
+	}
+		
+	if (question30 == "B") {
+		correct++;
+}
+	if (question31 == "C") {
+		correct++;
+}	
+	if (question32 == "C") {
+		correct++;
+	}
+	if (question33 == "B") {
+		correct++;
+}
+	if (question34 == "B") {
+		correct++;
+}	
+	if (question35 == "A") {
+		correct++;
+	}
+	if (question36 == "A") {
+		correct++;
+}
+	if (question37 == "B") {
+		correct++;
+}	
+	if (question38 == "D") {
+		correct++;
+	}
+	if (question39 == "A") {
+		correct++;
+}
+	if (question40 == "C") {
+		correct++;
+}	
+	if (question41 == "D") {
+		correct++;	
+	}
+	if (question42 == "C") {
+		correct++;
+}	
+	if (question43 == "C") {
+		correct++;
+	}
+	if (question44 == "B") {
+		correct++;
+}
+	if (question45 == "A") {
+		correct++;
+}	
+	if (question46 == "A") {
+		correct++;
+	}
+		
+	if (question47 == "A") {
+		correct++;
+}
+	if (question48 == "B") {
+		correct++;
+}	
+	if (question49 == "A") {
+		correct++;
+	}
+		
+	if (question50 == "C") {
+		correct++;
+}
+    var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+
+	document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("text").innerHTML = texts[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " out of 50 correct.";
+	document.getElementById("percentage").innerHTML = "Marks " + Math.round(correct/50*100)/1 + "%"
+
+	}
+	
+
+var numQues = 50;
+var numChoi = 4;
+var answers = new Array(50);
+answers[0] = "B";
+answers[1] = "B";
+answers[2] = "D";
+answers[3] = "A";
+answers[4] = "C";
+answers[5] = "C";
+answers[6] = "B";
+answers[7] = "B";
+answers[8] = "C";
+answers[9] = "D";
+answers[10] = "C";
+answers[11] = "A";
+answers[12] = "A";
+answers[13] = "A";
+answers[14] = "C";
+answers[15] = "B";
+answers[16] = "B";
+answers[17] = "B";
+answers[18] = "C";
+answers[19] = "C";
+answers[20] = "D"; 
+answers[21] = "D";
+answers[22] = "D";
+answers[23] = "B";
+answers[24] = "A";
+answers[25] = "B";
+answers[26] = "B";
+answers[27] = "A";
+answers[28] = "C";
+answers[29] = "A";
+answers[30] = "D";
+answers[31] = "D";
+answers[32] = "A";
+answers[33] = "B";
+answers[34] = "A";
+answers[35] = "B";
+answers[36] = "D";
+answers[37] = "C";
+answers[38] = "D";
+answers[39] = "C";
+answers[40] = "D";
+answers[41] = "C";
+answers[42] = "A";
+answers[43] = "C";
+answers[44] = "B";
+answers[45] = "D";
+answers[46] = "A";
+answers[47] = "B";
+answers[48] = "D";
+answers[49] = "A";
+
+
+function getScore(form) {
+  var correct = 0;
+  var currElt;
+  var currSelection;
+var d = document.getElementById("after_submit").style.visibility = "visible"; 
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          correct++;
+          break;
+        }
+      }
+    }
+  }
+  
+  var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+  correct = Math.round(correct/numQues*100);
+  document.getElementById("percentage").innerHTML = "Marks " + correct + "%";
+  document.getElementById("number_correct").innerHTML = "You got " + correct/2 + " out of 50 correct";
+  document.getElementById("text").innerHTML = texts[score];
+  document.getElementById("message").innerHTML = messages[score];
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+   d.style.visibility = "visible"; 
+}
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

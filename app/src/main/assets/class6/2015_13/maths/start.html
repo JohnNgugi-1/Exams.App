@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script>
+var timeInMinutes = 120;
+var currentTime = Date.parse(new Date());
+var deadline = new Date(currentTime + timeInMinutes*60*1000);
+ 
+ 
+function getTimeRemaining(endtime){
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
+ 
+function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    function updateClock(){
+        var t = getTimeRemaining(endtime);
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        if(t.total<=0){
+		 
+       clearInterval(timeinterval);
+	    Android.playAudio("Time is up!");
+            
+        }
+ 
+    }
+ 
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+}
+ 
+initializeClock('clockdiv', deadline);
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<p class = "questions">1. What is the place value of digit 4 in the number 245687?</p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). Tens<br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). Thousands<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). Ten thousands<br>
+<input type = "radio" id = "mc" name = "question1" value = "D"> D). Hundred thousands<br>
+
+<p class = "questions">2. What is the square root of 784?</p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). 28 <br>
+<input type = "radio" id = "mc" name = "question2" value = "B"> B). 22<br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). 26 <br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). 38<br>
+
+<p class = "questions">3. Round on 89370 to the nearest thousands. </p>
+<input type = "radio" id = "mc" name = "question3" value = "A"> A). 90000 <br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). 89000<br>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). 89300 <br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). 89400<br>
+ 
+<p class = "questions">4. Work out: 356 x 214 </p>
+<input type = "radio" id = "mc" name = "question4" value = "A"> A). 66184<br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). 60284<br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). 86384<br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). 76184<br>
+
+<p class = "questions">5. Find the G.C.D of 16, 24, 32</p>
+<input type = "radio" id = "mc" name = "question5" value = "A"> A). 96<br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). 12<br>
+<input type = "radio" id = "mc" name = "question5" value = "C"> C). 72<br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). 8<br>
+ 
+<p class = "questions">6. Subtract: 863351 - 572440</p>  
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). 290911<br>
+<input type = "radio" id = "mc" name = "question6" value = "B"> B). 390811<br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). 280911<br>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). 390901<br>
+
+<p class = "questions">7. Find the volume of the cuboid below in m<sup>3</sup>
+<p><img src="number7.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). 283.25 m<sup>3</sup><br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). 182.25 m<sup>3</sup><br>
+<input type = "radio" id = "mc" name = "question7" value = "C"> C). 162.75 m<sup>3</sup><br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). 182.75 m<sup>3</sup><br>
+
+<p class = "questions">8. During the Homa Bay senatorial campaign rally, the number of men was 83479. the women were 75218 while children were 135697. How many more children than men were there?</p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). 60479<br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). 52218<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). 294394<br>
+<input type = "radio" id = "mc" name = "question8" value = "D"> D). 62218<br>
+
+<p class = "questions">9. Evaluate: (<sup>4</sup>&frasl;<sub>7</sub>)<sup>2</sup></p>
+<input type = "radio" id = "mc" name = "question9" value = "A"> A). <sup>16</sup>&frasl;<sub>49</sub><br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). <sup>8</sup>&frasl;<sub>14</sub><br>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). 1<sup>1</sup>&frasl;<sub>7</sub><br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). 3<sup>1</sup>&frasl;<sub>49</sub><br>
+
+<p class = "questions">10. Convert 0.24 into a fraction and simplify it.</p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). <sup>24</sup>&frasl;<sub>100</sub><br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). <sup>24</sup>&frasl;<sub>50</sub><br>
+<input type = "radio" id = "mc" name = "question10" value = "C"> C). <sup>6</sup>&frasl;<sub>25</sub><br>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). <sup>8</sup>&frasl;<sub>20</sub><br>
+
+<p class = "questions">11. Workout: 0.554 + 6.08 + 10.0354</p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). 16.5684<br>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). 16.7694<br>
+<input type = "radio" id = "mc" name = "question11" value = "C"> C). 16.6694<br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). 17.6684<br>
+
+<p class = "questions">12. Add: 2<sup>4</sup>&frasl;<sub>5</sub> + 1<sup>3</sup>&frasl;<sub>10</sub> + 3<sup>5</sup>&frasl;<sub>6</sub></p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). 6<sup>30</sup>&frasl;<sub>58</sub><br>
+<input type = "radio" id = "mc" name = "question12" value = "B"> B). 7<sup>14</sup>&frasl;<sub>15</sub><br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). 6<sup>28</sup>&frasl;<sub>30</sub><br>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). 7<sup>15</sup>&frasl;<sub>29</sub><br>
+
+<p class = "questions">13. How many metres are there in 5 km 720 m?</p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). 0.572 m<br>
+<input type = "radio" id = "mc" name = "question13" value = "B"> B). 57200 m<br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). 5720 m<br>
+<input type = "radio" id = "mc" name = "question13" value = "D"> D). 0.0572 m<br>
+
+<p class = "questions">14. Workout: 1089 &#247; 1.8</p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). 605 <br>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). 60.5<br>
+<input type = "radio" id = "mc" name = "question14" value = "C"> C). 6.05 <br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). 650<br>
+
+<p class = "questions">15. Abuya’s plot of land measures 480 m by 260 m as shown below.
+<p><img src="number15.jpg"></p> Find its area in ACRES</p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). 124800<br>
+<input type = "radio" id = "mc" name = "question15" value = "B"> B). 124.8<br>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). 1248<br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). 12.480<br>
+
+<p class = "questions">16. Narcos bought the following items from a shop; 
+<p>4 kg of rice @ sh 50 per kg </p>
+<p>1&frac12; kg sugar @ sh 60 </p>
+<p>2 bars of chocolate for sh 40 </p>
+If she paid using a sh 500 note, how much was her balance?</p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). Sh 270<br>
+<input type = "radio" id = "mc" name = "question16" value = "B"> B). Sh 180<br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). Sh 330 <br>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). Sh 170<br>
+
+<p class = "questions">17. In a town. 25% of the population are children. If the town has 382000 people, find out how many children are there.</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). 286500 <br>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). 95500<br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). 57300 <br>
+<input type = "radio" id = "mc" name = "question17" value = "D"> D). 324700<br>
+
+<p class = "questions">18. Find the width x if the perimeter of the rectangle below is 216 cm.
+<p><img src="number18.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question18" value = "A"> A). 36 cm<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). 48 cm<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> C). 40 cm<br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). 24 cm<br>
+
+<p class = "questions">19. Find the circumference of the circle below.(&#960; = <sup>22</sup>&frasl;<sub>7</sub>)
+<p><img src="number19.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question19" value = "A"> A). 26.4 cm<br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B). 52.8 cm<br>
+<input type = "radio" id = "mc" name = "question19" value = "C"> C). 264 cm<br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D). 528 cm<br>
+
+<p class = "questions">20. A bus left Mombasa at 0715 hrs and reached Nairobi after 8 hrs 30 minutes. At what time did the reach Nairobi? (Give your answer in the 24 hr clock system)</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A). 0345 hrs<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). 1745 hrs<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). 1545 hrs<br>
+<input type = "radio" id = "mc" name = "question20" value = "D"> D). 3.45 hrs<br>
+
+<p class = "questions">21. Subtract:<p><img src="number21.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). 53 t 072 kg 119 g<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B). 21 t 560 kg 840 g<br>
+<input type = "radio" id = "mc" name = "question21" value = "C"> C). 21 t 568 kg 841 g<br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). 22 t 561 kg 841 g<br>
+
+<p class = "questions">22. The triangle below has an area of 75 cm<sup>2</sup>. The base of triangle is 5 cm. What is the height of the triangle?
+<p><img src="number22.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A). 150 cm<br>
+<input type = "radio" id = "mc" name = "question22" value = "B"> B). 45 cm<br>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C). 30 cm<br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). 15 cm<br>
+
+<p class = "questions">23. Lilian bought a dress for sh 1800. She later sold it making a loss of 10%. How much did she sell it at?</p>
+<input type = "radio" id = "mc" name = "question23" value = "A"> A). Sh 2000<br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B). Sh 1620<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). Sh 1720<br>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D). Sh 1580<br>
+
+<p class = "questions">24. Find the area of the unshaded part in the figure below.
+<p><img src="number24.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). 1394 cm<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B). 738 cm<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question24" value = "C"> C). 656 cm<sup>2</sup><br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). 2132 cm<sup>2</sup><br>
+
+<p class = "questions">25. Solve for x in the equation: <p>5(2x + 1 ) - 1 = 9</p></p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). <sup>1</sup>&frasl;<sub>2</sub><br>
+<input type = "radio" id = "mc" name = "question25" value = "B"> B). 1<sup>3</sup>&frasl;<sub>10</sub><br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). <sup>3</sup>&frasl;<sub>10</sub><br>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D). <sup>5</sup>&frasl;<sub>9</sub><br>
+
+<p class = "questions">26. What is the name of the triangle drawn below? <p><img src="number26.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). Isosceles<br>
+<input type = "radio" id = "mc" name = "question26" value = "B"> B). Scralene<br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C). Equilateral<br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). Right-angled triangle<br>
+
+<p class = "questions">27. Gesare drove a distance of 150 km from 8 am to 10 am . What was his average speed?</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). 70 km/hr<br>
+<input type = "radio" id = "mc" name = "question27" value = "B"> B). 80 km/hr<br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). 100 km/hr<br>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D). 75 km/hr<br>
+
+<p class = "questions">28. Find the value of the angle marked 'd' in the figure below <p><img src="number28.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question28" value = "A"> A). 60°<br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). 120°<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). 50°<br>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D). 90°<br>
+
+<p class = "questions">29. The table below shows the number of bags of mangoes harvested by a farmer in five days.
+<p><img src="number29.jpg"></p> If the farmer sold 780 bags, how many bags was he left with?</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A). 875<br>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B). 1450<br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). 670<br>
+<input type = "radio" id = "mc" name = "question29" value = "D"> D). 750<br>
+
+<p class = "questions">30. How many minutes are there in 83 hours?</p>
+<input type = "radio" id = "mc" name = "question30" value = "A"> A). 540 minutes<br>
+<input type = "radio" id = "mc" name = "question30" value = "B"> B). 500 minutes<br>
+<input type = "radio" id = "mc" name = "question30" value = "C"> C). 480 minutes<br>
+<input type = "radio" id = "mc" name = "question30" value = "D"> D). 620 minutes<br>
+
+<p class = "questions">31. Shadrack bought a shirt for sh 500 and later sold it for sh 600. Find the percentage profit.</p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). 25%<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). 20%<br>
+<input type = "radio" id = "mc" name = "question31" value = "C"> C). 18%<br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D). 16%<br>
+
+<p class = "questions">32. Maina has 7650 kg of maize in his store. He plans to buy an additional 3480 kg. How many tonnes of maize will he have?</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). 11130<br>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B). 1.113<br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C). 0.1113<br>
+<input type = "radio" id = "mc" name = "question32" value = "D"> D). 11.13<br>
+
+<p class = "questions">33. The table below shows the commission charges for sending parcels. <p><img src="number33.jpg"></p>
+Martin sent three parcels. One weighing 
+180 g. another one weighing 870 g and the last one weighing 1.5 kg. How much commission was he charged?</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A). Sh 910<br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B). Sh 780<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). Sh 810<br>
+<input type = "radio" id = "mc" name = "question33" value = "D"> D). Sh 430<br>
+
+<p class = "questions">34. Express 2.45 am in 24hr clock system.</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A). 1445hr<br>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B). 2245hr<br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). 0245hr<br>
+<input type = "radio" id = "mc" name = "question34" value = "D"> D). 2045hr<br>
+
+<p class = "questions">35. How many 2.5 dl packets of juice can be filled from 4.25 litres of juice?</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). 18 packets<br>
+<input type = "radio" id = "mc" name = "question35" value = "B"> B). 11 packets<br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). 10.625 packets<br>
+<input type = "radio" id = "mc" name = "question35" value = "D"> D). 17 packets<br>
+
+<p class = "questions">36. After selling 120 sheep. Mwangi was left with 
+70% of the sheep. How many sheep was he left with?</p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A). 400 <br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). 280<br>
+<input type = "radio" id = "mc" name = "question36" value = "C"> C). 190 <br>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D). 150<br>
+
+<p class = "questions">37. If 1 cm represents 20 m. what length will represent 80 in on the map?</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). 8 cm<br>
+<input type = "radio" id = "mc" name = "question37" value = "B"> B). 16 cm<br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). 6 cm<br>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D). 4 cm<br>
+
+<p class = "questions">38. A motorist travelled at a uniform speed of 90 km/h. Work out his speed in m/s.</p>
+<input type = "radio" id = "mc" name = "question38" value = "A"> A). 45 m/s<br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). 50 m/s<br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). 25 m/s<br>
+<input type = "radio" id = "mc" name = "question38" value = "D"> D). 30 m/s<br>
+
+<p class = "questions">39. Work out: 4.3 x 17.12 = ___</p>
+<input type = "radio" id = "mc" name = "question39" value = "A"> A). 73.616<br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B). 73616<br>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C). 736.16<br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). 7.3616<br>
+
+<p class = "questions">40. What is the value of: 3 &#247; 7 (correct to decimal places).</p>
+<input type = "radio" id = "mc" name = "question40" value = "A"> A). 0.429<br>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B). 0.430<br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). 0.428<br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D). 0.4290<br>
+
+<p class = "questions">41. Find the area of the plot below in hectares. <p><img src="number41.jpg"></p></p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). 30000<br>
+<input type = "radio" id = "mc" name = "question41" value = "B"> B). 5400<br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C). 35.4<br>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D). 3.54<br>
+
+<p class = "questions">42. The distance between Kiptoo's home and the school is 8.3 km. What distance does he cover from home to school and back in 5 school days?</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A). 16.6 km<br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). 83 km<br>
+<input type = "radio" id = "mc" name = "question42" value = "C"> C). 116.2 km<br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). 41.5 km<br>
+
+<p class = "questions">43. What is the next number in the sequence? <p>3, 7, 10, 14, 17, ___</p></p>
+<input type = "radio" id = "mc" name = "question43" value = "A"> A). 21<br>
+<input type = "radio" id = "mc" name = "question43" value = "B"> B). 20<br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). 19<br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). 24<br>
+
+<p class = "questions">44. Change <sup>38</sup>&frasl;<sub>7</sub> into a mixed fraction</p>
+<input type = "radio" id = "mc" name = "question44" value = "A"> A). 5<sup>7</sup>&frasl;<sub>3</sub><br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). 3<sup>5</sup>&frasl;<sub>7</sub><br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). 5<sup>3</sup>&frasl;<sub>7</sub><br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D). 5<sup>4</sup>&frasl;<sub>7</sub><br>
+
+<p class = "questions">45. Work out: 9996 &#247; 98</p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A). 12<br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B). 102<br>
+<input type = "radio" id = "mc" name = "question45" value = "C"> C). 1002<br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). 10002<br>
+
+<p class = "questions">46. What is the reciprocal of 7?</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). <sup>7</sup>&frasl;<sub>1</sub><br>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B). <sup>1</sup>&frasl;<sub>7</sub><br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C). <sup>2</sup>&frasl;<sub>7</sub><br>
+<input type = "radio" id = "mc" name = "question46" value = "D"> D). <sup>7</sup>&frasl;<sub>3</sub><br>
+
+<p class = "questions">47. Simplify: 10(3x + 4y) + 5(2x - 3y)</p>
+<input type = "radio" id = "mc" name = "question47" value = "A"> A). 40x + 25y<br>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B). 20x + 55y<br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). 40x - 55y<br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). 40x - 25y<br>
+
+<p class = "questions">48. Find the square root of: 48 x 12</p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A). 576 <br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). 676<br>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C). 26 <br>
+<input type = "radio" id = "mc" name = "question48" value = "D"> D). 24<br>
+
+<b>The graph below shows the mass in kilograms of coffee picked. Use it to answer questions 49 and 50</b>
+<p><img src="number49.jpg"></p>
+
+<p class = "questions">49. How many kilograms of coffee did the farmer pick altogether?</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A). 1050 kg <br>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B). 1150 kg<br>
+<input type = "radio" id = "mc" name = "question49" value = "C"> C). 1250 kg <br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). 1005 kg<br>
+
+<p class = "questions">50. On which day did he pick the greatest mass of coffee?</p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). Tuesday <br>
+<input type = "radio" id = "mc" name = "question50" value = "B"> B). Friday<br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). Saturday <br>
+<input type = "radio" id = "mc" name = "question50" value = "D"> D). Wednesday<br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+<!- <input id = "button" type = "button" value = "Get Results!" onclick = "check();"> 
+
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+<a href = 'grade.html' id="button">marking scheme </a>
+    </div>
+	  </form>
+
+	  
+<script>
+
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var question7 = document.quiz.question7.value;
+	var question8 = document.quiz.question8.value;
+	var question9 = document.quiz.question9.value;
+	var question10 = document.quiz.question10.value;
+	var question11 = document.quiz.question11.value;
+	var question12 = document.quiz.question12.value;
+	var question13 = document.quiz.question13.value;
+	var question14 = document.quiz.question14.value;
+	var question15 = document.quiz.question15.value;
+	var question16 = document.quiz.question16.value;
+	var question17 = document.quiz.question17.value;
+	var question18 = document.quiz.question18.value;
+	var question19 = document.quiz.question19.value;
+	var question20 = document.quiz.question20.value;
+	var question21 = document.quiz.question21.value;
+	var question22 = document.quiz.question22.value;
+	var question23 = document.quiz.question23.value;
+	var question24 = document.quiz.question24.value;
+	var question25 = document.quiz.question25.value;
+	var question26 = document.quiz.question26.value;
+	var question27 = document.quiz.question27.value;
+	var question28 = document.quiz.question28.value;
+	var question29 = document.quiz.question29.value;
+	var question30 = document.quiz.question30.value;
+	var question31 = document.quiz.question31.value;
+	var question32 = document.quiz.question32.value;
+	var question33 = document.quiz.question33.value;
+	var question34 = document.quiz.question34.value;
+	var question35 = document.quiz.question35.value;
+	var question36 = document.quiz.question36.value;
+	var question37 = document.quiz.question37.value;
+	var question38 = document.quiz.question38.value;
+	var question39 = document.quiz.question39.value;
+	var question40 = document.quiz.question40.value;
+	var question41 = document.quiz.question41.value;
+	var question42 = document.quiz.question42.value;
+	var question43 = document.quiz.question43.value;
+	var question44 = document.quiz.question44.value;
+	var question45 = document.quiz.question45.value;
+	var question46 = document.quiz.question46.value;
+	var question47 = document.quiz.question47.value;
+	var question48 = document.quiz.question48.value;
+	var question49 = document.quiz.question49.value;
+	var question50 = document.quiz.question50.value;
+	var correct = 0;
+
+
+	if (question1 == "C") {
+		correct++;
+}
+	if (question2 == "B") {
+		correct++;
+}	
+	if (question3 == "C") {
+		correct++;
+	}
+	if (question4 == "C") {
+		correct++;
+}
+	if (question5 == "D") {
+		correct++;
+}	
+	if (question6 == "A") {
+		correct++;
+	}
+		
+	if (question7 == "A") {
+		correct++;
+}
+	if (question8 == "A") {
+		correct++;
+}	
+	if (question9 == "C") {
+		correct++;
+	}
+		
+	if (question10 == "D") {
+		correct++;
+}
+	if (question11 == "A") {
+		correct++;
+}	
+	if (question12 == "B") {
+		correct++;
+	}
+	if (question13 == "A") {
+		correct++;
+}
+	if (question14 == "D") {
+		correct++;
+}	
+	if (question15 == "C") {
+		correct++;
+	}
+	if (question16 == "B") {
+		correct++;
+}
+	if (question17 == "C") {
+		correct++;
+	
+}	
+	if (question18 == "B") {
+		correct++;
+	}
+	if (question19 == "C") {
+		correct++;
+}
+	if (question20 == "B") {
+		correct++;
+}	
+	if (question21 == "D") {
+		correct++;	
+	}
+	if (question22 == "C") {
+		correct++;
+}	
+	if (question23 == "A") {
+		correct++;
+	}
+	if (question24 == "D") {
+		correct++;
+}
+	if (question25 == "C") {
+		correct++;
+}	
+	if (question26 == "B") {
+		correct++;
+	}
+		
+	if (question27 == "D") {
+		correct++;
+}
+	if (question28 == "C") {
+		correct++;
+}	
+	if (question29 == "A") {
+		correct++;
+	}
+		
+	if (question30 == "B") {
+		correct++;
+}
+	if (question31 == "C") {
+		correct++;
+}	
+	if (question32 == "C") {
+		correct++;
+	}
+	if (question33 == "B") {
+		correct++;
+}
+	if (question34 == "B") {
+		correct++;
+}	
+	if (question35 == "A") {
+		correct++;
+	}
+	if (question36 == "A") {
+		correct++;
+}
+	if (question37 == "B") {
+		correct++;
+}	
+	if (question38 == "D") {
+		correct++;
+	}
+	if (question39 == "A") {
+		correct++;
+}
+	if (question40 == "C") {
+		correct++;
+}	
+	if (question41 == "D") {
+		correct++;	
+	}
+	if (question42 == "C") {
+		correct++;
+}	
+	if (question43 == "C") {
+		correct++;
+	}
+	if (question44 == "B") {
+		correct++;
+}
+	if (question45 == "A") {
+		correct++;
+}	
+	if (question46 == "A") {
+		correct++;
+	}
+		
+	if (question47 == "A") {
+		correct++;
+}
+	if (question48 == "B") {
+		correct++;
+}	
+	if (question49 == "A") {
+		correct++;
+	}
+		
+	if (question50 == "C") {
+		correct++;
+}
+    var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+
+	document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("text").innerHTML = texts[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " out of 50 correct.";
+	document.getElementById("percentage").innerHTML = "Marks " + Math.round(correct/50*100)/1 + "%"
+
+	}
+	
+
+var numQues = 50;
+var numChoi = 4;
+var answers = new Array(50);
+answers[0] = "C";
+answers[1] = "A";
+answers[2] = "B";
+answers[3] = "D";
+answers[4] = "D";
+answers[5] = "A";
+answers[6] = "B";
+answers[7] = "B";
+answers[8] = "A";
+answers[9] = "C";
+answers[10] = "C";
+answers[11] = "B";
+answers[12] = "C";
+answers[13] = "A";
+answers[14] = "C";
+answers[15] = "D";
+answers[16] = "B";
+answers[17] = "B";
+answers[18] = "B";
+answers[19] = "C";
+answers[20] = "C"; 
+answers[21] = "C";
+answers[22] = "B";
+answers[23] = "C";
+answers[24] = "A";
+answers[25] = "D";
+answers[26] = "D";
+answers[27] = "B";
+answers[28] = "C";
+answers[29] = "B";
+answers[30] = "B";
+answers[31] = "D";
+answers[32] = "C";
+answers[33] = "C";
+answers[34] = "D";
+answers[35] = "B";
+answers[36] = "D";
+answers[37] = "C";
+answers[38] = "A";
+answers[39] = "A";
+answers[40] = "D";
+answers[41] = "B";
+answers[42] = "A";
+answers[43] = "C";
+answers[44] = "B";
+answers[45] = "B";
+answers[46] = "A";
+answers[47] = "D";
+answers[48] = "A";
+answers[49] = "B";
+
+function getScore(form) {
+  var correct = 0;
+  var currElt;
+  var currSelection;
+var d = document.getElementById("after_submit").style.visibility = "visible"; 
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          correct++;
+          break;
+        }
+      }
+    }
+  }
+  
+  var texts = ["Outstanding", "Excellent", "Very Good", "Good", "Good", "Pass", "Fair", "Try Harder", "Try Harder", "Poor", "Very Poor", "Fail"];
+	var messages = ["Grade A", "Grade A-", "Grade B+", "Grade B", "Grade B-", "Grade C+", "Grade C", "Grade C-", "Grade D+", "Grade D", "Grade D-", "Grade E"];
+	var score;
+
+	if (correct >= 40) {
+		score = 0;
+	}
+
+	if (correct > 37 && correct < 40) {
+		score = 1;
+	}
+if (correct >= 35 && correct <= 37) {
+		score = 2;
+	}
+if (correct > 32 && correct < 35) {
+		score = 3;
+	}
+if (correct >= 30 && correct <= 32) {
+		score = 4;
+	}
+if (correct > 27 && correct < 30) {
+		score = 5;
+	}
+if (correct >= 25 && correct <= 27) {
+		score = 6;
+	}
+if (correct > 22 && correct < 25) {
+		score = 7;
+	}
+if (correct >= 20 && correct <= 22) {
+		score = 8;
+	}
+if (correct > 17 && correct < 20) {
+		score = 9;
+	}
+if (correct >= 15 && correct <= 17) {
+		score = 10;
+	}
+if (correct >= 0 && correct < 15) {
+		score = 11;
+	}
+
+  correct = Math.round(correct/numQues*100);
+  document.getElementById("percentage").innerHTML = "Marks " + correct + "%";
+  document.getElementById("number_correct").innerHTML = "You got " + correct/2 + " out of 50 correct";
+  document.getElementById("text").innerHTML = texts[score];
+  document.getElementById("message").innerHTML = messages[score];
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+   d.style.visibility = "visible"; 
+}
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+

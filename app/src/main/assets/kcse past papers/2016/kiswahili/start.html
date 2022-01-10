@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<title>KCSE exam</title>
+<link href ="../../../style1.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<audio id="xyz" src="../../../bell.mp3" preload="auto"></audio>
+<div class="countdown-wrap">
+            <div id="clockdiv">
+                <div>
+                    <span class="hours"></span>
+                    <span class="time-label">HOURS</span>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <span class="time-label">MINUTES</span>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <span class="time-label">SECS</span>
+                </div>
+            </div>
+        </div>
+	
+<script src="../../../java2.js">
+
+</script>
+
+</head>
+
+
+<body>
+<form id="quiz" name="quiz" >
+<h1>Good Luck</h1>
+<p id="output"></p>
+
+
+
+
+
+
+<p><b>Soma vifungu vifuatavyo. Vina nafasi 1 mpaka 15. Umepewa majibu manne hapo. Chagua jibu lifaalo zaidi katiyayale uliyopewa.</b></p>
+
+<p>Umuhimu wa afya bora kwa raia _______1, ______2 kuna wasiotilia maanani suala hili. Raia 
+_______3 afya hawamudu _______4 kukabiliana na matatizo ______5 maisha, ______6 pia huwa na hamu zaidi 
+ya kutenda kazi. Raia wanastahili kuhimizwa kutunza afya ______7 wasije wakahasirika baadaye 
+kwani, ______8.</p>
+
+<p class = "questions">1. </p>
+<input type = "radio" id = "mc" name = "question1" value = "A"> A). utakuwa umesisitizwa<br>
+<input type = "radio" id = "mc" name = "question1" value = "B"> B). umekuwa ulisisitizwa<br>
+<input type = "radio" id = "mc" name = "question1" value = "C"> C). unakuwa umesisitizwa <br>
+<input type = "radio" id = "mc" name = "question1" value = "j"><a class="y"> D). umekuwa ukisisitizwa</a><br>
+
+<p class = "questions">2. </p>
+<input type = "radio" id = "mc" name = "question2" value = "A"> A). ama<br>
+<input type = "radio" id = "mc" name = "question2" value = "j"><a class="y"> B). japo</a><br>
+<input type = "radio" id = "mc" name = "question2" value = "C"> C). wala<br>
+<input type = "radio" id = "mc" name = "question2" value = "D"> D). lau<br>
+<p class = "questions">3. </p>
+<input type = "radio" id = "mc" name = "question3" value = "j"><a class="y"> A). wenye</a><br>
+<input type = "radio" id = "mc" name = "question3" value = "B"> B). zenye<br>
+<input type = "radio" id = "mc" name = "question3" value = "C"> C). kwenye<br>
+<input type = "radio" id = "mc" name = "question3" value = "D"> D). penye<br>
+
+<p class = "questions">4. </p>
+<input type = "radio" id = "mc" name = "question4" value = "j"><a class="y"> A). tu</a><br>
+<input type = "radio" id = "mc" name = "question4" value = "B"> B). kamwe<br>
+<input type = "radio" id = "mc" name = "question4" value = "C"> C). kabisa<br>
+<input type = "radio" id = "mc" name = "question4" value = "D"> D). hata<br>
+
+<p class = "questions">5. </p>
+<input type = "radio" id = "mc" name = "question5" value = "A"> A). yanaodhuru<br>
+<input type = "radio" id = "mc" name = "question5" value = "B"> B). yanavyodhuru<br>
+<input type = "radio" id = "mc" name = "question5" value = "j"><a class="y"> C). yanayodhuru</a><br>
+<input type = "radio" id = "mc" name = "question5" value = "D"> D). yanakodhuru<br>
+
+<p class = "questions">6. </p>
+<input type = "radio" id = "mc" name = "question6" value = "A"> A). au<br>
+<input type = "radio" id = "mc" name = "question6" value = "j"><a class="y"> B). bali</a><br>
+<input type = "radio" id = "mc" name = "question6" value = "C"> C). na<br>
+<input type = "radio" id = "mc" name = "question6" value = "D"> D). hata<br>
+
+<p class = "questions">7.  </p>
+<input type = "radio" id = "mc" name = "question7" value = "A"> A). nao<br>
+<input type = "radio" id = "mc" name = "question7" value = "B"> B). hao<br>
+<input type = "radio" id = "mc" name = "question7" value = "j"><a class="y"> C). zao</a><br>
+<input type = "radio" id = "mc" name = "question7" value = "D"> D). wao<br>
+
+<p class = "questions">8. </p>
+<input type = "radio" id = "mc" name = "question8" value = "A"> A). rasharasha ndio mwanzo wa mvua<br>
+<input type = "radio" id = "mc" name = "question8" value = "B"> B). tone na tone huwa mchirizi<br>
+<input type = "radio" id = "mc" name = "question8" value = "C"> C). maji ukiyavulia nguo yaoge<br>
+<input type = "radio" id = "mc" name = "question8" value = "j"><a class="y"> D). mchelea mwana kulia hulia mwenyewe</a><br>
+
+<p>Sitawahi kumsahau Bi. Tunu; ______9 hamu ya kujiendeleza masomoni. Nakumbuka kidato cha 
+kwanza nilipokuwa _____10 katika Kiswahili. ______11 somo kuwa rahisi. Alitufunza aina za mashairi 
+kama vile ______12 lenye mishororo mitano katika ubeti. Alisisitiza kwamba ushairi ni mwepesi, 
+Akasema, “Ikiwa mtoto mdogo anaweza kutunga na kukariri shairi ______13 nyinyi ______14 ” Pia, 
+Bi. Tunu alitufundisha aina za tamathali za usemi kama vile, sitiari. Mfano wa sitiari ni _____15.</p>
+
+<p class = "questions">9. </p>
+<input type = "radio" id = "mc" name = "question9" value = "j"><a class="y"> A). ndiye aliyenipa</a><br>
+<input type = "radio" id = "mc" name = "question9" value = "B"> B). ndivyo alivyonipa<br>
+<input type = "radio" id = "mc" name = "question9" value = "C"> C). ndipo aliponipa<br>
+<input type = "radio" id = "mc" name = "question9" value = "D"> D). ndioalionipa<br>
+
+<p class = "questions">10. </p>
+<input type = "radio" id = "mc" name = "question10" value = "A"> A). nimeenda shoti<br>
+<input type = "radio" id = "mc" name = "question10" value = "B"> B). nimekula mwande<br>
+<input type = "radio" id = "mc" name = "question10" value = "j"><a class="y"> C). nimeenda nguu</a><br>
+<input type = "radio" id = "mc" name = "question10" value = "D"> D). nimekula hasara<br>
+
+<p class = "questions">11. </p>
+<input type = "radio" id = "mc" name = "question11" value = "A"> A). Aliifanya<br>
+<input type = "radio" id = "mc" name = "question11" value = "B"> B). Uliifanya<br>
+<input type = "radio" id = "mc" name = "question11" value = "j"><a class="y"> C). Alilifanya</a><br>
+<input type = "radio" id = "mc" name = "question11" value = "D"> D). Ulilifanya<br>
+
+<p class = "questions">12. </p>
+<input type = "radio" id = "mc" name = "question12" value = "A"> A). tathnia<br>
+<input type = "radio" id = "mc" name = "question12" value = "j"><a class="y"> B). takhmisa</a><br>
+<input type = "radio" id = "mc" name = "question12" value = "C"> C). tathlitha<br>
+<input type = "radio" id = "mc" name = "question12" value = "D"> D). tasdisa<br>
+
+<p class = "questions">13. </p>
+<input type = "radio" id = "mc" name = "question13" value = "A"> A). madhali<br>
+<input type = "radio" id = "mc" name = "question13" value = "B"> B). ilhali<br>
+<input type = "radio" id = "mc" name = "question13" value = "C"> C). angalau<br>
+<input type = "radio" id = "mc" name = "question13" value = "j"><a class="y"> D). sembuse</a><br>
+
+<p class = "questions">14. </p>
+<input type = "radio" id = "mc" name = "question14" value = "A"> A). ;<br>
+<input type = "radio" id = "mc" name = "question14" value = "B"> B). ,<br>
+<input type = "radio" id = "mc" name = "question14" value = "j"><a class="y"> C). ?</a><br>
+<input type = "radio" id = "mc" name = "question14" value = "D"> D). .<br>
+
+<p class = "questions">15. </p>
+<input type = "radio" id = "mc" name = "question15" value = "A"> A). Mkai anawaza akiwazua kila siku. <br>
+<input type = "radio" id = "mc" name = "question15" value = "j"><a class="y"> B). Hamira ni ninga anayetuliza.</a><br>
+<input type = "radio" id = "mc" name = "question15" value = "C"> C). Kitambaa hiki ni laini kama pamba. <br>
+<input type = "radio" id = "mc" name = "question15" value = "D"> D). Mawimbi ya bahari yalinizungumzia.<br>
+
+<p><b>Kutoka swali la 16 mpaka 30, chagua jibu lililo sahihi.</b></p>
+
+<p class = "questions">16. Chagua sentensi sahihi kisarufi.</p>
+<input type = "radio" id = "mc" name = "question16" value = "A"> A). Nywele ambayo imesukwa ni fupi.<br>
+<input type = "radio" id = "mc" name = "question16" value = "j"><a class="y"> B). Ngome iliyojengwa hapa inietukinga.</a><br>
+<input type = "radio" id = "mc" name = "question16" value = "C"> C). Jino iliyooza imeng’olewa na daktari.<br>
+<input type = "radio" id = "mc" name = "question16" value = "D"> D). Changarawe ambacho kimesombwa kitauzwa.<br>
+
+<p class = "questions">17. Ukigawanya nusu mara nne sawa utapata?</p>
+<input type = "radio" id = "mc" name = "question17" value = "A"> A). robo<br>
+<input type = "radio" id = "mc" name = "question17" value = "B"> B). sudusi<br>
+<input type = "radio" id = "mc" name = "question17" value = "C"> C). khumusi<br>
+<input type = "radio" id = "mc" name = "question17" value = "j"><a class="y"> D). thumni</a><br>
+
+<p class = "questions">18. Chagua jibu lenye sauti sighuna pekee.</p>
+<input type = "radio" id = "mc" name = "question18" value = "j"><a class="y"> A). ch, f, s, th </a><br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> B). gh, j, m, t<br>
+<input type = "radio" id = "mc" name = "question18" value = "B"> C). p, ny, n, d<br>
+<input type = "radio" id = "mc" name = "question18" value = "D"> D). dh, k, ng’,h<br>
+
+<p class = "questions">19. Nomino nyanja imo katika ngeli gani?</p>
+<input type = "radio" id = "mc" name = "question19" value = "j"><a class="y"> A). U-Zl</a><br>
+<input type = "radio" id = "mc" name = "question19" value = "B"> B). I-ZI<br>
+<input type = "radio" id = "mc" name = "question19" value = "C"> C). I-I <br>
+<input type = "radio" id = "mc" name = "question19" value = "D"> D). LI-YA<br>
+
+<p class = "questions">20. Maneno yaliyopigiwa mstari ni: Sesi alibeba vikapu <u>kadha begani</u>.</p>
+<input type = "radio" id = "mc" name = "question20" value = "A"> A). kielezi, kiwakilishi;<br>
+<input type = "radio" id = "mc" name = "question20" value = "B"> B). kivumishi, kihusishi;<br>
+<input type = "radio" id = "mc" name = "question20" value = "C"> C). kiwakilishi, kihusishi;<br>
+<input type = "radio" id = "mc" name = "question20" value = "j"><a class="y"> D). kivumishi, kielezi.</a><br>
+
+<p class = "questions">21. Chagua jibu la kitendawili kifuatacho. Mimi ninakula vyakula vyote vinono lakini sinenepi wala sikui.</p>
+<input type = "radio" id = "mc" name = "question21" value = "A"> A). ulimi na meno;<br>
+<input type = "radio" id = "mc" name = "question21" value = "B"> B). kinu cha kusagia;<br>
+<input type = "radio" id = "mc" name = "question21" value = "j"><a class="y"> C). chungu cha kupikia;</a><br>
+<input type = "radio" id = "mc" name = "question21" value = "D"> D). mkono na vidole.<br>
+
+<p class = "questions">22. Onyesha usemi halisi wa sentensi ifuatayo. Muli aliniambia kwamba wiki ambayo ingefuata angeenda kutazama mechi hiyo</p>
+<input type = "radio" id = "mc" name = "question22" value = "A"> A). “Wiki ambayo ilifuata nilienda kutazama mechi hiyo.” Muli akaniambia.<br>
+<input type = "radio" id = "mc" name = "question22" value = "j"><a class="y"> B). “Wiki ijayo nitaenda kutazama mechi hiyo.” Muli akaniambia.</a><br>
+<input type = "radio" id = "mc" name = "question22" value = "C"> C). “Wiki ambayo ilipita ulienda kutazama mechi hiyo.” Muli akaniambia.<br>
+<input type = "radio" id = "mc" name = "question22" value = "D"> D). “Wiki ijayo utaenda kutazama mechi hiyo.” Muli akaniambia.<br>
+
+<p class = "questions">23. Nukta pacha hutumiwaje?</p>
+<input type = "radio" id = "mc" name = "question23" value = "j"><a class="y"> A). kutanguliza maneno katika orodha;</a><br>
+<input type = "radio" id = "mc" name = "question23" value = "B"> B). kufungia maneno halisi ya msemaji;<br>
+<input type = "radio" id = "mc" name = "question23" value = "C"> C). kuonyesha ufafanuzi wa maneno ya ziada;<br>
+<input type = "radio" id = "mc" name = "question23" value = "D"> D). kubainisha maneno ya awali.<br>
+
+<p class = "questions">24. Ni jibu lipi sahihi?</p>
+<input type = "radio" id = "mc" name = "question24" value = "A"> A). Utaridi ndiyo sayari iliyo karibu sana na jua.<br>
+<input type = "radio" id = "mc" name = "question24" value = "B"> B). Zebaki ndiyo sayari kubwa zaidi ya zote.<br>
+<input type = "radio" id = "mc" name = "question24" value = "j"><a class="y"> C). Zuhura ndiyo sayari angavu yenye joto zaidi.</a><br>
+<input type = "radio" id = "mc" name = "question24" value = "D"> D). Mshtarii ndiyo sayari iliyo karibu zaidi na dunia.<br>
+
+<p class = "questions">25. Chagua sentensi iliyotumia kiunganishi sahihi.</p>
+<input type = "radio" id = "mc" name = "question25" value = "A"> A). Fauka ya kumwita alikataa kuitika.<br>
+<input type = "radio" id = "mc" name = "question25" value = "j"><a class="y"> B). Maadamu umeniomba nitakusaidia.</a><br>
+<input type = "radio" id = "mc" name = "question25" value = "C"> C). Maria alijaribu bighairi akashinda<br>
+<input type = "radio" id = "mc" name = "question25" value = "D"> D). Umu ni msomaji bora ikiwa hanivutii.<br>
+
+<p class = "questions">26. Maana ya nahau, “tia mrija” ni:</p>
+<input type = "radio" id = "mc" name = "question26" value = "A"> A). kutumia mali vibaya;<br>
+<input type = "radio" id = "mc" name = "question26" value = "j"><a class="y"> B). kumtegemea mtu kwa kila kitu;</a><br>
+<input type = "radio" id = "mc" name = "question26" value = "C"> C). kujitafutia mali kwa hila;<br>
+<input type = "radio" id = "mc" name = "question26" value = "D"> D). kumchukulia mtu mali ya mwenzake.<br>
+
+<p class = "questions">27. Ni jibu lipi lenye maelezo sahihi?</p>
+<input type = "radio" id = "mc" name = "question27" value = "A"> A). Mzegazega huuza bidhaa rejareja.<br>
+<input type = "radio" id = "mc" name = "question27" value = "j"><a class="y"> B). Saisi hutunza wanyama wa uchukuzi.</a><br>
+<input type = "radio" id = "mc" name = "question27" value = "C"> C). Mjume ni fundi wa kulua visu.<br>
+<input type = "radio" id = "mc" name = "question27" value = "D"> D). Sogora ni fundi wa kuimba na kukariri mashairi.<br>
+
+<p class = "questions">28. <b>Chagua kauli ya kutendewa ya sentensi hii</b>: Malkia alipiga ngoma akiwa kwa Hamu.</p>
+<input type = "radio" id = "mc" name = "question28" value = "j"><a class="y"> A). Ngoma ilipigiwa kwa Hamu na malkia.</a><br>
+<input type = "radio" id = "mc" name = "question28" value = "B"> B). Malkia alipigiwa ngoma kwa Hamu.<br>
+<input type = "radio" id = "mc" name = "question28" value = "C"> C). Ngoma ilipigiwa Hamu na malkia kwake.<br>
+<input type = "radio" id = "mc" name = "question28" value = "D"> D). Malkia alipigiwa ngoma na Hamu kwake.<br>
+
+<p class = "questions">29. <b>Chagua wingi wa sentensi ifuatayo</b>: Jani hilo kavu lilipeperushwa likatua kwenye mlingoti.</p>
+<input type = "radio" id = "mc" name = "question29" value = "A"> A). Majani hayo makavu yalipeperushwa yakatua kwenye mlingoti.<br>
+<input type = "radio" id = "mc" name = "question29" value = "B"> B). Majani yale makavu yalipeperushwa yakatua kwenye milingoti.<br>
+<input type = "radio" id = "mc" name = "question29" value = "C"> C). Majani yale makavu yalipeperushwa yakatua kwenye mlingoti.<br>
+<input type = "radio" id = "mc" name = "question29" value = "j"><a class="y"> D). Majani hayo makavu yalipeperushwa yakatua kwenye milingoti.</a><br>
+
+<p class = "questions">30. Ni jibu lipi lenye methali zenye maana sawa? 
+<p>(i) Mzigo uko kichwani kwapa lakutokeani jasho? </p>
+<p>(ii) Pilipili usiyoila yakuwashiani? </p>
+<p>(iii) Mtama usioula wawawingiani kuku? </p>
+<p>(iv) Kuku alaye mtama atakuwaje na nyama?</p></p>
+<input type = "radio" id = "mc" name = "question30" value = "j"> A). (i), (iv)<br>
+<input type = "radio" id = "mc" name = "question30" value = "j"> B). (ii), (iii)<br>
+<input type = "radio" id = "mc" name = "question30" value = "j"> C). (i), (ii)<br>
+<input type = "radio" id = "mc" name = "question30" value = "j"> D). (iii), (iv)<br>
+
+<p></b>Soma kifungu kifuatacho kisha ujibu maswali 31 mpaka 40. </b></p>
+<p>Wanafunzi wengi hudhani kwamba michezo ya riadha huanzia shuleni. Hata hivyo, ukichunguza kwa makini utapata kwamba watu huanza kushiriki katika riadha na michezo mingine wakiwa watoto wakembe. Ikiwa unakumbuka vyema, utapata kwamba ulianza kucheza kabumbu mara tu ulipoanza kutembea. Mara ya kwanza mpira wako ulikuwa sahani ya mama yako, au hata kikombe ulichotiliwa maziwa. Ulipokua kiasi, wewe na wenzako mliunda mpira kwa karatasi, majani au vitambaa, ambavyo mara nyingi mliokota kwenye majalala. </p>
+<p>Huenda unakumbuka mara yako ya kwanza kuogelea. Sitashangaa ukiniambia kuwa kidimbwi chako kilikuwa maji machafu yaliyokuwa nje ya nyumba yenu. Wengine wataniambia kuwa waliogelea kwenye vijito vilivyojaa konokono bila kuwa na mwao na hatari ya kuambulia magonjwa. Licha ya kuogelea, wewe na wenzako pia mlishiriki katika michezo mingine kama vile kurusha tiara, kibe, kuwinga kuku na ndege kwa mawe, kuvutana kwa kamba, kuruka kamba, na kuzungushia tairi kwenye kiuno. Wakati mwingine mlikimbizana ili kuona anayempiku mwenzake. </p>
+<p>Ukiulizwa kuhusu michezo mliyoshiriki mkiwa watoto, utasema kwamba michezo hii mliitunga wenyewe. Kadhalika nyinyi wenyewe ndio mliotunga sheria ambazo zilidhibiti uchezaji wenu. Wale ambao walivunja sheria hizi walipewa adhabu kali kama vile kutengwa na kikundi au kupewa kazi ya kuwahudumia wengine wakiendelea kucheza. Bila shaka adhabu hizi ziliimarisha nidhamu miongoni mwenu. Hali kadhalika michezo hii yenu haikuwaleta pamoja tu, ball pia ilichangia kuimarisha urafiki. Mathalani, mmoja wenu alipoumia, kundi zima lilimshughulikia. Aidha, michezo hii ilikuza ubunifu na ujasiri. Kule kutengeneza mipira na nyavu kwa nyasi au karatasi kuliwapa stadi zaidi za kuunda hata vifaa vikubwa zaidi. Vilevile ni wazi kwamba ulipoirusha tiara yako. na kuwashinda wenzako katika mbio, ulijihisi kuwa shujaa na kujiamini zaidi. Wakati mwingine hata ulichaguliwa kuwa kiongozi wa kundi kutokana na umahiri wako katika michezo.</p>
+<p>Natumai unafahamu kuwa michezo hiyo yenu iliwasaidia kujenga misuli na kuimarisha viungo vya mwili. Ni wazi kwamba wakati uliposhiriki michezo hii ulijihisi mwepesi zaidi, na uliweza kutekeleza mengi bila kuchoka haraka. Zaidi ya hayo, michezo hiyo ilikuwezesha kupata usingizi wa pono na kuraukia shule bila kulazimishwa na mlezi wako. Ikumbukwe kwamba michezo hiyo hiyo ndiyo inayoendelezwa hata shuleni. Manufaa yake ni mengi hata kwa watu wazima. Wanaoshiriki michezo hii katika nyanja za kieneo na kimataifa hujifaa kwa mengi. Kuna wale ambao hushinda tuzo na nishani mbalimbali kutokana na weledi wao. Wengine hupata fedha nyingi na kuambulia utajiri wa ghafla. Pia baadhi huteuliwa kuchezea timu za kimataifa na kuziletea familia, na nchi yao sifa kuu. Wapo wanaoajiriwa kama makocha na*marefa wa timu za kitaifa na kimataifa. </p>
+<p>Mke ni nguo, mgomba kupaliliwa. Nao utendaji wako katika michezo unahitaji kuboreshwa kila mara. Ushauri wa walimu na wanajamii wengine ni muhimu katika kukuimarisha michezoni. Hao hukuelekeza kuhusu namna ya kuutumia muda wako vyema; usije ukaegemea sana katika michezo ukasahau mengine muhimu kama vile kudumisha usafi, kuzingatia masomo na mahusiano ya kifamilia. Kadhalika, ni sharti ufuate nasaha ya waelekezi wako kuhusu njia bora ya kutumia pato ambalo huenda ukapata kutokana na michezo.</p>
+
+<p class = "questions">31. Kulingana na aya ya <b>kwanza</b>:</p>
+<input type = "radio" id = "mc" name = "question31" value = "A"> A). Watoto wanapofika shuleni hawajui michezo ya nyumbani.<br>
+<input type = "radio" id = "mc" name = "question31" value = "B"> B). Wanafunzi wanaojihusisha na riadha huwa wachanga.<br>
+<input type = "radio" id = "mc" name = "question31" value = "j"><a class="y"> C). Watoto huimarisha uchezaji kutokana na vifaa kwenye mazingira yao.</a><br>
+<input type = "radio" id = "mc" name = "question31" value = "D"> D). Wanafunzi hupata jinsi ya kuj ifunza kulingana na wanavyokua nyumbani.<br>
+
+<p class = "questions">32. Kifungu kimebainisha kwamba:</p>
+<input type = "radio" id = "mc" name = "question32" value = "A"> A). Watu wanapowaza kwa dhati huelewa wanavyoanza<br>
+<input type = "radio" id = "mc" name = "question32" value = "B"> B). Watoto wakitembea wakicheza hawajui umuhimu wa vitu.<br>
+<input type = "radio" id = "mc" name = "question32" value = "C"> C). Mpira ukiundwa kwa karatasi huchezewa jaani.<br>
+<input type = "radio" id = "mc" name = "question32" value = "j"><a class="y"> D). Watu wanapohitaji jambo hutafuta mbinu za kulifikia.</a><br>
+
+<p class = "questions">33. <b>‘Sitashangaa ukiniambia kuwa kidimbwi chako kilikuwa maji machafu yaliyokuwa nje ya nyumba yenu,’</b> ina maana kuwa:</p>
+<input type = "radio" id = "mc" name = "question33" value = "A"> A). Msomaji anajua kuwa aliogelea mwanzo kidimbwini.<br>
+<input type = "radio" id = "mc" name = "question33" value = "B"> B). Mwandishi ana imani kuwa nyumba ina maeneo machafu.<br>
+<input type = "radio" id = "mc" name = "question33" value = "C"> C). Msomaji anaamini kuwa anaambiwa kuhusu uogeleaji kule nje.<br>
+<input type = "radio" id = "mc" name = "question33" value = "j"><a class="y"> D). Mwandishi ana hakika kwamba watoto walichezea maji yale.</a><br>
+
+<p class = "questions">34. Kulingana na aya ya <b>pili</b>:</p>
+<input type = "radio" id = "mc" name = "question34" value = "A"> A). Viumbe wa majini huwaumiza wagonjwa wanaoogelea.<br>
+<input type = "radio" id = "mc" name = "question34" value = "B"> B). Msomaji anakumbuka alipoanza kurusha tiara nyumbani.<br>
+<input type = "radio" id = "mc" name = "question34" value = "C"> C). Wenzako walijificha mlipowafukuza ndege na kuku<br>
+<input type = "radio" id = "mc" name = "question34" value = "j"><a class="y"> D). Michezo mingine ya watoto ilisababisha ushindani.</a><br>
+
+<p class = "questions">35. Kulingana na aya ya <b>tatu</b>:</p>
+<input type = "radio" id = "mc" name = "question35" value = "A"> A). Mtu asiyejua sheria michezoni hawezi kuhurumiwa.<br>
+<input type = "radio" id = "mc" name = "question35" value = "j"><a class="y"> B). Watu wakiwa pamoja huunda mikakati ya kudumisha mahusiano mema.</a><br>
+<input type = "radio" id = "mc" name = "question35" value = "C"> C). Huduma bora hutolewa na wanaokosea michezoni.<br>
+<input type = "radio" id = "mc" name = "question35" value = "D"> D). Michezo huwapa watu ujasiri wanapowashughulikia wagonjwa.<br>
+
+<p class = "questions">36. Michezo:</p>
+<input type = "radio" id = "mc" name = "question36" value = "A"> A). inapowaleta watu pamoja idadi ya marafiki huwa nyingi nyumbani<br>
+<input type = "radio" id = "mc" name = "question36" value = "B"> B). ikiendelea kundini huzidisha matayarisho ya kazi<br>
+<input type = "radio" id = "mc" name = "question36" value = "j"><a class="y"> C). inawafanya watu kuwa na moyo wa kukabiliana na magumu</a><br>
+<input type = "radio" id = "mc" name = "question36" value = "D"> D). inasababisha kuwepo kwa mashabiki kunakorushwa tiara.<br>
+
+<p class = "questions">37. Kulingana na kifungu:</p>
+<input type = "radio" id = "mc" name = "question37" value = "A"> A). Wanafunzi wanakuwa viongozi wanapoona ubora wa michezo.<br>
+<input type = "radio" id = "mc" name = "question37" value = "j"><a class="y"> B). Mtu anayeshiriki michezo hupata utulivu zaidi wa mwili.</a><br>
+<input type = "radio" id = "mc" name = "question37" value = "C"> C). Misuli huimarika mtu anapofahamu umuhimu wa kucheza.<br>
+<input type = "radio" id = "mc" name = "question37" value = "D"> D). Viungo hujengekea michezoni mtu anapofanya kazi kwa urahisi.<br>
+
+<p class = "questions">38. Chagua jibu sahihi kulingana na kifungu.</p>
+<input type = "radio" id = "mc" name = "question38" value = "A"> A). Walezi hawawaamshi watoto wanaopenda michezo.<br>
+<input type = "radio" id = "mc" name = "question38" value = "B"> B). Faida za michezo shuleni huwa nyingi ikianzia nyumbani.<br>
+<input type = "radio" id = "mc" name = "question38" value = "C"> C). Watu wazima wakichezea timu za kimataifa huajiriwa.<br>
+<input type = "radio" id = "mc" name = "question38" value = "j"><a class="y"> D). Kushiriki michezo huweza kuimarisha hali ya mtu kiuchumi.</a><br>
+
+<p class = "questions">39. Kulingana na aya ya mwisho, <b>‘mke ni nguo, mgomba kupaliliwa’,kwani</b></p>
+<input type = "radio" id = "mc" name = "question39" value = "j"><a class="y"> A). Mchezaji akielekezwa vyema huweza kutumia riziki yake kujinufaisha.</a><br>
+<input type = "radio" id = "mc" name = "question39" value = "B"> B). Mwanafunzi akifuata ushauri wa mwalimu huzingatia chanzo cha familia.<br>
+<input type = "radio" id = "mc" name = "question39" value = "C"> C). Mtu akishiriki michezo vyema huweza kufikia udumishaji usafi.<br>
+<input type = "radio" id = "mc" name = "question39" value = "D"> D). Mtoto akihusika vyema katika familia hupata njia ifaayo ya kujiimarisha.<br>
+
+<p class = "questions">40. Maana ya <b>‘bila kuwa na mwao’</b> kulingana na kifungu ni, bila:</p>
+<input type = "radio" id = "mc" name = "question40" value = "j"><a class="y"> A). kufahamu</a><br>
+<input type = "radio" id = "mc" name = "question40" value = "B"> B). kuamini<br>
+<input type = "radio" id = "mc" name = "question40" value = "C"> C). kuogopa<br>
+<input type = "radio" id = "mc" name = "question40" value = "D"> D). kuajabia<br>
+
+<p><b>Soma kifungu kifuatacho kisha ujibu maswali 41-50 </b></p>
+<p>Meli alipokivuka kizingiti cha lango la shule ya kitaifa ya Tungambele alikuwa na azma ya kusoma kwa bidii ili kuinukia kuwa kijana wa kutegemewa na jamii yake. Alikuwa kalelewa katika familia yenye pato wastani. Akasoma kwa juhudi za wazazi wake hadi darasa la nane alipokwangura alama za kumwezesha kujiunga na shule hii ya kifahari. Meli alijua kwamba alikuwa mwanagenzi, si katika masomo ya shule ya upili tu, bali pia katika maisha ya jijini ambamo shule hii ilipatikana. Kwa kweli hii ndiyo iliyokuwa mara yake ya kwanza kutia guu kwenye jiji hili ambalo habari zake akizisoma, ama katika magazeti machache yaliyowahi kufika kijijini mwao, au kupitia soma la Elimujamii. Hata hivyo, Meli hakuwa mtu wa kuogopa au kunywea machoni mwa changamoto. Alijiambia kwamba kwa vyovyote vile atapambana na maisha haya mapya. </p>
+<p>Saa mbili kamili asubuhi ilimpata Meli kapiga foleni katika afisi ya kuwasajili wanafunzi wageni. Wasiwasi wa aina fulani ulianza kumnyemelea alipotazama hapa na pale bila kuona dalili ya mja yeyote aliyemfahamu. Alijihisi kama yule kuku mgeni ambaye mwalimu wake alishinda kuwaambia kuwa hakosi kamba mguuni. Hata hivyo uliupiga moyo wake konde na kujiambia kuwa kuja kwake hapa kulitokana na juhudi zake mwenyewe na katu hatauruhusu ugeni wa mazingira kuifisha ari yake ya masomo.</p>
+<p>Usajili ulikamilika, naye Meli na wenzake wakajitosa katika ushindani wa kimasomo jinsi waogeleaji wajitumbikizapo kidimbwini wakapiga mbizi, baadhi wakiambulia ushindi na wengine wakifedheheka kwa kushindwa. Meli na wenzake walibainikiwa kwamba wote walikuwa mabingwa kutoka majimbo na wilaya zao. Ilimbidi kila mmoja wao kujikakamua zaidi ili kuelea katika bahari hii ya ushindani. Muhula wa kwanza ulishuhudia kishindo cha Meli kubwagwa chini na majabali wenzake. Alijipata miongoni mwa wanafunzi kumi wa mwisho; au kama alivyozoea <b>kuwatania</b> wenzake katika shule ya msingi, “wanafunzi kumi bora kuanzia mwisho”! Hili lilimwatua moyo  Meli na kumfanya kutahayari. Alifika kwao amejiinamia kama kondoo aliyeumia malishoni. Akawataka wazazi wake wambadilishie shule lakini wakakataa. </p>
+<p>Muhula wa pili na wa tatu mambo yalikuwa yaleyale. Meli akahisi kama askarijeshi aliyeshindwa kabisa kutambua mbinu za kuwavizia maadui. Akaona kwamba njia ya pekee ni kujiunga na wenzake kama yeye katika vitendo vya utundu kama vile kuvuruga masomo kwa kupiga kelele darasani, kupiga soga bwenini na hata kuvuta sigara. Mwanzoni alichukia vitendo hivi lakini alimeza mrututu akisema kwamba ndiyo njia ya pekee ya <b>kujipurukusha</b> na aibu. Wazazi wa Meli hawakusita kutambua mabadiliko katika hulka ya mwanao. Wakajaribu kumshika sikio nyumbani lakini akawa hasikii la mwadhini wala la mteka maji msikitini. Wakawahusisha wataalamu wa nasaha ambao waliwaambia kuwa Meli hakuwa na tatizo lolote la kuyamudu masomo. Kile alichokosa ni kujiamini tu. </p>
+<p>Wazazi wa Meli waliona kuwa ni muhimu kuwahusisha walimu katika kutatua tatizo la mwanao. Mwanzo wa muhula wa pili uliwapata wazazi hawa afisini mwa naibu wa mwalimu mkuu. Mazungumzo kati ya wazazi, naibu wa mwalimu mkuu na mwalimu wa darasa la Meli yalidhihirisha kwamba walimu walikuwa wamemuasa Meli kuhusu kujiingiza katika makundi yasiyomfaidi lakini rai zao ziliingia katika masikio yaliyotiwa nta. Aliyopenda zaidi Meli ni shughuli zilizomtoa nje ya shule kama vile tamasha za muziki, ukariri wa mashairi na drama. Mazungumzo yalibainisha kwamba Meli alihitaji ushauri na uelekezaji zaidi kutoka kwa mtaalamu wa nasaha pale shuleni.</p>
+<p>Meli alianza vikao na mtaalamu huyu ambaye pia alimpendekezea Meli ushauii zaidi kutoka kwa washauri marika. Hili lilimchangamsha zaidi Meli kwani aliwaona hawa kama wenzake waliojua changamoto zake. Juhudi za mtaalamu wa nasaha na washauri marika zilifua dafu. Mwisho wa kidato cha pili ulishuhudia mabadiliko makuu katika hulka na utendaji kimasomo wa Meli. <b>Aliukata kabisa uhusiano wake na marafiki waliompotosha</b> na kuanza kuandamana na wanafunzi waliotia juhudi masomoni. Polepole alama zake ziliimarika. Matokeo ya mtihani wa kidato cha nne yalimweka kwenye safu ya wanafunzi bora zaidi nchini.</p>
+
+<p class = "questions">41. Nia ya Meli katika elimu ilikuwa:</p>
+<input type = "radio" id = "mc" name = "question41" value = "A"> A). kuinua hali ya familia yake;<br>
+<input type = "radio" id = "mc" name = "question41" value = "j"><a class="y"> B). kuisaidia jamii yake;</a><br>
+<input type = "radio" id = "mc" name = "question41" value = "C"> C). kupata alama nzuri;<br>
+<input type = "radio" id = "mc" name = "question41" value = "D"> D). kujiunga na shule bora.<br>
+
+<p class = "questions">42. Meli alipojiunga na Tungambele:</p>
+<input type = "radio" id = "mc" name = "question42" value = "A"> A). alifahamu machache kuhusu uanagenzi<br>
+<input type = "radio" id = "mc" name = "question42" value = "B"> B). alijua machache kuhusu masomo ya upili<br>
+<input type = "radio" id = "mc" name = "question42" value = "j"><a class="y"> C). alifahamu machache kuhusu jiji</a><br>
+<input type = "radio" id = "mc" name = "question42" value = "D"> D). alijua machache kuhusu maisha mapya.<br>
+
+<p class = "questions">43. Kifungu kimedhihirisha kwamba:</p>
+<input type = "radio" id = "mc" name = "question43" value = "j"><a class="y"> A). Tungambele iliwasajili wanafunzi bora zaidi katika maeneo yao.</a><br>
+<input type = "radio" id = "mc" name = "question43" value = "B"> B). Wanafunzi walijitolea kwa bidii ili wasifedheheke.<br>
+<input type = "radio" id = "mc" name = "question43" value = "C"> C). Meli na wenzake walijua ni mabingwa siku waliposajiliwa.<br>
+<input type = "radio" id = "mc" name = "question43" value = "D"> D). Watu walitazamana kwa woga walipoanguka mitihani.<br>
+
+<p class = "questions">44. Kulingana na kifungu:</p>
+<input type = "radio" id = "mc" name = "question44" value = "j"><a class="y"> A). kutofikia malengo kunaweza kusababisha kuzorota kwa maadili</a><br>
+<input type = "radio" id = "mc" name = "question44" value = "B"> B). kutofanya vyema darasani kunaweza kusababisha kubadilishwa shuleni<br>
+<input type = "radio" id = "mc" name = "question44" value = "C"> C). kuanguka katika masomo kunaweza kunyima njia za kujiokoa<br>
+<input type = "radio" id = "mc" name = "question44" value = "D"> D). kupoteza alama kunaweza kuzua upigaji wa kelele.<br>
+
+<p class = "questions">45. Chagua jibu lisilo sahihi kwa mujibu wa kifungu.</p>
+<input type = "radio" id = "mc" name = "question45" value = "A"> A). Meli alivuta sigara na kupiga soga ili kujisahaulisha unyonge wake.<br>
+<input type = "radio" id = "mc" name = "question45" value = "B"> B). Wazazi wa Meli walikuwa wenye makini. <br>
+<input type = "radio" id = "mc" name = "question45" value = "j"><a class="y"> C). Meli hakutambua umuhimu wa masomo.</a> <br>
+<input type = "radio" id = "mc" name = "question45" value = "D"> D). Wazazi wa Meli walitambua haja ya kushirikiana katika malezi.<br>
+
+<p class = "questions">46. Kulingana na aya ya <b>tano</b>:</p>
+<input type = "radio" id = "mc" name = "question46" value = "A"> A). Meli alikuwa bingwa katika ukariri wa mashairi na drama.<br>
+<input type = "radio" id = "mc" name = "question46" value = "B"> B). Tabia ya Meli iliathiriwa vyema na marika zake.<br>
+<input type = "radio" id = "mc" name = "question46" value = "C"> C). Wataalamu wa nasaha shuleni ndio waliojua tatizo la Meli masomoni.<br>
+<input type = "radio" id = "mc" name = "question46" value = "j"><a class="y"> D). Walimu walikuwa wamemwonya Meli dhidi ya upigaji soga na uvutaji sigara.</a><br>
+
+<p class = "questions">47. Kulingana na kifungu, ushauri marika unafaa zaidi kwani:</p>
+<input type = "radio" id = "mc" name = "question47" value = "j"><a class="y"> A). anayeshauriwa hujitambulisha zaidi na washauri</a><br>
+<input type = "radio" id = "mc" name = "question47" value = "B"> B). washauri hupendekezwa na wataalamu<br>
+<input type = "radio" id = "mc" name = "question47" value = "C"> C). anayeshauriwa anaelewa zaidi matatizo yake<br>
+<input type = "radio" id = "mc" name = "question47" value = "D"> D). washauri huwafurahisha wanaoshauriwa<br>
+
+<p class = "questions">48. <b>“Aliukata kabisa uhusiano wake na marafiki waliompotosha”</b>. Chagua kauli inayoweza kujumuisha maneno haya.</p>
+<input type = "radio" id = "mc" name = "question48" value = "A"> A). Aliuacha ubaharia kwa unahodha.<br>
+<input type = "radio" id = "mc" name = "question48" value = "B"> B). Aliliacha ganda la muwa la jana.<br>
+<input type = "radio" id = "mc" name = "question48" value = "C"> C). Aliukata mkono uliokuwa ukimlisha.<br>
+<input type = "radio" id = "mc" name = "question48" value = "j"><a class="y"> D). Alimtupa jongoo na mti wake.</a><br>
+
+<p class = "questions">49. Maana ya: <b>kuwatania</b> ni</p>
+<input type = "radio" id = "mc" name = "question49" value = "A"> A). kuwafanyia dharau<br>
+<input type = "radio" id = "mc" name = "question49" value = "B"> B). kuwafanyia chuku<br>
+<input type = "radio" id = "mc" name = "question49" value = "j"><a class="y"> C). kuwafanyia mzaha</a><br>
+<input type = "radio" id = "mc" name = "question49" value = "D"> D). kuwafanyia inda.<br>
+
+<p class = "questions">50. Chagua maana ya: <b>‘kujipurukusha’</b>, kwa mujibu wa kifungu.</p>
+<input type = "radio" id = "mc" name = "question50" value = "A"> A). kujiokoa<br>
+<input type = "radio" id = "mc" name = "question50" value = "j"><a class="y"> B). kujisahaulisha</a><br>
+<input type = "radio" id = "mc" name = "question50" value = "C"> C). kujilinda<br>
+<input type = "radio" id = "mc" name = "question50" value = "D"> D). kujiepusha.<br>
+
+<input type="button" id="button" value="Get Results" onClick="getScore(this.form)" style="block">
+
+
+
+
+    <div id = "after_submit">
+
+<p id = "percentage"></p>
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<p id = "text"></p>
+
+    </div>
+	  </form>
+
+	  
+<script src="../../../javascript.js">
+
+</script>
+	  
+</body>
+</html>
+
+
+
+
+
