@@ -1,39 +1,4 @@
-{
-  "project_info": {
-    "project_number": "842913512590",
-    "firebase_url": "https://new-273119.firebaseio.com",
-    "project_id": "new-273119",
-    "storage_bucket": "new-273119.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:842913512590:android:bc595b3289fbd3728e1ddf",
-        "android_client_info": {
-          "package_name": "com.somakcpe.app"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "842913512590-cr9497ce73b80gqq3eadpogmupc2uhgh.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAAqo_8Pd8UMoZDX30W7_Hg1h4YWMN5Qcg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "842913512590-cr9497ce73b80gqq3eadpogmupc2uhgh.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
+
     }
   ],
   "configuration_version": "1"
