@@ -50,18 +50,9 @@ public class MainActivity extends AppCompatActivity {
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-        /*List<String> testDeviceIds = Arrays.asList("885A821345A988A7621DDCF0B48B9FAE");
-        RequestConfiguration configuration =
-                new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
-        MobileAds.setRequestConfiguration(configuration);*/
-        //RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("3944E1E3EFC9849ECAC8FD9FD5AEA034")
+        
         View hView =  navigationView.inflateHeaderView(R.layout.nav_header_main);
-        //AdRequest adRequest = new AdRequest.Builder().build();
-        //AdView mAdView =  hView.findViewById(R.id.adViewHeader);
-        //mAdView.loadAd(adRequest);
-        //Interstitial.loadIt(this);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
                 R.id.nav_tools, R.id.nav_share, R.id.nav_send, R.id.nav_kcse)
