@@ -50,53 +50,7 @@ public class ShareFragment extends Fragment {
         adView.setAdUnitId(getString(R.string.banner_home));
         adContainerView.addView(adView, adsParams);
         loadBanner();
-        /*AdRequest adRequest = new AdRequest.Builder().build();
-        AdView mAdView =  root.findViewById(R.id.adViewShare);
-        mAdView.loadAd(adRequest);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                Log.d("TAG", "ad loaded.");
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                Log.d("TAG", "ad failed to load");
-            }
-
-            @Override
-            public void onAdOpened() {
-                Log.d("TAG", "ad opened.");
-            }
-
-            @Override
-            public void onAdClicked() {
-                Log.d("TAG", "ad clicked");
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                Log.d("TAG", "ad left application");
-            }
-
-            @Override
-            public void onAdClosed() {
-                Log.d("TAG", "ad closed.");
-            }
-        });
-*/
-
-        /*mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
-            }
-        });*/
+        
 
         myWebView = root.findViewById(R.id.share);
 
