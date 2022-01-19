@@ -76,18 +76,7 @@ public class Reward extends AppCompatActivity {
                 Log.d("TAG", "ad closed.");
             }
         });
-       /* mInterstitialAd = new InterstitialAd(this);
-
-        mInterstitialAd.setAdUnitId("ca-app-pub-8737004905441026/3091506195");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
-            }
-        });*/
+       
         final WebView myWebView = findViewById(R.id.rweb);
         myWebView.setWebChromeClient(new WebChromeClient());
         myWebView.setWebViewClient(new WebViewClient());
