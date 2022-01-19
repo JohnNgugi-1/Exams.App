@@ -51,52 +51,7 @@ public class ToolsFragment extends Fragment {
         adView.setAdUnitId(getString(R.string.banner_home));
         adContainerView.addView(adView, adsParams);
         loadBanner();
-        /*AdRequest adRequest = new AdRequest.Builder().build();
-        AdView mAdView =  v.findViewById(R.id.adViewTools);
-        mAdView.loadAd(adRequest);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                Log.d("TAG", "ad loaded.");
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                Log.d("TAG", "ad failed to load");
-            }
-
-            @Override
-            public void onAdOpened() {
-                Log.d("TAG", "ad opened.");
-            }
-
-            @Override
-            public void onAdClicked() {
-                Log.d("TAG", "ad clicked");
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                Log.d("TAG", "ad left application");
-            }
-
-            @Override
-            public void onAdClosed() {
-                Log.d("TAG", "ad closed.");
-            }
-        });
-
-        mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-8737004905441026/3091506195");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
-            }
-        });*/
+        
         myWebView = v.findViewById(R.id.tools);
 
         myWebView.setWebChromeClient(new WebChromeClient());
